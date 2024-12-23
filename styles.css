@@ -155,12 +155,13 @@ nav#navbar ul li a {
   content: '';
   position: absolute;
   right: -10px; /* Move the arrow to the right of the line */
-  top: -5px; /* Adjust the position of the arrow vertically */
+  top: -5px; /* Adjust the vertical position to align better with the line */
   width: 0;
   height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-left: 10px solid #4a90e2; /* Blue arrow pointing right */
+  margin-top: -2px; /* Adjust to fix the arrow alignment */
 }
 
 /* Timeline Item */
@@ -198,6 +199,7 @@ nav#navbar ul li a {
   justify-content: center;
   margin-top: 20px; /* Added margin to move the square down */
 }
+
 .timeline-content h3 {
   margin: 0 0 10px;
   font-size: 1.2rem;
@@ -207,6 +209,9 @@ nav#navbar ul li a {
   margin: 0;
   font-size: 0.9rem;
 }
+
+
+
 /* Skills Section */
 .skills-progress {
   display: flex;
