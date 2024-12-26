@@ -185,3 +185,19 @@
   </script>
 </body>
 </html>
+
+<script>
+  // Selectors for scrollable container and buttons
+  const scrollContainer = document.querySelector('.scroll-container');
+  const leftBtn = document.querySelector('.left-btn');
+  const rightBtn = document.querySelector('.right-btn');
+
+  // Add event listeners for scrolling
+  leftBtn.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+  });
+
+  rightBtn.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+  });
+</script>
