@@ -8,15 +8,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header Section -->
-  <header id="hero">
-    <div class="hero-content">
-      <h1>Kai-Hsin Hung</h1>
-      <p>Master of Science in Data Science | Python Enthusiast | Engineer</p>
-      <a href="#about" class="btn-primary smooth-scroll">View My Work</a>
-    </div>
-  </header>
-
   <!-- Navigation Bar -->
   <nav id="navbar">
     <ul>
@@ -27,9 +18,18 @@
     </ul>
   </nav>
 
+  <!-- Hero Section -->
+  <header id="hero">
+    <div class="hero-content">
+      <h1>Kai-Hsin Hung</h1>
+      <p>Master of Science in Data Science | Python Enthusiast | Engineer</p>
+      <a href="#about" class="btn-primary smooth-scroll">View My Work</a>
+    </div>
+  </header>
+
   <!-- About Me Section -->
   <section id="about">
-    <div class="section-title">
+    <div class="section-title-left">
       <h2>About Me</h2>
     </div>
     <div class="about-content">
@@ -47,52 +47,48 @@
           </a>
         </div>
         <div class="resume-button">
-          <a href="https://csma777-my.sharepoint.com/:b:/g/personal/danielkai0802_csmatw_org/EWPq2JhkPXlKsW1yIvAHtiYBN3h1qVvjgTW387uclgHsVg?e=zYWrlg" 
-             target="_blank" class="btn-primary">My Resume</a>
+          <a href="https://csma777-my.sharepoint.com/:b:/g/personal/danielkai0802_csmatw_org/EWPq2JhkPXlKsW1yIvAHtiYBN3h1qVvjgTW387uclgHsVg?e=zYWrlg" target="_blank" class="btn-primary">My Resume</a>
         </div>
       </div>
       <div class="about-description">
-        <p>Hello! My name is Kai-Hsin Hung, and I'm from Taiwan. I hold a Bachelor of Science in Material Science and Engineering and am currently pursuing a Master’s in Data Science. My academic background has given me a strong foundation in both material science and data analysis, which I am excited to further develop in my current studies.</p>
+        <p>
+          Hello! My name is Kai-Hsin Hung, and I'm from Taiwan. I hold a Bachelor of Science in Material Science and Engineering and am currently pursuing a Master’s in Data Science. My academic background has given me a strong foundation in both material science and data analysis, which I am excited to further develop in my current studies.
+        </p>
       </div>
     </div>
   </section>
 
-<!-- Education Section -->
-<section id="education">
-  <div class="section-title">
-    <h2>Education</h2>
-  </div>
-  <div class="timeline-wrapper">
-    <div class="timeline">
-      <!-- Horizontal Line -->
-      <div class="horizontal-line"></div>
-
-      <!-- First Education Item -->
-      <div class="timeline-item">
-        <div class="timeline-circle">2019</div>
-        <div class="timeline-content">
-          <h3>Ming Chi University of Technology</h3>
-          <p>Bachelor of Science in Material Science and Engineering</p>
-          <p>Location: New Taipei City, Taiwan</p>
+  <!-- Education Section -->
+  <section id="education">
+    <div class="section-title-left">
+      <h2>Education</h2>
+    </div>
+    <div class="timeline-wrapper">
+      <div class="timeline">
+        <div class="horizontal-line"></div>
+        <div class="timeline-item">
+          <div class="timeline-circle">2019</div>
+          <div class="timeline-content">
+            <h3>Ming Chi University of Technology</h3>
+            <p>Bachelor of Science in Material Science and Engineering</p>
+            <p>Location: New Taipei City, Taiwan</p>
+          </div>
         </div>
-      </div>
-
-      <!-- Second Education Item -->
-      <div class="timeline-item">
-        <div class="timeline-circle">2024</div>
-        <div class="timeline-content">
-          <h3>University of the Pacific</h3>
-          <p>Master of Science in Data Science</p>
-          <p>Location: Stockton, California</p>
+        <div class="timeline-item">
+          <div class="timeline-circle">2024</div>
+          <div class="timeline-content">
+            <h3>University of the Pacific</h3>
+            <p>Master of Science in Data Science</p>
+            <p>Location: Stockton, California</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Skills Section -->
   <section id="skills">
-    <div class="section-title">
+    <div class="section-title-left">
       <h2>Skills</h2>
     </div>
     <div class="skills-progress">
@@ -111,47 +107,37 @@
     </div>
   </section>
 
-<!-- Projects Section -->
-<section id="projects">
-  <div class="section-title">
-    <h2>Projects</h2>
-  </div>
-  <div class="grid-container">
-    <!-- Third Project Card: Machine Learning Classification -->
-    <div class="grid-item project-card">
-      <h3>Machine Learning Classification</h3>
-      <p>This project involves the application of machine learning algorithms to classify datasets. It covers algorithms such as decision trees, logistic regression, and k-nearest neighbors.</p>
-      <a href="https://github.com/hungkaihsin/Machine-learning-Classification" target="_blank" class="btn-link">View Project</a>
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="section-title-left">
+      <h2>Projects</h2>
     </div>
-
-    <!-- Fourth Project Card: Facial Recognition with OpenCV -->
-    <div class="grid-item project-card">
-      <h3>Facial Recognition with OpenCV</h3>
-      <p>Implemented facial recognition algorithms using OpenCV. This project provides a basic framework for recognizing faces in images and real-time video streams using deep learning techniques.</p>
-      <a href="https://github.com/hungkaihsin/Facial_recogniton-with-Open-CV" target="_blank" class="btn-link">View Project</a>
+    <div class="grid-container">
+      <div class="grid-item project-card">
+        <h3>Machine Learning Classification</h3>
+        <p>This project involves the application of machine learning algorithms to classify datasets. It covers algorithms such as decision trees, logistic regression, and k-nearest neighbors.</p>
+        <a href="https://github.com/hungkaihsin/Machine-learning-Classification" target="_blank" class="btn-link">View Project</a>
+      </div>
+      <div class="grid-item project-card">
+        <h3>Facial Recognition with OpenCV</h3>
+        <p>Implemented facial recognition algorithms using OpenCV. This project provides a basic framework for recognizing faces in images and real-time video streams using deep learning techniques.</p>
+        <a href="https://github.com/hungkaihsin/Facial_recogniton-with-Open-CV" target="_blank" class="btn-link">View Project</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- Footer Section -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2024 Kai-Hsin Hung</p>
   </footer>
 
   <script>
-    // Smooth scrolling for all links with the "smooth-scroll" class
     document.querySelectorAll('.smooth-scroll').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         target.scrollIntoView({ behavior: 'smooth' });
       });
-    });
-
-    // Circle Progress Script
-    document.querySelectorAll('.skill-circle').forEach(circle => {
-      const percent = circle.getAttribute('data-percent');
-      circle.style.background = `conic-gradient(#4a90e2 ${percent}%, #ccc ${percent}%)`;
     });
   </script>
 </body>

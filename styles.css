@@ -5,6 +5,7 @@ body {
   padding: 0;
   color: #333;
   background: #f7f7f7;
+  overflow-x: hidden;
 }
 
 /* Header Section */
@@ -54,8 +55,10 @@ nav#navbar {
   background: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
 }
 
@@ -78,15 +81,38 @@ nav#navbar ul li a {
 }
 
 /* About Section */
+#about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.section-title-left {
+  text-align: left;
+  font-size: 2rem;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
 .about-content {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: flex-start;
   gap: 30px;
+  padding: 20px;
 }
 
-.personal-image img {
+.personal-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image {
   width: 300px;
   border-radius: 10px;
 }
@@ -95,17 +121,16 @@ nav#navbar ul li a {
   margin-top: 15px;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
 }
 
-.contact-icons img {
+.icon-image {
   width: 40px;
   height: 40px;
 }
 
 .resume-button {
   margin-top: 15px;
-  text-align: center;
 }
 
 .resume-button .btn-primary {
@@ -123,55 +148,66 @@ nav#navbar ul li a {
   background: #3578c8;
 }
 
+.about-description {
+  flex: 2;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
 /* Education Section */
+#education {
+  height: 100vh;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
 .timeline-wrapper {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 40px 0;
+  position: relative;
 }
 
 .timeline {
   position: relative;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
   width: 80%;
   gap: 50px;
 }
 
-/* Horizontal Line */
 .horizontal-line {
   position: absolute;
-  top: 85px; /* Moved the line down to align with the new position */
-  left: 10%; /* Aligns the line to start near the first circle */
-  right: 10%; /* Aligns the line to end near the second circle */
-  height: 5px; /* Thickness of the line */
-  background: #4a90e2; /* Blue color matching the circles */
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 5px;
+  background: #4a90e2;
   z-index: -1;
 }
 
-/* Add arrow at the end of the line facing right */
 .horizontal-line::after {
   content: '';
   position: absolute;
-  right: -10px; /* Move the arrow to the right of the line */
-  top: -5px; /* Adjust the vertical position to align better with the line */
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 0;
   height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-left: 10px solid #4a90e2; /* Blue arrow pointing right */
-  margin-top: -2px; /* Adjust to fix the arrow alignment */
+  border-left: 10px solid #4a90e2;
 }
 
-/* Timeline Item */
 .timeline-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  position: relative;
-  margin-top: 20px; /* Adjusted to move squares down a bit */
+  gap: 20px;
 }
 
 .timeline-circle {
@@ -184,35 +220,36 @@ nav#navbar ul li a {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  margin-bottom: 20px;
+  z-index: 1;
 }
 
 .timeline-content {
-  background: #333;
-  color: white;
+  background: #fff;
+  color: #333;
   border-radius: 10px;
   padding: 15px 20px;
-  width: 250px;
-  height: 150px; /* Fixed height for equal sizing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: left;
+}
+
+/* Skills Section */
+#skills {
+  height: 100vh;
+  background-color: #f7f7f7;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 20px; /* Added margin to move the square down */
+  padding: 20px;
 }
 
-.timeline-content h3 {
-  margin: 0 0 10px;
-  font-size: 1.2rem;
+.section-title-left {
+  text-align: left;
+  font-size: 2rem;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
-.timeline-content p {
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-
-
-/* Skills Section */
 .skills-progress {
   display: flex;
   justify-content: center;
@@ -224,29 +261,61 @@ nav#navbar ul li a {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  position: relative;
   background: conic-gradient(#4a90e2 0%, #ccc 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .percentage {
   position: absolute;
-  top: -25px;
+  top: -30px; /* Adjusted for better vertical alignment */
   left: 50%;
   transform: translateX(-50%);
+  font-size: 1.2rem;
   font-weight: bold;
   color: #333;
+  text-align: center;
 }
 
 .circle-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-size: 1rem;
   font-weight: bold;
   color: #333;
+  text-align: center;
+}
+
+/* Animate circular progress */
+.skill-circle[data-percent="85"] {
+  background: conic-gradient(#4a90e2 85%, #ccc 0%);
+}
+
+.skill-circle[data-percent="70"] {
+  background: conic-gradient(#4a90e2 70%, #ccc 0%);
+}
+
+.skill-circle[data-percent="65"] {
+  background: conic-gradient(#4a90e2 65%, #ccc 0%);
 }
 
 /* Projects Section */
+#projects {
+  height: 100vh;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.section-title-left {
+  text-align: left;
+  font-size: 2rem;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -259,17 +328,40 @@ nav#navbar ul li a {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
 .project-card h3 {
   margin-top: 0;
+  font-size: 1.5rem;
+  color: #4a90e2;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #333;
 }
 
 .project-card a {
   text-decoration: none;
   color: #4a90e2;
   font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+  border: 2px solid #4a90e2;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
+
+.project-card a:hover {
+  background: #4a90e2;
+  color: white;
+}
+
+
+
 
 /* Footer Section */
 footer {
