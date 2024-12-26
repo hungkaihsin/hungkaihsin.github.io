@@ -363,6 +363,51 @@ nav#navbar ul li a {
 
 
 
+
+/* Relevant Coursework Section */
+.relevant-coursework {
+  margin-top: 30px;
+}
+
+.coursework-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #4a90e2;
+}
+
+.relevant-coursework {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.coursework-category {
+  flex: 1;
+  background: #f7f7f7;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.coursework-category h4 {
+  margin-top: 0;
+  color: #4a90e2;
+}
+
+.coursework-category ul {
+  margin: 10px 0 0 0;
+  padding-left: 20px;
+}
+
+.coursework-category li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+
+
 /* Footer Section */
 footer {
   background: #4a90e2;
