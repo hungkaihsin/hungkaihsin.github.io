@@ -407,6 +407,38 @@ nav#navbar ul li a {
 }
 
 
+.scroll-container {
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+  gap: 20px; /* Space between project cards */
+  padding: 20px 0; /* Padding for the scroll container */
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 10px; /* Height of the horizontal scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #4a90e2; /* Color of the scrollbar thumb */
+  border-radius: 5px; /* Rounded scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #f7f7f7; /* Color of the scrollbar track */
+}
+
+.grid-item {
+  min-width: 300px; /* Ensures each project card has a consistent width */
+  flex-shrink: 0; /* Prevents cards from shrinking */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
 
 /* Footer Section */
 footer {
