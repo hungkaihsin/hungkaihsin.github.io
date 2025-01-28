@@ -114,14 +114,14 @@ nav#navbar ul li a {
   flex-direction: column;
   justify-content: center;
   background-color: #f7f7f7;
-  padding: 20px;
+  margin-top: -50px;
 }
 
 .section-title-left {
-  text-align: left;
-  font-size: 2rem;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  text-align: top;
+  font-size: 1rem;
+  margin-left: 200px;
+  margin-bottom: 14px;
 }
 
 .about-content {
@@ -482,3 +482,11 @@ footer {
 
 
 
+/* customize section */
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  margin-top: -80px;
+}
