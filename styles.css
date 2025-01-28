@@ -195,7 +195,7 @@ nav#navbar ul li a {
 .timeline-wrapper {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   position: relative;
 }
 
@@ -203,7 +203,7 @@ nav#navbar ul li a {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   width: 80%;
   gap: 50px;
 }
