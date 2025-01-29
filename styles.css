@@ -107,6 +107,7 @@ nav#navbar ul li a {
   text-decoration: none;
   color: #4a90e2;
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
 /* About Section */
@@ -201,6 +202,7 @@ nav#navbar ul li a {
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+
 }
 
 .education-wrapper {
@@ -232,71 +234,7 @@ nav#navbar ul li a {
   text-align: center;
 }
 
-/* Skills Section */
-#skills {
-  height: 100vh;
-  background-color: #f7f7f7;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-}
 
-.section-title-left {
-  text-align: left;
-  font-size: 2rem;
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-
-.skills-progress {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.skill-circle {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: conic-gradient(#4a90e2 0%, #ccc 100%);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.percentage {
-  position: absolute;
-  top: -30px; /* Adjusted for better vertical alignment */
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
-  text-align: center;
-}
-
-.circle-content {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #333;
-  text-align: center;
-}
-
-/* Animate circular progress */
-.skill-circle[data-percent="85"] {
-  background: conic-gradient(#4a90e2 85%, #ccc 0%);
-}
-
-.skill-circle[data-percent="70"] {
-  background: conic-gradient(#4a90e2 70%, #ccc 0%);
-}
-
-.skill-circle[data-percent="65"] {
-  background: conic-gradient(#4a90e2 65%, #ccc 0%);
-}
 
 /* Projects Section */
 #projects {
@@ -306,6 +244,8 @@ nav#navbar ul li a {
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+  scroll-margin-top: 80px;
+
 }
 
 .section-title-left {
@@ -387,6 +327,20 @@ nav#navbar ul li a {
 
 
 /* Relevant Coursework Section */
+
+
+
+/* Skills Section */
+#skills {
+  height: 100vh;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+
 .relevant-coursework {
   margin-top: 30px;
 }
