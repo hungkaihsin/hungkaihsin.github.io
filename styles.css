@@ -137,7 +137,6 @@ nav#navbar ul li a {
   flex: 2;
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
 }
 
 .personal-image {
@@ -188,7 +187,8 @@ nav#navbar ul li a {
   font-size: 1.2rem;
   line-height: 1.6;
   color: #333;
-}
+  margin-top: -25px;
+  }
 
 /* Education */
 #education {
@@ -210,7 +210,7 @@ nav#navbar ul li a {
 .education-container {
   display: flex;
   justify-content: flex-start;
-  gap: 100px;
+  gap: 50px;
   flex-wrap: wrap;
   margin-top: 10px;
 }
@@ -218,12 +218,13 @@ nav#navbar ul li a {
 
 
 .timeline-content {
+  margin-top: 20px;
   background: #fff;
   color: #333;
   border-radius: 10px;
   padding: 15px 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 350px;
   max-width: 90%;
   text-align: center;
 }
