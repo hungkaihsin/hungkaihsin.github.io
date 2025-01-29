@@ -108,6 +108,10 @@ nav#navbar ul li a {
 }
 
 /* About Section */
+
+
+/* customize section */
+
 #about {
   height: 100vh;
   display: flex;
@@ -117,11 +121,12 @@ nav#navbar ul li a {
   margin-top: -50px;
 }
 
-.section-title-left {
-  text-align: top;
-  font-size: 1rem;
-  margin-left: 200px;
-  margin-bottom: 14px;
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  margin-top: -80px;
 }
 
 .about-content {
@@ -192,12 +197,6 @@ nav#navbar ul li a {
   padding: 20px;
 }
 
-.timeline-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
 
 .timeline {
   position: relative;
@@ -231,11 +230,6 @@ nav#navbar ul li a {
   border-left: 10px solid #4a90e2;
 }
 
-.timeline-item {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
 
 .timeline-circle {
   width: 50px;
