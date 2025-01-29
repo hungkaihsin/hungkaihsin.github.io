@@ -109,9 +109,6 @@ nav#navbar ul li a {
 
 /* About Section */
 
-
-/* customize section */
-
 #about {
   height: 100vh;
   display: flex;
@@ -124,9 +121,8 @@ nav#navbar ul li a {
 .section-title {
   text-align: center;
   font-size: 30px;
-  margin-left: 10px;
-  margin-bottom: 0px;
-  margin-top: -80px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .about-content {
@@ -135,6 +131,7 @@ nav#navbar ul li a {
   justify-content: flex-start;
   gap: 30px;
   padding: 20px;
+  flex-wrap: wrap;
 }
 
 .personal-image {
@@ -187,7 +184,7 @@ nav#navbar ul li a {
   color: #333;
 }
 
-/* Education Section */
+/* Education */
 #education {
   height: 100vh;
   background-color: #f7f7f7;
@@ -197,52 +194,21 @@ nav#navbar ul li a {
   padding: 20px;
 }
 
-
-.timeline {
-  position: relative;
+.education-wrapper {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  width: 80%;
-  gap: 50px;
-}
-
-.horizontal-line {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  right: 10%;
-  height: 5px;
-  background: #4a90e2;
-  z-index: -1;
-}
-
-.horizontal-line::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid #4a90e2;
-}
-
-
-.timeline-circle {
-  width: 50px;
-  height: 50px;
-  background: #4a90e2;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  font-weight: bold;
-  z-index: 1;
+  margin-top: 20px;
 }
+
+.education-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
 
 .timeline-content {
   background: #fff;
@@ -251,7 +217,8 @@ nav#navbar ul li a {
   padding: 15px 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 300px;
-  text-align: left;
+  max-width: 90%;
+  text-align: center;
 }
 
 /* Skills Section */
