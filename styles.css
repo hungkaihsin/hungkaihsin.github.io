@@ -13,13 +13,15 @@ header#hero {
   height: 100vh;
   background-image: url('https://imgur.com/eHhQZ9J.png');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-attachment: fixed;
   color: white;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
 }
 
 .hero-content {
@@ -116,6 +118,7 @@ nav#navbar ul li a {
   justify-content: center;
   background-color: #f7f7f7;
   margin-top: -50px;
+  scroll-margin-top: -50px;
 }
 
 .section-title {
