@@ -213,11 +213,13 @@ nav#navbar ul li a {
 }
 
 .education-container {
-  display: flex;
-  justify-content: flex-start;
-  gap: 50px;
-  flex-wrap: wrap;
-  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 
@@ -227,11 +229,11 @@ nav#navbar ul li a {
   background: #fff;
   color: #333;
   border-radius: 10px;
-  padding: 15px 20px;
+  padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 350px;
-  max-width: 90%;
   text-align: center;
+  max-width: 100%;
 }
 
 
@@ -267,7 +269,9 @@ nav#navbar ul li a {
   display: flex;
   justify-content: center; /* Centers cards horizontally */
   gap: 30px; /* Adds spacing between cards */
-  flex-wrap: wrap; /* Ensures responsiveness */
+  flex-wrap: nowrap; /* Ensures responsiveness */
+  padding: 20px;
+  overflow-x: auto;
 }
 
 .project-card {
@@ -277,12 +281,11 @@ nav#navbar ul li a {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: left; /* Center text like education cards */
   width: 350px; /* Same width as education cards */
-  max-width: 90%;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 45%;
+  height: 100%;
 }
 
 .project-card h3 {
