@@ -424,3 +424,31 @@ footer {
   margin-bottom: 0px;
   margin-top: -80px;
 }
+
+
+/* Fade-in Section Initial State */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* When the section becomes visible via JavaScript */
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Example for a simple bounce animation using CSS Keyframes */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.bounce-animation {
+  animation: bounce 2s infinite;
+}

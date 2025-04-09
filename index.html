@@ -6,6 +6,8 @@
   <title>Kai-Hsin Hung Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <!-- Optionally include a library like Animate.css if desired -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -18,9 +20,9 @@
   </nav>
 
   <!-- Hero Section -->
-  <header id="hero">
+  <header id="hero" class="fade-in-section">
     <div class="hero-content">
-      <h1>Kai-Hsin Hung</h1>
+      <h1 class="bounce-animation">Kai-Hsin Hung</h1>
       <p class="hero-subtitle">Data Science | Material Science| Engineering</p>
       <div class="hero-button">
         <a href="#about" class="btn-primary smooth-scroll">View My Work</a>
@@ -28,11 +30,8 @@
     </div>
   </header>
 
-
-
   <!-- About Me Section -->
-  <section id="about">
-    </div>
+  <section id="about" class="fade-in-section">
     <div class="about-content">
       <div class="personal-image">
         <img src="https://imgur.com/wxK37D6.png" alt="Kai-Hsin Hung" class="profile-image">
@@ -56,84 +55,45 @@
           <p>
             Hello! My name is Kai-Hsin Hung, and I'm from Taiwan. I hold a Bachelor of Science in Material Science and Engineering and am currently pursuing a Master’s in Data Science.
           </p>
-    
-        <!--for education-->
-        <div class="education-wrapper">
-          <div class="education-container">
-            <div class="timeline-content">
-              <h4>Ming Chi University of Technology</h4>
-              <h4>Bachelor (2019 - 2023)</h4>
-              <p>Material Science Engineering</p>
-              <p>Location: New Taipei City, Taiwan</p>
-            </div>
-            <div class="timeline-content">
-              <h3>University of the Pacific</h3>
-              <h4>Master (2024 - Present)</h4>
-              <p>Data Science</p>
-              <p>Location: Stockton, California</p>
+          <!--for education-->
+          <div class="education-wrapper">
+            <div class="education-container">
+              <div class="timeline-content">
+                <h4>Ming Chi University of Technology</h4>
+                <h4>Bachelor (2019 - 2023)</h4>
+                <p>Material Science Engineering</p>
+                <p>Location: New Taipei City, Taiwan</p>
+              </div>
+              <div class="timeline-content">
+                <h3>University of the Pacific</h3>
+                <h4>Master (2024 - Present)</h4>
+                <p>Data Science</p>
+                <p>Location: Stockton, California</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </section>
 
-  
-<!-- Projects Section -->
-<section id="projects">
-  <div class="project-container">
-    <div class="project-card">
-      <h3>Machine Learning with SVD</h3>
-      <ul>
-        <li>Use SVD to classify the handwriting data based on requirement.</li>
-        <li>Compare the accuracy, correct classification rate between actual data and predicted data by using confusion matrix.</li>
-        <li>FAfter calculation, the model get 93.97% accuracy</li>
-      </ul>
-      <a href="https://github.com/hungkaihsin/Machine-learning-Classification" target="_blank" class="btn-link">View Project</a>
+  <!-- Projects Section -->
+  <section id="projects" class="fade-in-section">
+    <div class="project-container">
+      <div class="project-card">
+        <h3>Machine Learning with SVD</h3>
+        <ul>
+          <li>Use SVD to classify the handwriting data based on requirement.</li>
+          <li>Compare the accuracy, correct classification rate between actual data and predicted data by using confusion matrix.</li>
+          <li>After calculation, the model achieved 93.97% accuracy.</li>
+        </ul>
+        <a href="https://github.com/hungkaihsin/Machine-learning-Classification" target="_blank" class="btn-link">View Project</a>
+      </div>
+      <!-- Add other project cards similarly -->
     </div>
-    
-    <div class="project-card">
-      <h3>Facial Recognition with OpenCV</h3>
-      <ul>
-        <li>Developed a framework for facial recognition using OpenCV.</li>
-        <li>Supported image and real-time video recognition with deep learning.</li>
-        <li>Utilized pre-trained models for feature extraction and matching.</li>
-        <li>Optimized real-time performance for efficient face detection.</li>
-      </ul>
-      <a href="https://github.com/hungkaihsin/Facial_recogniton-with-Open-CV" target="_blank" class="btn-link">View Project</a>
-    </div>
+  </section>
 
-    <div class="project-card">
-      <h3>TDSP Data Science Project</h3>
-      <ul>
-        <li>Interpret the dataset from NYC OpenData on vehicle collisions and analyze several factors leading to crashes using the pandas, matplotlib, and seaborn libraries in Python</li>
-        <li>Utilize data visualization skills to create charts, compare relationships between different categories, and recommend solutions to reduce the number of crashes.</li>
-      </ul>
-      <a href="https://github.com/hungkaihsin/TDSD_Projcet_analysis" target="_blank" class="btn-link">View Project</a>
-    </div>
-    <div class="project-card">
-      <h3>Graphene Oxide Actuator</h3>
-      <ul>
-        <li>Explored the development of bilayer actuators with graphene oxide.</li>
-        <li>Integrated polypyrrole for enhanced mechanical performance.</li>
-        <li>Demonstrated responses to light, humidity, and electrical stimuli.</li>
-        <li>Investigated applications in smart materials and robotics.</li>
-      </ul>
-      <a href="https://csma777-my.sharepoint.com/:b:/g/personal/danielkai0802_csmatw_org/EYyuqek1SKBKtxtYDxE6HawBf7xHhQvV658gWgexOtu1iQ?e=JY8WkV" target="_blank" class="btn-link">View Project</a>
-    </div>
-    <div class="project-card">
-      <h3>Machine Learning with PCA </h3>
-      <ul>
-        <li>Used PCA in Python to compress several large-sized images.</li>
-        <li>Combined images to generate a new one with reduced noise.</li>
-      </ul>
-      <a href="https://github.com/hungkaihsin/Machine-learning-image-compression-with-PCA" target="_blank" class="btn-link">View Project</a>
-    </div>
-  </div>
-</section>
-
-
-  <section id="skills">
-
+  <section id="skills" class="fade-in-section">
     <div class="relevant-coursework">
       <h3 class="coursework-title">Relevant Coursework</h3>
       <div class="coursework-category">
@@ -142,7 +102,7 @@
           <li>Relational Databases</li>
           <li>NPL for Data Science</li>
           <li>Machine Learning</li>
-          <li>Data visualization</li>
+          <li>Data Visualization</li>
         </ul>
       </div>
       <div class="coursework-category">
@@ -156,16 +116,14 @@
     </div>
   </section>
 
-
-
-
-
   <!-- Footer -->
   <footer>
     <p>&copy; 2024 Kai-Hsin Hung</p>
   </footer>
 
+  <!-- Combined JavaScript Code: Smooth Scroll, Scroll-triggered Fade-In, and Button Scrolling -->
   <script>
+    // Smooth scroll for navigation links
     document.querySelectorAll('.smooth-scroll').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -173,22 +131,39 @@
         target.scrollIntoView({ behavior: 'smooth' });
       });
     });
+
+    // Scroll buttons for scroll container (if any)
+    const scrollContainer = document.querySelector('.scroll-container');
+    const leftBtn = document.querySelector('.left-btn');
+    const rightBtn = document.querySelector('.right-btn');
+
+    if (scrollContainer && leftBtn && rightBtn) {
+      leftBtn.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+      });
+
+      rightBtn.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+      });
+    }
+
+    // Fade-in on scroll functionality:
+    // Elements with the class "fade-in-section" will fade into view when they enter the viewport
+    function handleScrollFadeIn() {
+      const fadeInSections = document.querySelectorAll('.fade-in-section');
+      fadeInSections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        // When the element's top is within the bottom 80% of the viewport, add the "visible" class.
+        if (rect.top < window.innerHeight * 0.8) {
+          section.classList.add('visible');
+        }
+      });
+    }
+
+    // Run on scroll
+    window.addEventListener('scroll', handleScrollFadeIn);
+    // Run once when the page loads in case some elements are already in view.
+    handleScrollFadeIn();
   </script>
 </body>
 </html>
-
-<script>
-  // Selectors for scrollable container and buttons
-  const scrollContainer = document.querySelector('.scroll-container');
-  const leftBtn = document.querySelector('.left-btn');
-  const rightBtn = document.querySelector('.right-btn');
-
-  // Add event listeners for scrolling
-  leftBtn.addEventListener('click', () => {
-    scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
-  });
-
-  rightBtn.addEventListener('click', () => {
-    scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
-  });
-</script>
