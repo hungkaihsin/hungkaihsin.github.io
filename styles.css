@@ -14,7 +14,7 @@ header#hero {
   background-image: url('https://imgur.com/eHhQZ9J.png');
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   color: white;
   text-align: center;
   display: flex;
@@ -115,7 +115,7 @@ nav#navbar ul li a {
 #about {
   padding: 120px 20px 60px; /* 120px top to clear the navbar, adjust as needed */
   background-color: #f7f7f7;
-  scroll-margin-top: 80px; /* If you need anchor offset; optional */
+  scroll-margin-top: 20px; /* If you need anchor offset; optional */
 }
 
 
