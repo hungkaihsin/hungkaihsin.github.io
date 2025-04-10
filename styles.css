@@ -113,34 +113,49 @@ nav#navbar ul li a {
 /* About Section */
 
 #about {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 120px 20px 60px; /* 120px top to clear the navbar, adjust as needed */
   background-color: #f7f7f7;
-  margin-top: -50px;
-  scroll-margin-top: -5px;
+  scroll-margin-top: 80px; /* If you need anchor offset; optional */
 }
+
+
+#about h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 
 .section-title {
   text-align: center;
-  font-size: 30px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  font-size: 2.5rem; /* or 3rem, as you like */
+  margin: 0 auto 1rem; /* top-right-bottom-left, no negative margins */
+}
+.about-content {
+  display: flex;          /* Two-column layout on wide screens */
+  gap: 2rem;              /* Space between columns */
+  align-items: flex-start; 
+  flex-wrap: wrap;        /* Let columns wrap if the screen is narrower */
 }
 
-.about-content {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 30px;
-  padding: 20px;
-  flex-wrap: wrap;
+
+
+.contact-section {
+  /* If you want both columns to share space evenly: */
+  flex: 1;
+  /* Or set a specific width, for example: */
+  /* width: 30%; */
 }
+
+
 .about-right {
-  flex: 2;
+  flex: 2;  /* Make the right column wider if you prefer */
+}
+
+.contact-icons {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 1rem;
 }
 
 .personal-image {
@@ -163,12 +178,15 @@ nav#navbar ul li a {
 }
 
 .icon-image {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
 .resume-button {
-  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .resume-button .btn-primary {
@@ -196,7 +214,6 @@ nav#navbar ul li a {
 
 /* Education */
 #education {
-  height: 100vh;
   background-color: #f7f7f7;
   display: flex;
   flex-direction: column;
@@ -240,7 +257,7 @@ nav#navbar ul li a {
 
 /* Projects Section */
 #projects {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f7f7f7;
   display: flex;
   flex-direction: column;
@@ -337,7 +354,7 @@ nav#navbar ul li a {
 
 /* Skills Section */
 #skills {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f7f7f7;
   display: flex;
   flex-direction: column;
@@ -416,15 +433,6 @@ footer {
 
 
 
-/* customize section */
-.section-title {
-  text-align: center;
-  font-size: 30px;
-  margin-left: 10px;
-  margin-bottom: 0px;
-  margin-top: -80px;
-}
-
 
 /* Fade-in Section Initial State */
 .fade-in-section {
@@ -451,4 +459,20 @@ footer {
 
 .bounce-animation {
   animation: bounce 2s infinite;
+}
+
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+
+.intro-text {
+  text-align: center;       /* Center the paragraph text */
+  max-width: 800px;         /* Optionally limit width for readability */
+  margin: 0 auto 2rem;      /* Center horizontally & add bottom margin */
+  font-size: 1.2rem;        /* Adjust as you like */
+  line-height: 1.6;         /* Improve readability */
+  color: #333;              /* Match your color scheme */
 }
