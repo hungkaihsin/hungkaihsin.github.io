@@ -8,6 +8,25 @@
   <link rel="stylesheet" href="styles.css">
   <!-- Optionally include a library like Animate.css if desired -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+  <style>
+    /* Add the following block to ensure the scroll indicator is visible */
+
+    .scroll-indicator {
+      position: fixed;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      pointer-events: none;  /* Allows clicks to pass through */
+      z-index: 9999;
+    }
+
+    /* Optional: If you want to adjust the spacing or add a border, you can update further below */
+
+    /* End of scroll indicator block */
+  </style>
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -209,5 +228,12 @@
     // Run once when the page loads in case some elements are already in view.
     handleScrollFadeIn();
   </script>
+
+  <!-- Scroll Indicator on the left -->
+<div class="scroll-indicator">
+  <div class="scroll-line"></div>
+  <div class="scroll-text">Scroll<br>for<br>more</div>
+</div>
+
 </body>
 </html>
