@@ -369,41 +369,45 @@ nav#navbar ul li a {
 
 .relevant-coursework {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Each column will be at least 250px wide; # of columns depends on available space */
   gap: 20px;
-  margin-top: 30px;
+  max-width: 900px;   /* limit total width so it doesn’t stretch across entire screen */
+  margin: 0 auto;     /* center the grid container horizontally */
+  margin-top: 40px;   /* space above the cards */
+  justify-items: center; /* center each card in its grid cell */
 }
 
 .coursework-title {
   text-align: center;
-  font-size: 2.5rem; /* adjusted to match other section titles */
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin: 0 auto 1rem;
   color: #4a90e2;
 }
 
-.relevant-coursework {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
 
 .coursework-category {
   background: #f7f7f7;
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 450px;              /* fixed width for uniform cards */
+  height: 250;
+  box-sizing: border-box;     /* includes padding in that width */
   text-align: left;
-  min-height: 200px;  /* ensures each card maintains at least this height for consistency */ 
+  min-height: 180px;         /* ensures consistent vertical size */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 
 .coursework-category h4 {
   margin-top: 0;
   color: #4a90e2;
   font-size: 1.5rem; /* Adjust this size to make the text larger */
   font-weight: bold; /* Optional: Makes the text bold */
+  text-align: center;
 }
 
 
