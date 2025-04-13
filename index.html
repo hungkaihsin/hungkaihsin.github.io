@@ -26,6 +26,25 @@
     /* Optional: If you want to adjust the spacing or add a border, you can update further below */
 
     /* End of scroll indicator block */
+    
+    .timeline-content {
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .coursework-category {
+      width: 100%;
+      max-width: 450px;
+    }
+
+    @media (max-width: 768px) {
+      .education-container {
+        grid-template-columns: 1fr;
+      }
+      .relevant-coursework {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -229,11 +248,7 @@
     handleScrollFadeIn();
   </script>
 
-  <!-- Scroll Indicator on the left -->
-<div class="scroll-indicator">
-  <div class="scroll-line"></div>
-  <div class="scroll-text">Scroll<br>for<br>more</div>
-</div>
+
 
 </body>
 </html>
