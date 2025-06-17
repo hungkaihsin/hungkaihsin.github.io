@@ -1,0 +1,112 @@
+.about-container {
+  min-height: 100vh;
+  background-color: #c8c0c0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+}
+
+.about-card {
+  background-color: #e1e1e1;
+  padding: 24px 36px;
+  border-radius: 20px;
+  max-width: 700px;
+  width: 90%;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.nav-buttons button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #d3d3d3;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-buttons .active {
+  border: 2px solid #555;
+  background-color: white;
+}
+
+h2 {
+  font-weight: bold;
+  margin: 16px 0 8px;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 32px;
+  margin-top: 16px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 16px;
+  width: 4px;
+  background-color: #a88f8f;
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  height: 16px;
+  background-color: #b38b8b;
+  border-radius: 50%;
+}
+
+.timeline-content {
+  margin-left: 24px;
+  background-color: white;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.contact-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.github {
+  background-color: #a88f8f;
+}
+
+.linkedin {
+  background-color: #a9c8a6;
+}
+
+.gmail {
+  background-color: #b4a7d6;
+}
