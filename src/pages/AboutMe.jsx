@@ -1,23 +1,24 @@
 import React from 'react'
 import './AboutMe.css'
+import '../styles/shared.css'
+
 
 const AboutMe = () => {
   return (
-    <>
-      {/* Nav buttons outside the main content container */}
-      <div className="nav-buttons">
-        <button className="active">About Me</button>
-        <button>Resume</button>
-        <button>Side Project</button>
+    <div className="about-wrapper">
+      <div className="nav-buttons fadeUp delay-1">
+        <button className="nav-button active">About Me</button>
+        <button className='nav-button'>Resume</button>
+        <button className='nav-button'>Side Project</button>
       </div>
 
-      <div className="about-container">
+      <div className="about-container fadeUp delay-2">
         <div className="about-card">
           <section>
             <h2>Introduction</h2>
             <p>
-              Hello! My name is Kai-Hsin, Hung, and I'm from Taiwan. I hold a Bachelor of Science in
-              Material Science and Engineering and am currently pursuing a Master’s in Data Science.
+                Hi! I’m a data science grad student at the University of the Pacific with a passion for turning data into real-world solutions. 
+                I enjoy working on machine learning projects—especially time series forecasting with models like LSTM and ConvNets—and recently completed a remote software internship where I helped build backend APIs and worked with SQL databases.
             </p>
           </section>
 
@@ -60,7 +61,7 @@ const AboutMe = () => {
           </section>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

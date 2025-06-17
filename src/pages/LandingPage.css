@@ -1,3 +1,4 @@
+
 /* .landing-container {
   min-height: 100vh;
   min-width: 150vh;
@@ -66,19 +67,3 @@
   background-color: #d0d0d0;
 }
 
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInBackground {
-  from {
-    background-color: #bfb6b6;
-  }
-  to {
-    background-color: #c8c0c0;
-  }
-}

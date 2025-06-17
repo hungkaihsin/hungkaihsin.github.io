@@ -1,5 +1,5 @@
 .about-container {
-  min-height: 75vh;
+  min-height: 80vh;
   background-color: #c8c0c0;
   display: flex;
   justify-content: center;
@@ -18,6 +18,16 @@
   color: #333;
 }
 
+.about-card h2 {
+    text-align: left;
+}
+.about-card p {
+    text-align: left;
+}
+
+
+
+
 .nav-buttons {
   display: flex;
   justify-content: center;
@@ -26,20 +36,6 @@
   margin-bottom: 0;
 }
 
-.nav-buttons button {
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: none;
-  background-color: #d3d3d3;
-  font-size: 16px;
-  cursor: pointer;
-  color: #333;
-}
-
-.nav-buttons .active {
-  border: 2px solid #555;
-  background-color: white;
-}
 
 h2 {
   font-weight: bold;
@@ -114,4 +110,49 @@ p {
 
 .gmail {
   background-color: #b4a7d6;
+}
+
+
+.about-wrapper {
+  min-height: 100vh;
+  background-color: #c8c0c0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+  animation: fadeInBackground 1s ease forwards;
+  padding-top: 40px;
+}
+
+/* Reuse fadeUp animation logic */
+.fadeUp {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.delay-2 {
+  animation-delay: 0.6s;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBackground {
+  from {
+    background-color: #bfb6b6;
+  }
+  to {
+    background-color: #c8c0c0;
+  }
 }
