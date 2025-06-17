@@ -8,7 +8,14 @@ const AboutMe = () => {
     <div className="about-wrapper">
       <div className="nav-buttons fadeUp delay-1">
         <button className="nav-button active">About Me</button>
-        <button className='nav-button'>Resume</button>
+        <a
+        className="nav-button"
+        href="/Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer">
+        Resume
+        </a>
+        
         <button className='nav-button'>Side Project</button>
       </div>
 
@@ -52,9 +59,9 @@ const AboutMe = () => {
           <section>
             <h2>Contact info</h2>
             <div className="contact-buttons">
-              <button className="github">Github</button>
-              <button className="linkedin">Linkedin</button>
-              <button className="gmail">Gmail</button>
+                <a className="github" href="https://github.com/hungkaihsin" target="_blank" rel="noopener noreferrer">Github</a>
+                <a className="linkedin" href="https://www.linkedin.com/in/kai-hsin-hung/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                <a className="gmail" href="mailto:k_hung2@u.pacific.edu">Gmail</a>
             </div>
           </section>
         </div>

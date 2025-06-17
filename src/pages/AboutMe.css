@@ -103,16 +103,19 @@ p {
   justify-content: center;
   gap: 16px;
   margin-top: 16px;
+  
 }
 
-.contact-buttons button {
+.contact-buttons a {
   padding: 10px 20px;
-  border: none;
   border-radius: 20px;
   font-size: 16px;
   color: #fff;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
+
 
 .github {
   background-color: #a88f8f;
