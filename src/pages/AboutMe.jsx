@@ -23,7 +23,7 @@ const AboutMe = () => {
           </section>
 
           <section>
-            <h2>Experience</h2>
+            <h2>Education</h2>
             <div className="timeline">
               <div className="timeline-line" />
               <div className="timeline-item">
@@ -31,8 +31,7 @@ const AboutMe = () => {
                 <div className="timeline-content">
                   <p>
                     <strong>Ming Chi University of Technology</strong><br />
-                    Major in Material Science Engineering<br />
-                    From 2019 to 2023<br />
+                    Material Science Engineering (2019 - 2023)<br />
                     Location: New Taipei City, Taiwan
                   </p>
                 </div>
@@ -42,8 +41,7 @@ const AboutMe = () => {
                 <div className="timeline-content">
                   <p>
                     <strong>University of the Pacific</strong><br />
-                    Master (2024 – Present)<br />
-                    Data Science<br />
+                    Data Science (2024 - present)<br />
                     Location: Stockton, California
                   </p>
                 </div>

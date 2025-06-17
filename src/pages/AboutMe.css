@@ -49,40 +49,54 @@ p {
 
 .timeline {
   position: relative;
-  padding-left: 32px;
   margin-top: 16px;
+  padding-left: 40px;
 }
 
 .timeline-line {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 16px;
+  left: 20px;
   width: 4px;
   background-color: #a88f8f;
   border-radius: 2px;
 }
 
 .timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
   position: relative;
-  margin-bottom: 32px;
 }
 
 .timeline-dot {
-  position: absolute;
-  left: 8px;
   width: 16px;
   height: 16px;
   background-color: #b38b8b;
   border-radius: 50%;
+  margin-right: 16px;
+  margin-left: -26px; /* pulls it left to center on the vertical line (20px + 8px radius) */
+  margin-top: 0px;
+  flex-shrink: 0;
+  display: flex;
 }
 
+
 .timeline-content {
-  margin-left: 24px;
   background-color: white;
   padding: 16px;
   border-radius: 16px;
+  margin-left: 130px;
+  width: 50%;       /* or use a fixed value like 500px */
+  max-width: 600px;  /* good for limiting overly wide content */
+
 }
+
+.timeline-content p {
+    text-align: center;
+}
+
 
 .contact-buttons {
   display: flex;
