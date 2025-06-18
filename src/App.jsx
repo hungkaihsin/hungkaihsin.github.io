@@ -1,8 +1,10 @@
+
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import LandingPage from './pages/LendingPage.jsx'
 import AboutMe from './pages/AboutMe.jsx'
 import SideProject from './pages/SideProject.jsx'
 import './App.css'
+
 
 function App() {
   return (
@@ -20,4 +22,6 @@ function App() {
   )
 }
 
+
 export default App
+
