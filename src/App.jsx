@@ -1,23 +1,14 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import LandingPage from './pages/LendingPage.jsx'
-import AboutMe from './pages/AboutMe.jsx'
-import SideProject from './pages/SideProject.jsx'
-import './App.css'
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        {/* Redirect root to /predict */}
         <Route path="/" element={<Navigate to="/landing" replace />} />
-        <Route path="/landing" element={<LandingPage/>} />
-        <Route path="/about" element={<AboutMe/>} />
-        <Route path="/sideproject" element={<SideProject/>} />
-
-        {/* later you can add more pages here */}
+        <Route path="/landing" element={<LandingPage />} />
+        <Route path="/about" element={<AboutMe />} />
+        <Route path="/sideproject" element={<SideProject />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   )
 }
-
-export default App
