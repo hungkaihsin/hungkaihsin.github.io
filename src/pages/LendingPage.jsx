@@ -14,7 +14,7 @@ const LandingPage = () => {
       <div className="button-group">
         <button onClick={() => navigate('/about')}>About Me</button>
         <button onClick={() => window.open('/Resume.pdf')}>Resume</button>
-        <button onClick={() => navigate('/predict')}>Side Project</button>
+        <button onClick={() => navigate('/sideproject')}>Side Project</button>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import './AboutMe.css'
 import '../styles/shared.css'
-
+import { Link } from 'react-router-dom'
 
 const AboutMe = () => {
   return (
@@ -16,7 +16,7 @@ const AboutMe = () => {
         Resume
         </a>
         
-        <button className='nav-button'>Side Project</button>
+        <Link className="nav-button" to="/sideproject">Side Project</Link>
       </div>
 
       <div className="about-container fadeUp delay-2">
