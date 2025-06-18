@@ -1,7 +1,8 @@
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import LandingPage from '../pages/LandingPage.jsx'
-import AboutMe from '../pages/AboutMe.jsx'
-import SideProject from '../pages/SideProject.jsx'
+import LandingPage from './pages/LandingPage.jsx'
+import AboutMe from './pages/AboutMe.jsx'
+import SideProject from './pages/SideProject.jsx'
+
 
 function App() {
   return (
@@ -15,4 +16,5 @@ function App() {
     </Router>
   )
 }
+
 export default App
