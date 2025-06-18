@@ -1,0 +1,177 @@
+.about-container {
+  min-height: 100vh;
+  background-color: #c8c0c0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+  animation: fadeInBackground 1s ease forwards;
+  padding-top: 40px;
+}
+
+
+.about-card {
+  background-color: #e1e1e1;
+  padding: 24px 36px;
+  border-radius: 20px;
+  max-width: 700px;
+  width: 90%;
+  color: #333;
+}
+
+.about-card h2 {
+    text-align: left;
+}
+.about-card p {
+    text-align: left;
+}
+
+
+
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  color: #333;
+  margin-bottom: 0;
+}
+
+
+h2 {
+  font-weight: bold;
+  margin: 16px 0 8px;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 16px;
+  padding-left: 40px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 4px;
+  background-color: #a88f8f;
+  border-radius: 2px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background-color: #b38b8b;
+  border-radius: 50%;
+  margin-right: 16px;
+  margin-left: -26px; /* pulls it left to center on the vertical line (20px + 8px radius) */
+  margin-top: 0px;
+  flex-shrink: 0;
+  display: flex;
+}
+
+
+.timeline-content {
+  background-color: white;
+  padding: 16px;
+  border-radius: 16px;
+  margin-left: 130px;
+  width: 50%;       /* or use a fixed value like 500px */
+  max-width: 600px;  /* good for limiting overly wide content */
+
+}
+
+.timeline-content p {
+    text-align: center;
+}
+
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+  
+}
+
+.contact-buttons a {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+.github {
+  background-color: #a88f8f;
+}
+
+.linkedin {
+  background-color: #a9c8a6;
+}
+
+.gmail {
+  background-color: #b4a7d6;
+}
+
+
+.about-wrapper {
+  min-height: 100vh;
+  background-color: #c8c0c0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+  animation: fadeInBackground 1s ease forwards;
+  padding-top: 40px;
+}
+
+/* Reuse fadeUp animation logic */
+.fadeUp {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.delay-2 {
+  animation-delay: 0.6s;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBackground {
+  from {
+    background-color: #bfb6b6;
+  }
+  to {
+    background-color: #c8c0c0;
+  }
+}
