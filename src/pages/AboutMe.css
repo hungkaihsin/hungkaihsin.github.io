@@ -180,16 +180,18 @@ p {
 @media (max-width: 768px) {
   .timeline {
     padding-left: 0;
+    margin-left: 16px;
   }
 
   .timeline-line {
-    left: 10px;
+    left: 8px;
   }
 
   .timeline-item {
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 20px;
+    margin-left: 0;
+    padding-left: 16px;
   }
 
   .timeline-dot {
@@ -198,22 +200,14 @@ p {
   }
 
   .timeline-content {
-    width: 90%;
     margin-left: 0;
-  }
-
-  .about-card {
-    width: 90%;
-    padding: 20px;
-  }
-
-  .contact-buttons {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .contact-buttons a {
     width: 100%;
-    text-align: center;
+    max-width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .timeline-content p {
+    text-align: left;
   }
 }
