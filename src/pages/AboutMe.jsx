@@ -24,8 +24,8 @@ const AboutMe = () => {
           <section>
             <h2>Introduction</h2>
             <p>
-                Hi! I’m a data science grad student at the University of the Pacific with a passion for turning data into real-world solutions. 
-                I enjoy working on machine learning projects—especially time series forecasting with models like LSTM and ConvNets—and recently completed a remote software internship where I helped build backend APIs and worked with SQL databases.
+                I'm a data science graduate student passionate about turning data into real-world impact. I have experience in machine learning (LSTM, ConvNets), backend API development, and SQL databases. 
+                Bilingual in Mandarin and English, I'm curious, collaborative, and driven to build smart, effective solutions.
             </p>
           </section>
 
