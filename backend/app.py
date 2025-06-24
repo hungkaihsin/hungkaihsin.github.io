@@ -3,6 +3,9 @@ from flask_cors import CORS
 from models import db
 from auth import auth
 from config import Config
+from dotenv import load_dotenv
+
+load_dotenv()  
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -10,6 +13,9 @@ CORS(app)
 
 db.init_app(app)
 app.register_blueprint(auth, url_prefix='/auth')
+
+
+
 
 @app.route("/")
 def home():
