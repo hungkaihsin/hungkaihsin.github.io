@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
-from models import db, User
+from src.api.models.user import db, User
 import jwt, datetime
-from config import Config
+from src.tools.config import Config
 
 auth = Blueprint('auth', __name__)
 

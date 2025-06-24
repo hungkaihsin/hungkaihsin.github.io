@@ -1,12 +1,13 @@
 from flask import Flask
 from flask_cors import CORS
-from models import db
-from auth import auth
-from config import Config
+from src.api.models.user import db
+from src.api.controller.auth import auth
+from src.tools.config import Config
 from dotenv import load_dotenv
+import os
 load_dotenv()  
 
-
+port = os.getenv('port')
 
 
 app = Flask(__name__)
@@ -16,12 +17,6 @@ CORS(app)
 db.init_app(app)
 app.register_blueprint(auth, url_prefix='/auth')
 
-
-
-
-@app.route("/")
-def home():
-    return {"message": "Backend working"}
 
 if __name__ == "__main__":
     with app.app_context():
