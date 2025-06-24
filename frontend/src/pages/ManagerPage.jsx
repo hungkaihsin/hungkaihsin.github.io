@@ -7,7 +7,7 @@ const ManagerPage = () => {
   const [token, setToken] = useState(localStorage.getItem('token'));
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const BACKEND_URL = 'https://your-backend-name.onrender.com'; // Replace with your actual Render URL
+  const BACKEND_URL = 'https://hungkaihsin-github-io.onrender.com'; // Replace with your actual Render URL
 
   const handleLogin = async () => {
     try {

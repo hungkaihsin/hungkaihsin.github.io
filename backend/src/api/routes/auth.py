@@ -1,7 +1,6 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, current_app
 from src.api.models.user import db, User
 import jwt, datetime
-from src.tools.config import Config
 
 auth = Blueprint('auth', __name__)
 
@@ -13,6 +12,6 @@ def login():
         token = jwt.encode({
             'user_id': user.id,
             'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
-        }, Config.SECRET_KEY, algorithm='HS256')
+        }, current_app.config["SECRET_KEY"], algorithm='HS256')  # ✅ Use current_app
         return jsonify({'token': token})
     return jsonify({'error': 'Invalid credentials'}), 401
