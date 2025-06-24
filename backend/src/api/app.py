@@ -7,10 +7,10 @@ from dotenv import load_dotenv
 import os
 load_dotenv()  
 
-port = os.getenv('port')
-
 
 app = Flask(__name__)
+
+# For database setting 
 app.config.from_object(Config)
 CORS(app)
 
