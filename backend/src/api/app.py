@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 from src.api.models.user import db
-from src.api.controller.auth import auth
+from src.api.routes.auth import auth
 from src.tools.config import Config
 from dotenv import load_dotenv
 import os
