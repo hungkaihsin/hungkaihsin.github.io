@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './ManagerPage.css'; // You'll create this
+import '../styles/shared.css';
+
+const BACKEND_URL = 'https://hungkaihsin-github-io.onrender.com'; // Replace if needed
 
 const ManagerPage = () => {
   const [email, setEmail] = useState('');
@@ -7,13 +11,11 @@ const ManagerPage = () => {
   const [token, setToken] = useState(localStorage.getItem('token'));
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const BACKEND_URL = 'https://hungkaihsin-github-io.onrender.com'; // Replace with your actual Render URL
-
   const handleLogin = async () => {
     try {
       const response = await axios.post(`${BACKEND_URL}/auth/login`, {
         email,
-        password
+        password,
       });
 
       const receivedToken = response.data.token;
@@ -37,38 +39,46 @@ const ManagerPage = () => {
     }
   }, [token]);
 
-  if (!isAuthenticated) {
-    return (
-      <div>
-        <h2>Manager Login</h2>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <br />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <br />
-        <button onClick={handleLogin}>Login</button>
-      </div>
-    );
-  }
-
   return (
-    <div>
-      <h1>Welcome, Manager</h1>
-      <button onClick={handleLogout}>Logout</button>
-      <ul>
-        <li><a href="/Resume.pdf" target="_blank">My Resume</a></li>
-        <li><a href="https://example.com/secret1.pdf" target="_blank">Resource 1</a></li>
-        {/* Add more protected files or links here */}
-      </ul>
+    <div className="manager-wrapper">
+      <div className="nav-buttons fadeUp delay-1">
+        <button className="nav-button active">Manager</button>
+        <a className="nav-button" href="/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a className="nav-button" href="/">Back to Portfolio</a>
+      </div>
+
+      <div className="manager-container fadeUp delay-2">
+        <div className="manager-card">
+          {!isAuthenticated ? (
+            <div className="login-form">
+              <h2>Manager Login</h2>
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <button onClick={handleLogin}>Login</button>
+            </div>
+          ) : (
+            <div className="resource-section">
+              <h1>Welcome, Manager</h1>
+              <button className="logout-button" onClick={handleLogout}>Logout</button>
+              <ul>
+                <li><a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a></li>
+                <li><a href="https://example.com/secret1.pdf" target="_blank" rel="noopener noreferrer">Resource 1</a></li>
+                {/* Add more secure links here */}
+              </ul>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
