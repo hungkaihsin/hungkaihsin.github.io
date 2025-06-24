@@ -12,6 +12,7 @@ app = Flask(__name__)
 
 # For database setting 
 app.config.from_object(Config)
+app.config['SECRET_KEY'] = os.getenv("SECRET_KEY", "dev")
 CORS(app)
 
 db.init_app(app)
