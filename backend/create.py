@@ -1,7 +1,5 @@
-# backend/create.py
-
 from dotenv import load_dotenv
-load_dotenv()  # 🛑 this must come FIRST
+load_dotenv()  
 
 from app import app, db
 from models import User
