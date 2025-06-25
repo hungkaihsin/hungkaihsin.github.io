@@ -33,7 +33,7 @@ def add_link():
 @token_required
 def get_links():
     links = Link.query.all()
-    return jsonify([{'title': l.title, 'url': l.url} for l in links])
+    return jsonify([{'id': l.id, 'title': l.title, 'url': l.url} for l in links])
 
 @links_bp.route('/links/<int:link_id>', methods=['DELETE'])
 @token_required
