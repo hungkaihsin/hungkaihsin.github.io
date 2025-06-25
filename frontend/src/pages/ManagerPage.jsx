@@ -13,6 +13,10 @@ const ManagerPage = () => {
   const [token, setToken] = useState(localStorage.getItem('token'));
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+  const [links, setLinks] = useState([]);
+  const [newTitle, setNewTitle] = useState('');
+  const [newUrl, setNewUrl] = useState('');
+
   const handleLogin = async () => {
     try {
       const response = await axios.post(`${BACKEND_URL}/auth/login`, {
@@ -38,11 +42,59 @@ const ManagerPage = () => {
     setIsAuthenticated(false);
   };
 
+  const fetchLinks = async () => {
+    try {
+      const res = await axios.get(`${BACKEND_URL}/api/links`, {
+        headers: { Authorization: token },
+      });
+      setLinks(res.data);
+    } catch (err) {
+      toast.error('Failed to fetch links.');
+    }
+  };
+
+  const handleAddLink = async () => {
+    if (!newTitle || !newUrl) {
+      toast.warn('Please fill in both fields');
+      return;
+    }
+    try {
+      await axios.post(`${BACKEND_URL}/api/links`, {
+        title: newTitle,
+        url: newUrl,
+      }, {
+        headers: { Authorization: token },
+      });
+      setNewTitle('');
+      setNewUrl('');
+      fetchLinks();
+    } catch (err) {
+      toast.error('Failed to add link.');
+    }
+  };
+
+  const handleDeleteLink = async (id) => {
+    try {
+      await axios.delete(`${BACKEND_URL}/api/links/${id}`, {
+        headers: { Authorization: token },
+      });
+      fetchLinks();
+    } catch (err) {
+      toast.error('Failed to delete link.');
+    }
+  };
+
   useEffect(() => {
     if (token) {
       setIsAuthenticated(true);
     }
   }, [token]);
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      fetchLinks();
+    }
+  }, [isAuthenticated]);
 
   return (
     <div className="manager-wrapper">
@@ -74,11 +126,30 @@ const ManagerPage = () => {
             <div className="resource-section">
               <h1>Links</h1>
               <ul>
-                <li><a href="https://csma777-my.sharepoint.com/:f:/g/personal/danielkai0802_csmatw_org/EpJVaSxM8CVMgPzONVtcpOIBLeJ32qXyZkkHEd7DEfOb0Q?e=tmP46h" target="_blank" rel="noopener noreferrer">Software</a></li>
-                <li><a href="/2025_Spring.pdf" target="_blank" rel="noopener noreferrer">Transcript</a></li>
-                
-                
+                {links.map((link, index) => (
+                  <li key={index} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <a href={link.url} target="_blank" rel="noopener noreferrer">{link.title}</a>
+                    <button onClick={() => handleDeleteLink(link.id)} style={{ marginLeft: '10px' }}>Delete</button>
+                  </li>
+                ))}
               </ul>
+
+              <div className="link-form">
+                <input
+                  type="text"
+                  placeholder="Link Title"
+                  value={newTitle}
+                  onChange={(e) => setNewTitle(e.target.value)}
+                />
+                <input
+                  type="text"
+                  placeholder="Link URL"
+                  value={newUrl}
+                  onChange={(e) => setNewUrl(e.target.value)}
+                />
+                <button onClick={handleAddLink}>Add Link</button>
+              </div>
+
               <button className="logout-button" onClick={handleLogout}>Logout</button>
             </div>
           )}
