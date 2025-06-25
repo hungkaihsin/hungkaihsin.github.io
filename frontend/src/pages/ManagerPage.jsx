@@ -74,7 +74,7 @@ const ManagerPage = () => {
             <div className="resource-section">
               <h1>Links</h1>
               <ul>
-                <li><a href="https://csma777-my.sharepoint.com/:f:/g/personal/danielkai0802_csmatw_org/EpJVaSxM8CVMgPzONVtcpOIBLeJ32qXyZkkHEd7DEfOb0Q?e=aO2iGK" target="_blank" rel="noopener noreferrer">Software</a></li>
+                <li><a href="https://csma777-my.sharepoint.com/:f:/g/personal/danielkai0802_csmatw_org/EpJVaSxM8CVMgPzONVtcpOIBLeJ32qXyZkkHEd7DEfOb0Q?e=tmP46h" target="_blank" rel="noopener noreferrer">Software</a></li>
                 <li><a href="/2025_Spring.pdf" target="_blank" rel="noopener noreferrer">Transcript</a></li>
                 
                 
