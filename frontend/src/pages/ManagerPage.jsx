@@ -73,6 +73,17 @@ const ManagerPage = () => {
     }
   };
 
+  const handleDeleteLink = async (id) => {
+    try {
+      await axios.delete(`${BACKEND_URL}/api/links/${id}`, {
+        headers: { Authorization: token },
+      });
+      fetchLinks();
+    } catch (err) {
+      toast.error('Failed to delete link.');
+    }
+  };
+
   useEffect(() => {
     if (token) {
       setIsAuthenticated(true);
@@ -116,8 +127,9 @@ const ManagerPage = () => {
               <h1>Links</h1>
               <ul>
                 {links.map((link, index) => (
-                  <li key={index}>
+                  <li key={index} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <a href={link.url} target="_blank" rel="noopener noreferrer">{link.title}</a>
+                    <button onClick={() => handleDeleteLink(link.id)} style={{ marginLeft: '10px' }}>Delete</button>
                   </li>
                 ))}
               </ul>
