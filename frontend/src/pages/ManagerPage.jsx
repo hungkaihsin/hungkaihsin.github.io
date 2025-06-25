@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './ManagerPage.css'; // You'll create this
+import './ManagerPage.css'; 
 import '../styles/shared.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const BACKEND_URL = 'https://hungkaihsin-github-io.onrender.com'; // Replace if needed
 
@@ -23,7 +25,10 @@ const ManagerPage = () => {
       setToken(receivedToken);
       setIsAuthenticated(true);
     } catch (err) {
-      alert('Login failed. Check your email and password.');
+      toast.error('Login failed. Check your email and password.', {
+        position: 'top-center',
+        autoClose: 3000,
+      });
     }
   };
 
@@ -43,7 +48,6 @@ const ManagerPage = () => {
     <div className="manager-wrapper">
       <div className="nav-buttons fadeUp delay-1">
         <button className="nav-button active">Manager</button>
-        <a className="nav-button" href="/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
         <a className="nav-button" href="/">Back to Portfolio</a>
       </div>
 
@@ -68,17 +72,19 @@ const ManagerPage = () => {
             </div>
           ) : (
             <div className="resource-section">
-              <h1>Welcome, Manager</h1>
-              <button className="logout-button" onClick={handleLogout}>Logout</button>
+              <h1>Links</h1>
               <ul>
-                <li><a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a></li>
-                <li><a href="https://example.com/secret1.pdf" target="_blank" rel="noopener noreferrer">Resource 1</a></li>
-                {/* Add more secure links here */}
+                <li><a href="https://csma777-my.sharepoint.com/:f:/g/personal/danielkai0802_csmatw_org/EpJVaSxM8CVMgPzONVtcpOIBLeJ32qXyZkkHEd7DEfOb0Q?e=aO2iGK" target="_blank" rel="noopener noreferrer">Software</a></li>
+                <li><a href="/2025_Spring.pdf" target="_blank" rel="noopener noreferrer">Transcript</a></li>
+                
+                
               </ul>
+              <button className="logout-button" onClick={handleLogout}>Logout</button>
             </div>
           )}
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
