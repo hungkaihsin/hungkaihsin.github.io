@@ -34,3 +34,11 @@ def add_link():
 def get_links():
     links = Link.query.all()
     return jsonify([{'title': l.title, 'url': l.url} for l in links])
+
+@links_bp.route('/links/<int:link_id>', methods=['DELETE'])
+@token_required
+def delete_link(link_id):
+    link = Link.query.get_or_404(link_id)
+    db.session.delete(link)
+    db.session.commit()
+    return jsonify({'message': 'Link deleted successfully'})
