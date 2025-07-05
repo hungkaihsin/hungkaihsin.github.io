@@ -17,6 +17,10 @@ const ManagerPage = () => {
   const [newTitle, setNewTitle] = useState('');
   const [newUrl, setNewUrl] = useState('');
 
+  const [editingLink, setEditingLink] = useState(null);
+  const [editedTitle, setEditedTitle] = useState('');
+  const [editedUrl, setEditedUrl] = useState('');
+
   const handleLogin = async () => {
     try {
       const response = await axios.post(`${BACKEND_URL}/auth/login`, {
@@ -84,6 +88,33 @@ const ManagerPage = () => {
     }
   };
 
+  const handleEditClick = (link) => {
+    setEditingLink(link.id);
+    setEditedTitle(link.title);
+    setEditedUrl(link.url);
+  };
+
+  const handleCancelEdit = () => {
+    setEditingLink(null);
+    setEditedTitle('');
+    setEditedUrl('');
+  };
+
+  const handleUpdateLink = async (id) => {
+    try {
+      await axios.put(`${BACKEND_URL}/api/links/${id}`, {
+        title: editedTitle,
+        url: editedUrl,
+      }, {
+        headers: { Authorization: token },
+      });
+      setEditingLink(null);
+      fetchLinks();
+    } catch (err) {
+      toast.error('Failed to update link.');
+    }
+  };
+
   useEffect(() => {
     if (token) {
       setIsAuthenticated(true);
@@ -93,6 +124,28 @@ const ManagerPage = () => {
   useEffect(() => {
     if (isAuthenticated) {
       fetchLinks();
+
+      const inactivityTimeout = 30 * 60 * 1000; // 30 minutes
+      let inactivityTimer;
+
+      const resetTimer = () => {
+        clearTimeout(inactivityTimer);
+        inactivityTimer = setTimeout(() => {
+          handleLogout();
+          toast.info('You have been logged out due to inactivity.');
+        }, inactivityTimeout);
+      };
+
+      window.addEventListener('mousemove', resetTimer);
+      window.addEventListener('keydown', resetTimer);
+
+      resetTimer(); // Initial timer setup
+
+      return () => {
+        clearTimeout(inactivityTimer);
+        window.removeEventListener('mousemove', resetTimer);
+        window.removeEventListener('keydown', resetTimer);
+      };
     }
   }, [isAuthenticated]);
 
@@ -128,8 +181,30 @@ const ManagerPage = () => {
               <ul>
                 {links.map((link, index) => (
                   <li key={index} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <a href={link.url} target="_blank" rel="noopener noreferrer">{link.title}</a>
-                    <button onClick={() => handleDeleteLink(link.id)} style={{ marginLeft: '10px' }}>Delete</button>
+                    {editingLink === link.id ? (
+                      <div className="edit-form">
+                        <input
+                          type="text"
+                          value={editedTitle}
+                          onChange={(e) => setEditedTitle(e.target.value)}
+                        />
+                        <input
+                          type="text"
+                          value={editedUrl}
+                          onChange={(e) => setEditedUrl(e.target.value)}
+                        />
+                        <button onClick={() => handleUpdateLink(link.id)}>Save</button>
+                        <button onClick={handleCancelEdit}>Cancel</button>
+                      </div>
+                    ) : (
+                      <>
+                        <a href={link.url} target="_blank" rel="noopener noreferrer">{link.title}</a>
+                        <div>
+                          <button onClick={() => handleEditClick(link)} style={{ marginLeft: '10px' }}>Edit</button>
+                          <button onClick={() => handleDeleteLink(link.id)} style={{ marginLeft: '10px' }}>Delete</button>
+                        </div>
+                      </>
+                    )}
                   </li>
                 ))}
               </ul>

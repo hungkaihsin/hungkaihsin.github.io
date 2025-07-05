@@ -42,3 +42,13 @@ def delete_link(link_id):
     db.session.delete(link)
     db.session.commit()
     return jsonify({'message': 'Link deleted successfully'})
+
+@links_bp.route('/links/<int:link_id>', methods=['PUT'])
+@token_required
+def update_link(link_id):
+    link = Link.query.get_or_404(link_id)
+    data = request.get_json()
+    link.title = data['title']
+    link.url = data['url']
+    db.session.commit()
+    return jsonify({'message': 'Link updated successfully'})
