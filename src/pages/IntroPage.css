@@ -49,34 +49,25 @@
 }
 
 .photo-card {
-  width: 200px;
-  height: 150px;
-  background-color: #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
+  width: 220px;
+  height: 220px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
 }
 
 .photo1 {
   transform: rotate(-5deg);
-  background-color: #d3d3d3;
 }
 
 .photo2 {
   transform: rotate(-10deg);
-  background-color: #f5baba;
   z-index: 1;
 }
 
 .photo3 {
   transform: rotate(10deg);
-  background-color: #e1e1e1;
 }
 
 .intro-description {

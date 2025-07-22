@@ -15,9 +15,9 @@ const IntroPage = () => {
       <h1 className="intro-title fadeUp delay-2">Hi, I’m Daniel Hung</h1>
 
       <div className="photo-deck fadeUp delay-3">
-        <div className="photo-card photo1">Photo 1</div>
-        <div className="photo-card photo2">Photo 2</div>
-        <div className="photo-card photo3">Photo 3</div>
+          <img src="/images/photo1.jpeg" alt="Photo 1" className="photo-card photo1" />
+          <img src="/images/photo2.jpeg" alt="Photo 2" className="photo-card photo2" />
+          <img src="/images/photo3.jpeg" alt="Photo 3" className="photo-card photo3" />
       </div>
 
       <p className="intro-description fadeUp delay-4">
