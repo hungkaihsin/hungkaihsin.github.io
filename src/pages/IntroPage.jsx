@@ -24,6 +24,30 @@ const IntroPage = () => {
         I'm a data science graduate student passionate about turning data into real-world impact. I have experience in machine learning (LSTM, ConvNets), backend API development, and SQL databases. Bilingual in Mandarin and English, I'm curious, collaborative, and driven to build smart, effective solutions
       </p>
 
+      <div className="timeline fadeUp delay-4">
+        <div className="timeline-line" />
+        <div className="timeline-item">
+          <div className="timeline-dot" />
+          <div className="timeline-content">
+            <p>
+              <strong>Ming Chi University of Technology</strong><br />
+              Material Science Engineering (2019 - 2023)<br />
+              Location: New Taipei City, Taiwan
+            </p>
+          </div>
+        </div>
+        <div className="timeline-item">
+          <div className="timeline-dot" />
+          <div className="timeline-content">
+            <p>
+              <strong>University of the Pacific</strong><br />
+              Data Science (2024 - present)<br />
+              Location: Stockton, California
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="contact-icons fadeUp delay-5">
         <a className="icon-button github" href="https://github.com/hungkaihsin" target="_blank" rel="noopener noreferrer">Github icon</a>
         <a className="icon-button linkedin" href="https://www.linkedin.com/in/kai-hsin-hung/" target="_blank" rel="noopener noreferrer">Linkedin icon</a>
