@@ -136,10 +136,22 @@
   position: relative;
 }
 
-.timeline-dot {
+.timeline-dot1 {
   width: 16px;
   height: 16px;
-  background-color: #b38b8b;
+  background-color: #b0a755;
+  border-radius: 50%;
+  margin-right: 16px;
+  margin-left: -26px;
+  margin-top: 0px;
+  flex-shrink: 0;
+  display: flex;
+}
+
+.timeline-dot2 {
+  width: 16px;
+  height: 16px;
+  background-color: #c9852d;
   border-radius: 50%;
   margin-right: 16px;
   margin-left: -26px;
@@ -160,6 +172,35 @@
 .timeline-content p {
   text-align: center;
 }
+
+.intro-footer {
+  margin-top: auto;
+  padding-top: 64px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin-top: 16px;
+}
+
+
+
+
 
 @media (max-width: 768px) {
   .timeline {
@@ -198,7 +239,24 @@
   }
 }
 
+.icon-button {
+  background-color: #ffffff;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  width: 48px;
+  height: 48px;
 
+}
+
+.icon-button:hover {
+  background-color: #bfbfbf;
+}
 
 /* Animation classes */
 .fadeUp {

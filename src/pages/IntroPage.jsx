@@ -2,6 +2,8 @@ import React from 'react';
 import './IntroPage.css';
 import { useNavigate } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+
 
 const IntroPage = () => {
   const navigate = useNavigate();
@@ -36,13 +38,13 @@ const IntroPage = () => {
       </div>
 
       <p className="intro-description fadeUp delay-4">
-        I'm a data science graduate student passionate about turning data into real-world impact. I have experience in machine learning (LSTM, ConvNets), backend API development, and SQL databases. Bilingual in Mandarin and English, I'm curious, collaborative, and driven to build smart, effective solutions
+        I'm a data science graduate student passionate about turning data into real-world impact. I have experience in machine learning (LSTM, ConvNets), backend API development, and SQL databases. Bilingual in Mandarin and English, I'm curious, collaborative, and driven to build smart, effective solutions.
       </p>
 
       <div className="timeline fadeUp delay-4">
         <div className="timeline-line" />
         <div className="timeline-item">
-          <div className="timeline-dot" />
+          <div className="timeline-dot1" />
           <div className="timeline-content">
             <p>
               <strong>Ming Chi University of Technology</strong><br />
@@ -52,7 +54,7 @@ const IntroPage = () => {
           </div>
         </div>
         <div className="timeline-item">
-          <div className="timeline-dot" />
+          <div className="timeline-dot2" />
           <div className="timeline-content">
             <p>
               <strong>University of the Pacific</strong><br />
@@ -63,11 +65,34 @@ const IntroPage = () => {
         </div>
       </div>
 
-      <div className="contact-icons fadeUp delay-5">
-        <a className="icon-button github" href="https://github.com/hungkaihsin" target="_blank" rel="noopener noreferrer">Github icon</a>
-        <a className="icon-button linkedin" href="https://www.linkedin.com/in/kai-hsin-hung/" target="_blank" rel="noopener noreferrer">Linkedin icon</a>
-        <a className="icon-button gmail" href="mailto:k_hung2@u.pacific.edu">Gmail icon</a>
-      </div>
+      <footer className="intro-footer fadeUp delay-5">
+        <div className="contact-icons">
+          <a
+            className="icon-button"
+            href="https://github.com/hungkaihsin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub size={30} />
+          </a>
+          <a
+            className="icon-button"
+            href="https://www.linkedin.com/in/kai-hsin-hung/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin size={30} />
+          </a>
+          <a
+            className="icon-button"
+            href="mailto:k_hung2@u.pacific.edu"
+          >
+            <FaEnvelope size={30} />
+          </a>
+        </div>
+
+        <p className="copyright">© 2025 Daniel Hung. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
