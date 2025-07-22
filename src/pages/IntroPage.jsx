@@ -1,6 +1,7 @@
 import React from 'react';
 import './IntroPage.css';
 import { useNavigate } from 'react-router-dom';
+import { Typewriter } from 'react-simple-typewriter';
 
 const IntroPage = () => {
   const navigate = useNavigate();
@@ -13,6 +14,20 @@ const IntroPage = () => {
       </div>
 
       <h1 className="intro-title fadeUp delay-2">Hi, I’m Daniel Hung</h1>
+      
+      <div className="typing-text fadeUp delay-2">
+        <h2>
+          <Typewriter
+            words={['Data Scientist', 'Software Engineer']}
+            loop={0}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1500}
+          />
+        </h2>
+      </div>
 
       <div className="photo-deck fadeUp delay-3">
           <img src="/images/photo1.jpeg" alt="Photo 1" className="photo-card photo1" />

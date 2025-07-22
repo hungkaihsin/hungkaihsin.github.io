@@ -15,7 +15,15 @@
 .intro-wrapper p {
     text-align: justify;
 
+}
 
+.typing-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 24px;
+  text-align: center;
+  margin-top: -40px;
 }
 
 
