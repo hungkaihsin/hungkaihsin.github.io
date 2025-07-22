@@ -13,6 +13,14 @@ const IntroPage = () => {
       <div className="nav-buttons fadeUp delay-1">
         <button className="nav-button" onClick={() => navigate('/')}>Home</button>
         <button className="nav-button" onClick={() => navigate('/sideproject')}>Side Projects</button>
+        <a
+          className="nav-button"
+          href="/Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume
+        </a>
       </div>
 
       <h1 className="intro-title fadeUp delay-2">Hi, I’m Daniel Hung</h1>
