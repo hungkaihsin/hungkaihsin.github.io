@@ -1,7 +1,9 @@
-import React, { useEffect, useRef } from 'react'
-import './SideProject.css'
+import React, { useEffect, useRef } from 'react';
+import './IntroPage.css';
 import '../styles/shared.css'
-import { Link } from 'react-router-dom'
+import './SideProject.css';
+import { Link } from 'react-router-dom';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const SideProject = () => {
   const projects = [
@@ -51,7 +53,7 @@ const SideProject = () => {
       ],
       link: 'https://github.com/hungkaihsin/Machine-learning-image-compression-with-PCA'
     },
-        {
+    {
       title: 'Graphene Oxide Actuator',
       date: 'May. 2023',
       bullets: [
@@ -62,54 +64,57 @@ const SideProject = () => {
       ],
       link: '/GraphineDioxide.pdf'
     },
-  ]
+  ];
 
-  const cardRefs = useRef([])
+  const cardRefs = useRef([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('show')
-            observer.unobserve(entry.target)
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
           }
-        })
+        });
       },
       { threshold: 0.1 }
-    )
+    );
 
     cardRefs.current.forEach(ref => {
-      if (ref) observer.observe(ref)
-    })
+      if (ref) observer.observe(ref);
+    });
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div className="sideproject-wrapper">
+    <div className="intro-wrapper">
       <div className="nav-buttons fadeUp delay-1">
-        <Link className="nav-button" to="/about">About Me</Link>
+        <Link className="nav-button" to="/">Home</Link>
+        <button className="nav-button active">Side Projects</button>
         <a className="nav-button" href="/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-        <button className="nav-button active">Side Project</button>
+        
       </div>
 
-      <div className="sideproject-container fadeUp delay-2">
-          {projects.map((project, index) => (
-            <div
-              className="project-card"
-              key={index}
-              ref={el => (cardRefs.current[index] = el)}
-              style={{ '--delay': `${index * 0.2}s` }}
-            >
-              <h3>{project.title}</h3>
-              {project.date && <p className="project-date">{project.date}</p>}
-              <ul>
-                {project.bullets.map((bullet, i) => (
-                  <li key={i}>{bullet}</li>
-                ))}
-              </ul>
-              <div className="project-link-container">
+      <h1 className="intro-title fadeUp delay-2">My Side Projects</h1>
+
+      <div className="sideproject-container fadeUp delay-3">
+        {projects.map((project, index) => (
+          <div
+            className="project-card"
+            key={index}
+            ref={el => (cardRefs.current[index] = el)}
+            style={{ '--delay': `${index * 0.2}s` }}
+          >
+            <h3>{project.title}</h3>
+            {project.date && <p className="project-date">{project.date}</p>}
+            <ul>
+              {project.bullets.map((bullet, i) => (
+                <li key={i}>{bullet}</li>
+              ))}
+            </ul>
+            <div className="project-link-container">
               <a
                 className="project-link"
                 href={project.link}
@@ -118,13 +123,37 @@ const SideProject = () => {
               >
                 View Project
               </a>
-              </div>
             </div>
-          ))}
-        
+          </div>
+        ))}
       </div>
-    </div>
-  )
-}
 
-export default SideProject
+      <footer className="intro-footer fadeUp delay-5">
+        <div className="contact-icons">
+          <a
+            className="icon-button"
+            href="https://github.com/hungkaihsin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub size={30} />
+          </a>
+          <a
+            className="icon-button"
+            href="https://www.linkedin.com/in/kai-hsin-hung/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin size={30} />
+          </a>
+          <a className="icon-button" href="mailto:k_hung2@u.pacific.edu">
+            <FaEnvelope size={30} />
+          </a>
+        </div>
+        <p className="copyright">© 2025 Daniel Hung. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+};
+
+export default SideProject;
