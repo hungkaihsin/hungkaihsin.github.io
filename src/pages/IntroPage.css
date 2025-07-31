@@ -17,6 +17,24 @@
 
 }
 
+.intro-content {
+  display: flex;
+  align-items: center; /* Vertical alignment */
+  justify-content: center; /* Center horizontally */
+  gap: 40px; /* Space between photo and text */
+  margin-bottom: 32px;
+  flex-wrap: wrap; /* Stack vertically on small screens */
+}
+
+.intro-description {
+  max-width: 500px;
+  font-size: 16px;
+  text-align: left; /* Align text left for side layout */
+  line-height: 1.6;
+  color: #111;
+}
+
+
 .typing-text {
   font-size: 14px;
   font-weight: 500;
@@ -72,7 +90,7 @@
 }
 
 .photo2 {
-  transform: rotate(-10deg);
+  transform: rotate(0deg);
   z-index: 1;
 }
 
@@ -110,6 +128,33 @@
 .icon-button:hover {
   background-color: #bfbfbf;
 }
+
+
+.sections-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 50px; /* Space between columns */
+  margin-top: 50px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.education-section, .experience-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+
 
 
 

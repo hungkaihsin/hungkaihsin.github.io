@@ -39,39 +39,68 @@ const IntroPage = () => {
         </h2>
       </div>
 
-      <div className="photo-deck fadeUp delay-3">
-          <img src="/images/photo1.jpeg" alt="Photo 1" className="photo-card photo1" />
-          <img src="/images/photo2.jpeg" alt="Photo 2" className="photo-card photo2" />
-          <img src="/images/photo3.jpeg" alt="Photo 3" className="photo-card photo3" />
-      </div>
-
-      <p className="intro-description fadeUp delay-4">
-        I'm a data science graduate student passionate about turning data into real-world impact. I have experience in machine learning (LSTM, ConvNets), backend API development, and SQL databases. Bilingual in Mandarin and English, I'm curious, collaborative, and driven to build smart, effective solutions.
+      <div className="intro-content fadeUp delay-3">
+      <img src="/images/photo2.jpeg" alt="Photo 2" className="photo-card photo2" />
+      <p className="intro-description">
+          I'm a data science graduate student passionate about turning data into real-world impact. I have experience in machine learning (LSTM, ConvNets), backend API development, and SQL databases. Bilingual in Mandarin and English, I'm curious, collaborative, and driven to build smart, effective solutions.
       </p>
-
-      <div className="timeline fadeUp delay-4">
-        <div className="timeline-line" />
-        <div className="timeline-item">
-          <div className="timeline-dot1" />
-          <div className="timeline-content">
-            <p>
-              <strong>Ming Chi University of Technology</strong><br />
-              Material Science Engineering (2019 - 2023)<br />
-              Location: New Taipei City, Taiwan
-            </p>
-          </div>
         </div>
-        <div className="timeline-item">
-          <div className="timeline-dot2" />
-          <div className="timeline-content">
-            <p>
-              <strong>University of the Pacific</strong><br />
-              Data Science (2024 - present)<br />
-              Location: Stockton, California
-            </p>
+
+
+      <div className="sections-container fadeUp delay-4">
+      {/* Left Side: Education */}
+      <div className="education-section">
+        <h2 className="section-title">Education</h2>
+        <div className="timeline">
+          <div className="timeline-line" />
+          <div className="timeline-item">
+            <div className="timeline-dot1" />
+            <div className="timeline-content">
+              <p>
+                <strong>Ming Chi University of Technology</strong><br />
+                Material Science Engineering (2019 - 2023)<br />
+                Location: New Taipei City, Taiwan
+              </p>
+            </div>
+          </div>
+          <div className="timeline-item">
+            <div className="timeline-dot2" />
+            <div className="timeline-content">
+              <p>
+                <strong>University of the Pacific</strong><br />
+                Data Science (2024 - present)<br />
+                Location: Stockton, California
+              </p>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Right Side: Experience */}
+      <div className="experience-section">
+        <h2 className="section-title">Experience</h2>
+        <div className="experience-item">
+          <p>
+            <strong>Software Developer Intern (Full-Stack) </strong><br />
+             Birthday Messaging (Apr. 2025-May. 2025) <br />
+            - Enabled automated, timezone-aware email scheduling by developing backend features using Flask, APScheduler, 
+              SMTP, and pytz, allowing users to schedule, track, and cancel messages across time zones .<br />
+            - Streamlined user data input by building a file upload system with StringIO and datetime, supporting contact imports 
+from .csv and .vcf files to simplify recipient management.
+          </p>
+        </div>
+        <div className="experience-item">
+          
+          <p>
+            <strong>Research Assistant</strong><br />
+            XYZ Lab (2022 - 2023)<br />
+            - Conducted ML experiments on large datasets.<br />
+            - Published findings in academic conferences.
+          </p>
+        </div>
+      </div>
+    </div>
+
 
       <footer className="intro-footer fadeUp delay-5">
         <div className="contact-icons">
