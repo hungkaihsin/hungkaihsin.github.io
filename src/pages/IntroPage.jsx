@@ -83,19 +83,29 @@ const IntroPage = () => {
           <p>
             <strong>Software Developer Intern (Full-Stack) </strong><br />
              Birthday Messaging (Apr. 2025-May. 2025) <br />
-            - Enabled automated, timezone-aware email scheduling by developing backend features using Flask, APScheduler, 
-              SMTP, and pytz, allowing users to schedule, track, and cancel messages across time zones .<br />
-            - Streamlined user data input by building a file upload system with StringIO and datetime, supporting contact imports 
-from .csv and .vcf files to simplify recipient management.
+	          -	Built timezone-aware email scheduling with Flask and APScheduler.<br/>
+	          -	Streamlined contact imports via CSV/VCF upload support.<br />
+	          -	Enhanced UI with a responsive page and timezone dropdown in React.
           </p>
         </div>
         <div className="experience-item">
-          
           <p>
-            <strong>Research Assistant</strong><br />
-            XYZ Lab (2022 - 2023)<br />
-            - Conducted ML experiments on large datasets.<br />
-            - Published findings in academic conferences.
+            <strong>Manufacturing Engineer Intern</strong><br />
+            Formosa Plastics (Nov. 2021 - Sept. 2022)<br />
+            -	Organized and analyzed pipeline data for maintenance planning.<br/>
+            -	Conducted ultrasound inspections to detect issues early.<br/>
+            -	Reduced pipeline leaks by 15% through improved monitoring.
+          </p>
+        </div>
+        <div className='experience-item'>
+          <p>
+          <strong>Research Assistant Intern</strong><br />
+          ITRI (Aug. 2021 - Nov. 2021)<br/>
+          	- Operated equipment to evaluate solar cell chip quality.<br/>
+            - Calibrated testing machines to meet global standards.<br/>
+            - Reduced defect rates through optimized inspection processes.
+
+
           </p>
         </div>
       </div>
