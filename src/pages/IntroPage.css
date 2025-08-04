@@ -349,3 +349,69 @@
     padding: 8px 16px;
   }
 }
+
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .sections-container {
+    grid-template-columns: 1fr; /* Stack sections vertically */
+    gap: 30px;
+  }
+
+  .nav-buttons {
+    flex-direction: column; /* Stack nav buttons */
+    gap: 12px;
+    align-items: center;
+  }
+
+  .intro-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .typing-text h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .experience-section p,
+  .education-section p {
+    white-space: normal; /* Allow wrapping on small screens */
+  }
+
+  .intro-description {
+    max-width: 90%;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .photo-card {
+    width: 150px;
+    height: 150px;
+  }
+
+  .sections-container {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+  .intro-title {
+    font-size: 20px;
+  }
+
+  .typing-text h2 {
+    font-size: 16px;
+  }
+
+  .intro-description {
+    font-size: 13px;
+  }
+
+  .photo-card {
+    width: 120px;
+    height: 120px;
+  }
+}
