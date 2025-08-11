@@ -68,7 +68,7 @@ const IntroPage = () => {
             <div className="timeline-content">
               <p>
                 <strong>University of the Pacific</strong><br />
-                Data Science (2024 - present)<br />
+                Data Science (2024 - Present)<br />
                 Location: Stockton, California
               </p>
             </div>
@@ -82,7 +82,7 @@ const IntroPage = () => {
         <div className="experience-item">
           <p>
             <strong>Software Developer Intern (Full-Stack) </strong><br />
-             Birthday Messaging (Apr. 2025-May. 2025) <br />
+             Birthday Messaging (Mar. 2025 - May. 2025) <br />
 	          -	Built timezone-aware email scheduling with Flask and APScheduler.<br/>
 	          -	Streamlined contact imports via CSV/VCF upload support.<br />
 	          -	Enhanced UI with a responsive page and timezone dropdown in React.
