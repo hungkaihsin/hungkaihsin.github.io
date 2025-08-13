@@ -8,6 +8,24 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 const SideProject = () => {
   const projects = [
     {
+      title: 'NYC Traffic Collision Analysis Dashboard',
+      date: 'July. 2025',
+      bullets: [
+        'Designed and launched an interactive traffic dashboard (React, Plotly, Flask) analyzing 2.1M+ collision records, pinpointing high-risk streets and peak crash hours, enabling data-driven public safety planning',
+        'Developed a Flask API with Pandas to preprocess and serve real-time analytics, reducing frontend load time by 20%'
+      ],
+      link: 'https://github.com/hungkaihsin/NYC_Traffic_Collision_Analysis_Dashboard?tab=readme-ov-file'
+    },
+    {
+      title: 'AI-Powered Resume Analyzer',
+      date: 'July. 2025',
+      bullets: [
+        'Implemented real-time resume parsing and keyword extraction pipelines (Pandas, Flask) to deliver instant skill-gap feedback for users',
+        'Created an AI-powered resume analysis tool integrating Adzuna and SerpApi for real-time job trends and Coursera recommendations, increasing user engagement by 25%'
+      ],
+      link: 'https://github.com/hungkaihsin/Resume-Analyzer'
+    },
+    {
       title: 'Time Series Forecasting of TSMC Stock Prices Using RNNs and ConvNets',
       date: 'Jun. 2025',
       bullets: [
