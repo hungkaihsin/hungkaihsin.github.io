@@ -65,12 +65,9 @@ const IntroPage = () => {
             {/* Relevant Courses under the master’s program */}
             <h3 className="sub-section">Relevant Courses</h3>
             <ul className="course-list compact">
-              <li>Machine Learning & Deep Learning (LSTM, ConvNets)</li>
-              <li>Statistical Inference & A/B Testing</li>
-              <li>Databases & SQL (Schema Design, Indexing)</li>
-              <li>Data Engineering Fundamentals (ETL, Scheduling)</li>
-              <li>Cloud & Deployment (Render, CI basics)</li>
-              <li>Algorithms & Data Structures</li>
+              <li>Relational Databases</li>
+              <li>Machine Learning</li>
+              <li>Natural Language Processing</li>
             </ul>
           </div>
 
@@ -83,6 +80,12 @@ const IntroPage = () => {
                 {/* Senior Project: Defect detection workflow and process optimization */}
               </span>
             </p>
+            <h3 className="sub-section">Relevant Courses</h3>
+            <ul className="course-list compact">
+              <li>Thermal Dynamics of Materials</li>
+              <li>Engineering of Mathematics</li>
+              <li>Semiconductor Processing</li>
+            </ul>
           </div>
         </div>
 
@@ -120,48 +123,52 @@ const IntroPage = () => {
 
       {/* Left Bottom: Skills */}
       <div className="skills-section">
-        <h2 className="section-title">Skills</h2>
-        <div className="skill-groups">
-          <div className="skill-group">
-            <p className="skill-heading">Languages</p>
-            <ul className="skill-chips">
-              <li>Python</li>
-              <li>SQL</li>
-              <li>JavaScript</li>
-            </ul>
-          </div>
+      <h2 className="section-title">Skills</h2>
 
-          <div className="skill-group">
-            <p className="skill-heading">ML / Data</p>
-            <ul className="skill-chips">
-              <li>LSTM</li>
-              <li>Conv1D</li>
-              <li>Scikit-learn</li>
-              <li>Pandas</li>
-              <li>NumPy</li>
-            </ul>
-          </div>
+      <div className="skill-groups">
+        <div className="skill-group">
+          <p className="skill-heading">Programming</p>
+          <ul className="skill-chips">
+            <li>Python (Pandas, NumPy)</li>
+            <li>SQL</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
 
-          <div className="skill-group">
-            <p className="skill-heading">Backend / Infra</p>
-            <ul className="skill-chips">
-              <li>Flask</li>
-              <li>APScheduler</li>
-              <li>REST APIs</li>
-              <li>Render</li>
-            </ul>
-          </div>
+        <div className="skill-group">
+          <p className="skill-heading">Data Engineering</p>
+          <ul className="skill-chips">
+            <li>ETL / ELT Pipelines</li>
+            <li>Data Cleaning & Transformation</li>
+            <li>API Integration</li>
+            <li>Workflow Automation</li>
+          </ul>
+        </div>
 
-          <div className="skill-group">
-            <p className="skill-heading">Frontend / Tools</p>
-            <ul className="skill-chips">
-              <li>React (Vite)</li>
-              <li>Typewriter</li>
-              <li>Git/GitHub</li>
-            </ul>
-          </div>
+        <div className="skill-group">
+          <p className="skill-heading">Frameworks & Libraries</p>
+          <ul className="skill-chips">
+            <li>Flask</li>
+            <li>React</li>
+            <li>TensorFlow</li>
+            <li>Keras</li>
+            <li>Scikit-learn</li>
+            <li>Plotly</li>
+            <li>Matplotlib</li>
+          </ul>
+        </div>
+
+        <div className="skill-group">
+          <p className="skill-heading">Databases & Tools</p>
+          <ul className="skill-chips">
+            <li>MySQL (Workbench)</li>
+            <li>SQLite</li>
+            <li>Git</li>
+            <li>REST APIs</li>
+          </ul>
         </div>
       </div>
+    </div>
     </div>
 
 
