@@ -169,7 +169,7 @@ const IntroPage = () => {
             <div className="skill-group">
               <p className="skill-heading">Databases &amp; Tools</p>
               <ul className="skill-chips">
-                <li>MySQL (Workbench)</li>
+                <li>MySQL</li>
                 <li>SQLite</li>
                 <li>Git</li>
                 <li>REST APIs</li>
