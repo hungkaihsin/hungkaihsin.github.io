@@ -49,24 +49,42 @@ const IntroPage = () => {
 
       <div className="sections-container fadeUp delay-4">
       {/* Left Side: Education */}
-      <div className="education-section">
-        <h2 className="section-title">Education</h2>
-        <div className="education-item">
-          <p>
-            <strong>Ming Chi University of Technology</strong><br />
-            Material Science Engineering (2019 - 2023)<br />
-            Location: New Taipei City, Taiwan
-          </p>
+        <div className="education-section">
+          <h2 className="section-title">Education</h2>
 
+          <div className="education-item">
+            <p>
+              <strong>University of the Pacific</strong><br />
+              M.S. in Data Science (2024 – Present) · Stockton, CA<br />
+              <span className="edu-meta">
+                {/* Optional: add GPA if ≥3.6 */}
+                {/* GPA: 3.9/4.0 ·  Graduate Assistant, Data Science Lab */}
+              </span>
+            </p>
+
+            {/* Relevant Courses under the master’s program */}
+            <h3 className="sub-section">Relevant Courses</h3>
+            <ul className="course-list compact">
+              <li>Machine Learning & Deep Learning (LSTM, ConvNets)</li>
+              <li>Statistical Inference & A/B Testing</li>
+              <li>Databases & SQL (Schema Design, Indexing)</li>
+              <li>Data Engineering Fundamentals (ETL, Scheduling)</li>
+              <li>Cloud & Deployment (Render, CI basics)</li>
+              <li>Algorithms & Data Structures</li>
+            </ul>
+          </div>
+
+          <div className="education-item">
+            <p>
+              <strong>Ming Chi University of Technology</strong><br />
+              B.S. in Materials Science & Engineering (2019 – 2023) · New Taipei City, Taiwan<br />
+              <span className="edu-meta">
+                {/* Optional: Scholarships / honors / lab work */}
+                {/* Senior Project: Defect detection workflow and process optimization */}
+              </span>
+            </p>
+          </div>
         </div>
-        <div className='education-item'>
-          <p>
-            <strong>University of the Pacific</strong><br />
-            Data Science (2024 - Present)<br />
-            Location: Stockton, California
-          </p>
-        </div>
-      </div>
 
       {/* Right Side: Experience */}
       <div className="experience-section">
@@ -96,9 +114,52 @@ const IntroPage = () => {
           	- Operated equipment to evaluate solar cell chip quality.<br/>
             - Calibrated testing machines to meet global standards.<br/>
             - Reduced defect rates through optimized inspection processes.
-
-
           </p>
+        </div>
+      </div>
+
+      {/* Left Bottom: Skills */}
+      <div className="skills-section">
+        <h2 className="section-title">Skills</h2>
+        <div className="skill-groups">
+          <div className="skill-group">
+            <p className="skill-heading">Languages</p>
+            <ul className="skill-chips">
+              <li>Python</li>
+              <li>SQL</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+
+          <div className="skill-group">
+            <p className="skill-heading">ML / Data</p>
+            <ul className="skill-chips">
+              <li>LSTM</li>
+              <li>Conv1D</li>
+              <li>Scikit-learn</li>
+              <li>Pandas</li>
+              <li>NumPy</li>
+            </ul>
+          </div>
+
+          <div className="skill-group">
+            <p className="skill-heading">Backend / Infra</p>
+            <ul className="skill-chips">
+              <li>Flask</li>
+              <li>APScheduler</li>
+              <li>REST APIs</li>
+              <li>Render</li>
+            </ul>
+          </div>
+
+          <div className="skill-group">
+            <p className="skill-heading">Frontend / Tools</p>
+            <ul className="skill-chips">
+              <li>React (Vite)</li>
+              <li>Typewriter</li>
+              <li>Git/GitHub</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
