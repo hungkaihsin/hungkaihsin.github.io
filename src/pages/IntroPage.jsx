@@ -51,28 +51,20 @@ const IntroPage = () => {
       {/* Left Side: Education */}
       <div className="education-section">
         <h2 className="section-title">Education</h2>
-        <div className="timeline">
-          <div className="timeline-line" />
-          <div className="timeline-item">
-            <div className="timeline-dot1" />
-            <div className="timeline-content">
-              <p>
-                <strong>Ming Chi University of Technology</strong><br />
-                Material Science Engineering (2019 - 2023)<br />
-                Location: New Taipei City, Taiwan
-              </p>
-            </div>
-          </div>
-          <div className="timeline-item">
-            <div className="timeline-dot2" />
-            <div className="timeline-content">
-              <p>
-                <strong>University of the Pacific</strong><br />
-                Data Science (2024 - Present)<br />
-                Location: Stockton, California
-              </p>
-            </div>
-          </div>
+        <div className="education-item">
+          <p>
+            <strong>Ming Chi University of Technology</strong><br />
+            Material Science Engineering (2019 - 2023)<br />
+            Location: New Taipei City, Taiwan
+          </p>
+
+        </div>
+        <div className='education-item'>
+          <p>
+            <strong>University of the Pacific</strong><br />
+            Data Science (2024 - Present)<br />
+            Location: Stockton, California
+          </p>
         </div>
       </div>
 
@@ -100,7 +92,7 @@ const IntroPage = () => {
         <div className='experience-item'>
           <p>
           <strong>Research Assistant Intern</strong><br />
-          ITRI (Aug. 2021 - Nov. 2021)<br/>
+          Industrial Technology Research Institute (ITRI) (Aug. 2021 - Nov. 2021)<br/>
           	- Operated equipment to evaluate solar cell chip quality.<br/>
             - Calibrated testing machines to meet global standards.<br/>
             - Reduced defect rates through optimized inspection processes.
