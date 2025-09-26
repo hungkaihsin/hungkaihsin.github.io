@@ -1,4 +1,39 @@
 /* ---- Layout & Base ---- */
+
+/* Header Navigation */
+.intro-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* push to right */
+  padding: 20px 40px;
+  box-sizing: border-box;
+  position: fixed;   /* stays on top while scrolling */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: transparent; /* or use a background if you want */
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-button {
+  background-color: transparent;
+  color: #111;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+  color: #555;
+}
+
 .intro-wrapper {
   min-height: 100vh;
   display: flex;
