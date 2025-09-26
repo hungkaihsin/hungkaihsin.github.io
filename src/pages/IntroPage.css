@@ -20,8 +20,8 @@
 }
 
 .nav-button {
-  background-color: transparent;
-  color: #111;
+  background-color: var(--nav-button-bg-color);
+  color: var(--nav-button-color);
   font-size: 16px;
   font-weight: 500;
   border: none;
@@ -31,7 +31,7 @@
 }
 
 .nav-button:hover {
-  color: #555;
+  color: var(--nav-button-hover-color);
 }
 
 .intro-wrapper {
@@ -40,7 +40,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 40px 16px;
+  padding: 120px 16px 40px; /* Add top padding */
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
 }
@@ -51,7 +51,7 @@
   font-size: 16px;
   text-align: left;
   line-height: 1.6;
-  color: #111;
+  color: var(--text-color);
 }
 
 .intro-content {
@@ -61,37 +61,29 @@
   gap: 40px;
   margin-bottom: 32px;
   flex-wrap: wrap;
+  width: min(92vw, 1000px);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .typing-text {
   font-size: 14px;
   font-weight: 500;
-  color: #444;
+  color: var(--text-color);
   margin-bottom: 24px;
   text-align: center;
   margin-top: -40px;
 }
 
-.nav-buttons {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
-.nav-button {
-  background-color: #dcdcdc;
-  padding: 8px 20px;
-  border-radius: 12px;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
+.typing-text h2 {
+  color: var(--text-color);
 }
 
 .intro-title {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 24px;
-  color: #111;
+  color: var(--text-color);
 }
 
 .photo-card {
@@ -103,6 +95,22 @@
   transition: transform 0.3s ease;
 }
 
+/* ---- Card ---- */
+.card {
+  background: var(--card-background);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
 /* ---- Sections Grid ---- */
 .sections-container {
   display: grid;
@@ -110,19 +118,20 @@
   grid-template-areas:
     "education experience"
     "skills skills";
-  gap: 50px;
+  gap: 24px; /* Adjusted gap for cards */
   margin: 50px auto;
   width: min(92vw, 1000px); /* centered, fluid, capped */
 }
 
 /* Map areas */
-.education-section { grid-area: education; }
-.experience-section { grid-area: experience; }
+.education-card { grid-area: education; }
+.experience-card { grid-area: experience; }
+.skills-card { grid-area: skills; }
+
 .skills-section {
-  grid-area: skills;
-  justify-self: center;      /* centers the grid item */
+  justify-self: center;
   width: 100%;
-  max-width: 900px;          /* comfortable width */
+  max-width: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,41 +144,35 @@
   font-weight: bold;
   margin-bottom: 20px;
   text-align: left;
-}
-
-.education-section,
-.experience-section {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  color: var(--text-color);
 }
 
 .education-item p { 
   text-align: left;
   margin-bottom: 12px; 
-
+  color: var(--text-color);
 }
-.edu-meta { color: #666; font-size: 14px; }
+.edu-meta { color: var(--text-color-secondary); font-size: 14px; }
 
 .sub-section {
   font-size: 16px;
   font-weight: 600;
   margin: 10px 0 8px;
   text-align: left;
+  color: var(--text-color);
 }
 
 /* Course lists */
-.course-list { margin: 0; padding-left: 18px; }
 .course-list.compact li {
   margin-bottom: 4px;
   line-height: 1.4;
-  color: #111;
+  color: var(--text-color);
   text-align: left;
 }
 
 /* Experience bullets (use real lists, not <br/>) */
 .exp-bullets {
-  color: #111;
+  color: var(--text-color);
   text-align: left;
   margin-top: -10px;
   margin-left: -25px;
@@ -185,6 +188,7 @@
 
 .experience-item p {
   text-align: left;
+  color: var(--text-color);
 }
 
 /* ---- Skills ---- */
@@ -196,7 +200,7 @@
 }
 
 .skill-group { width: 100%; }
-.skill-heading { font-weight: 600; margin-bottom: 8px; }
+.skill-heading { font-weight: 600; margin-bottom: 8px; color: var(--text-color); }
 
 .skill-chips {
   list-style: none;
@@ -205,11 +209,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  color: #111;
+  color: var(--text-color);
 }
 
 .skill-chips li {
-  background: #f2f2f2;
+  background: var(--chip-bg-color);
   border-radius: 999px;
   padding: 6px 12px;
   font-size: 14px;
@@ -236,12 +240,12 @@
 }
 
 .icon-button {
-  background-color: #ffffff;
+  background-color: var(--card-background);
   padding: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #111;
+  color: var(--icon-color);
   font-size: 20px;
   transition: background-color 0.3s ease;
   text-decoration: none;
@@ -249,11 +253,11 @@
   height: 48px;
 }
 
-.icon-button:hover { background-color: #bfbfbf; }
+.icon-button:hover { background-color: var(--icon-hover-bg-color); }
 
 .copyright {
   font-size: 14px;
-  color: #555;
+  color: var(--text-color);
   text-align: center;
   margin-top: 16px;
 }
@@ -308,4 +312,21 @@
   .typing-text h2 { font-size: 16px; }
   .intro-description { font-size: 13px; }
   .photo-card { width: 120px; height: 120px; }
+}
+
+.theme-toggle-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--icon-color);
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle-button:hover {
+  background-color: var(--icon-hover-bg-color);
 }
