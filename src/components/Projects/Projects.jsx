@@ -1,11 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import './IntroPage.css';
-import '../styles/shared.css'
-import './SideProject.css';
-import { Link } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import React from 'react';
+import './Projects.css';
 
-const SideProject = () => {
+const Projects = () => {
   const projects = [
     {
       title: 'NYC Traffic Collision Analysis Dashboard',
@@ -84,94 +80,29 @@ const SideProject = () => {
     },
   ];
 
-  const cardRefs = useRef([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    cardRefs.current.forEach(ref => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div className="intro-wrapper">
-      <div className="nav-buttons fadeUp delay-1">
-        <Link className="nav-button" to="/">Home</Link>
-        <button className="nav-button active">Side Projects</button>
-        <a className="nav-button" href="/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-        
-      </div>
-
-      <h1 className="intro-title fadeUp delay-2">My Side Projects</h1>
-
-      <div className="sideproject-container fadeUp delay-3">
-        {projects.map((project, index) => (
-          <div
-            className="project-card"
-            key={index}
-            ref={el => (cardRefs.current[index] = el)}
-            style={{ '--delay': `${index * 0.2}s` }}
-          >
-            <h3>{project.title}</h3>
-            {project.date && <p className="project-date">{project.date}</p>}
-            <ul>
-              {project.bullets.map((bullet, i) => (
-                <li key={i}>{bullet}</li>
-              ))}
-            </ul>
-            <div className="project-link-container">
-              <a
-                className="project-link"
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+    <section id="projects" className="section projects-section">
+      <div className="container">
+        <h2 className="section-title">Projects</h2>
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <div className="project-card" key={index}>
+              <h3 className="project-title">{project.title}</h3>
+              <p className="project-date">{project.date}</p>
+              <ul className="project-bullets">
+                {project.bullets.map((bullet, i) => (
+                  <li key={i}>{bullet}</li>
+                ))}
+              </ul>
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
                 View Project
               </a>
             </div>
-          </div>
-        ))}
-      </div>
-
-      <footer className="intro-footer fadeUp delay-5">
-        <div className="contact-icons">
-          <a
-            className="icon-button"
-            href="https://github.com/hungkaihsin"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub size={30} />
-          </a>
-          <a
-            className="icon-button"
-            href="https://www.linkedin.com/in/kai-hsin-hung/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin size={30} />
-          </a>
-          <a className="icon-button" href="mailto:k_hung2@u.pacific.edu">
-            <FaEnvelope size={30} />
-          </a>
+          ))}
         </div>
-        <p className="copyright">© 2025 Daniel Hung. All rights reserved.</p>
-      </footer>
-    </div>
+      </div>
+    </section>
   );
 };
 
-export default SideProject;
+export default Projects;
