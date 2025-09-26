@@ -5,21 +5,11 @@ const Experience = () => {
   const experienceData = [
     {
       title: 'Software Developer Intern (Full-Stack)',
-      subtitle: 'Birthday Messaging',
+      subtitle: 'Birthday Messaging, London, UK (Remote)',
       date: 'Mar. 2025 – May. 2025',
-      description: 'Built timezone-aware email scheduling with Flask and APScheduler. Streamlined contact imports via CSV/VCF upload support. Enhanced UI with a responsive page and timezone dropdown in React.',
-    },
-    {
-      title: 'Manufacturing Engineer Intern',
-      subtitle: 'Formosa Plastics',
-      date: 'Nov. 2021 – Sept. 2022',
-      description: 'Organized and analyzed pipeline data for maintenance planning. Conducted ultrasound inspections to detect issues early. Reduced pipeline leaks by 15% through improved monitoring.',
-    },
-    {
-      title: 'Research Assistant Intern',
-      subtitle: 'Industrial Technology Research Institute',
-      date: 'Aug. 2021 – Nov. 2021',
-      description: 'Operated equipment to evaluate solar cell chip quality. Calibrated testing machines to meet global standards. Reduced defect rates through optimized inspection processes.',
+      description: `• Implemented a timezone-aware Flask + APScheduler system for 100% accurate cross-time-zone birthday email scheduling.
+• Engineered a file upload pipeline (StringIO + datetime) to reduce manual contact entry from hours to seconds, processing 1,000+ contacts.
+• Designed a responsive React/Vite overview page and timezone dropdown, boosting usability scores by 25%.`,
     },
   ];
 

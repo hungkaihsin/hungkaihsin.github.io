@@ -65,4 +65,4 @@
   font-size: 0.8rem;
   line-height: 1.5;
   color: var(--text-color-secondary);
-}
+  white-space: pre-wrap; /* Preserve newlines for bullet points */

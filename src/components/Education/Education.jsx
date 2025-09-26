@@ -4,16 +4,16 @@ import './Education.css';
 const Education = () => {
   const educationData = [
     {
-      title: 'University of the Pacific',
-      subtitle: 'M.S. in Data Science',
-      date: '2024 – Present',
-      description: 'Relevant Courses: Relational Databases, Machine Learning, Natural Language Processing.',
+      title: 'University of the Pacific, Stockton, California',
+      subtitle: 'Master of Science in Data Science, GPA: 3.92 / 4.0',
+      date: 'Aug. 2024 – May. 2026',
+      description: 'Relevant Courseworks: Relational Databases, Machine Learning, Natural Language Processing',
     },
     {
-      title: 'Ming Chi University of Technology',
-      subtitle: 'B.S. in Materials Science & Engineering',
-      date: '2019 – 2023',
-      description: 'Relevant Courses: Thermal Dynamics of Materials, Engineering of Mathematics, Semiconductor Processing.',
+      title: 'Ming Chi University of Technology, New Taipei City, Taiwan',
+      subtitle: 'Bachelor of Science in Material Science and Engineering',
+      date: 'Jun. 2023',
+      description: 'Relevant Courseworks: Thermal Dynamics of Materials, Engineering of Mathematics, Semiconductor Processing',
     },
   ];
 

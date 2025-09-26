@@ -4,7 +4,7 @@ import { FaSun, FaMoon } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
