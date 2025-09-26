@@ -7,6 +7,8 @@
   --icon-color: #333;
   --icon-hover-bg-color: #e9ecef;
   --chip-bg-color: #e9ecef;
+  --accent-color: #0056b3; /* Distinct blue for accent */
+  --accent-color-dark: #004085; /* Darker blue for accent hover */
 }
 
 [data-theme='dark'] {
@@ -18,6 +20,8 @@
   --icon-color: #f8f9fa;
   --icon-hover-bg-color: #343a40;
   --chip-bg-color: #343a40;
+  --accent-color: #0056b3; /* Distinct blue for accent in dark mode */
+  --accent-color-dark: #004085; /* Darker blue for accent hover in dark mode */
 }
 
 html {}

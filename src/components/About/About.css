@@ -2,70 +2,120 @@
   text-align: center;
 }
 
-.about-content {
-  max-width: 800px;
+.about-main-content {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Space between photo and text */
+  max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
+  padding: 20px;
+}
+
+.about-photo-container {
+  flex-shrink: 0;
+  width: 250px; /* Fixed width for the square container */
+  height: 250px; /* Fixed height for the square container */
+  border-radius: 15px; /* Slightly rounded corners for the square */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .about-photo {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  display: block;
+}
+
+.about-text-content {
+  flex-grow: 1;
+  text-align: left; /* Align text to the left within its container */
 }
 
 .about-title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--text-color);
+  font-size: 3em;
+  color: var(--primary-color);
+  margin-bottom: 10px;
 }
 
 .about-subtitle {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--primary-color);
-  margin-bottom: 1.5rem;
-  min-height: 40px;
+  font-size: 1.5em;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  min-height: 1.5em; /* Ensure consistent height during typing */
 }
 
 .about-description {
-  font-size: 1.1rem;
+  font-size: 1.1em;
   line-height: 1.6;
-  color: var(--text-color-secondary);
-  margin-bottom: 2rem;
+  color: var(--text-color);
+  margin-bottom: 30px;
 }
 
 .download-cv-button {
-  background-color: var(--primary-color);
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 2rem;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
   display: inline-block;
-  margin-bottom: 2rem;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease; /* Changed to 'all' for smoother shadow transition */
+  margin-bottom: 30px;
+  cursor: pointer;
+  border: 1px solid var(--accent-color); /* Add a border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for card effect */
 }
 
 .download-cv-button:hover {
-  background-color: #0056b3;
+  background-color: var(--accent-color-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
 }
 
 .contact-icons {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  gap: 20px;
 }
 
 .icon-button {
-  color: var(--icon-color);
+  color: var(--text-color);
   transition: color 0.3s ease;
 }
 
 .icon-button:hover {
-  color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-main-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about-photo-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-text-content {
+    text-align: center;
+  }
+
+  .about-title {
+    font-size: 2.5em;
+  }
+
+  .about-subtitle {
+    font-size: 1.2em;
+  }
+
+  .about-description {
+    font-size: 1em;
+  }
+
+  .contact-icons {
+    justify-content: center;
+  }
 }

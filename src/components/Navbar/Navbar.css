@@ -1,61 +1,62 @@
 .navbar {
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-  padding: 0.8rem 2rem;
+  padding: 1rem 0; /* Adjust padding to remove vertical bar effect */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  /* Removed background-color, backdrop-filter, box-shadow, border-bottom */
 }
 
 [data-theme='dark'] .navbar {
-  background-color: rgba(30, 30, 30, 0.8);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  /* Removed background-color, box-shadow, border-bottom */
 }
 
 .navbar-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center; /* Center the buttons */
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 15px; /* Space between buttons */
+  padding: 0 20px; /* Horizontal padding for the container */
 }
 
 .nav-link {
-  color: var(--text-color);
+  background-color: var(--card-background); /* Button background */
+  color: var(--text-color); /* Text color */
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  margin-left: 1rem;
+  padding: 8px 15px; /* Button padding */
+  border-radius: 8px; /* Rounded corners for buttons */
   font-weight: 500;
   cursor: pointer;
-  transition: color 0.3s ease, background-color 0.3s ease;
-  border-radius: 0.5rem;
+  transition: all 0.3s ease; /* Smooth transitions for all properties */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for button effect */
+  margin-left: 0; /* Reset margin as gap handles spacing */
 }
 
 .nav-link:hover {
-  color: var(--primary-color);
-  background-color: var(--icon-hover-bg-color);
+  background-color: var(--icon-hover-bg-color); /* Darker background on hover */
+  color: var(--primary-color); /* Primary color text on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
 }
 
 .theme-toggle-button {
-  background-color: transparent;
+  background-color: var(--card-background); /* Button background */
   border: none;
   cursor: pointer;
   color: var(--icon-color);
-  padding: 8px;
-  border-radius: 50%;
+  padding: 8px; /* Padding for circular button */
+  border-radius: 50%; /* Circular shape */
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease;
-  margin-left: 1.5rem;
+  transition: all 0.3s ease; /* Smooth transitions */
+  margin-left: 0; /* Reset margin as gap handles spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .theme-toggle-button:hover {
-  background-color: var(--icon-hover-bg-color);
+  background-color: var(--icon-hover-bg-color); /* Darker background on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
 }
