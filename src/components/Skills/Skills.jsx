@@ -3,10 +3,9 @@ import './Skills.css';
 
 const Skills = () => {
   const skillGroups = {
-    'Programming': ['Python (Pandas, NumPy)', 'SQL', 'JavaScript'],
-    'Data Engineering': ['ETL / ELT Pipelines', 'Data Cleaning & Transformation', 'API Integration', 'Workflow Automation'],
-    'Frameworks & Libraries': ['Flask', 'React', 'TensorFlow', 'Keras', 'Scikit-learn', 'Plotly', 'Matplotlib'],
-    'Databases & Tools': ['MySQL', 'SQLite', 'Git', 'REST APIs'],
+    'Programming & Analytics': ['Python', 'SQL', 'JavaScript', 'Statistical Testing (t-tests, ANOVA)', 'Power BI', 'Tableau'],
+    'Frameworks & Libraries': ['Flask', 'React', 'Vite', 'Pandas', 'NumPy', 'Scikit-learn', 'TensorFlow', 'Keras', 'Matplotlib', 'Plotly'],
+    'Databases & DevOps': ['MySQL', 'SQLite', 'Git', 'REST APIs', 'Render'],
   };
 
   return (
