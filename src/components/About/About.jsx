@@ -30,7 +30,7 @@ const About = () => {
           <p className="about-description">
             A passionate data science graduate student with a knack for turning data into impactful real-world solutions. Experienced in machine learning, backend development, and bilingual in Mandarin and English.
           </p>
-          <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer" className="download-cv-button">
+          <a href="https://docs.google.com/document/d/1oJ4crtDbYg8-wcU7Qdht_bvZ_l_CnB9XZ0R1GRFvXA8/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="download-cv-button">
             Download CV
           </a>
           <div className="contact-icons">
