@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -u 'hungkaihsin <k_hung2@u.pacific.edu>'"
   },
   "dependencies": {
     "firebase": "^12.5.0",
