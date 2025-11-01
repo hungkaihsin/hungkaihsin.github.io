@@ -131,40 +131,42 @@ const AdminPage = () => {
           <h1>Admin Page</h1>
           <details open>
             <summary>Quick Access</summary>
-            <table className="links-table">
-              <thead>
-                <tr>
-                  <th>Description</th>
-                  <th>Link</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {quickAccessLinks.map((link) => (
-                  <tr key={link.id}>
-                    {editingLink && editingLink.id === link.id ? (
-                      <>
-                        <td data-label="Description"><input type="text" value={editingLink.description} onChange={(e) => setEditingLink({ ...editingLink, description: e.target.value })} /></td>
-                        <td data-label="Link"><input type="text" value={editingLink.link} onChange={(e) => setEditingLink({ ...editingLink, link: e.target.value })} /></td>
-                        <td data-label="Action">
-                          <button onClick={() => handleUpdateLink('quickAccess')} className="save-button">Save</button>
-                          <button onClick={handleCancelEdit} className="cancel-button">Cancel</button>
-                        </td>
-                      </>
-                    ) : (
-                      <>
-                        <td data-label="Description">{link.description}</td>
-                        <td data-label="Link"><a href={link.link} target="_blank" rel="noopener noreferrer">{link.link}</a></td>
-                        <td data-label="Action">
-                          <button onClick={() => handleEditLink(link)} className="edit-button">Edit</button>
-                          <button onClick={() => handleDeleteLink('quickAccess', link.id)} className="delete-button">Delete</button>
-                        </td>
-                      </>
-                    )}
+            <div className="table-container">
+              <table className="links-table">
+                <thead>
+                  <tr>
+                    <th>Description</th>
+                    <th>Link</th>
+                    <th>Action</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {quickAccessLinks.map((link) => (
+                    <tr key={link.id}>
+                      {editingLink && editingLink.id === link.id ? (
+                        <>
+                          <td><input type="text" value={editingLink.description} onChange={(e) => setEditingLink({ ...editingLink, description: e.target.value })} /></td>
+                          <td><input type="text" value={editingLink.link} onChange={(e) => setEditingLink({ ...editingLink, link: e.target.value })} /></td>
+                          <td>
+                            <button onClick={() => handleUpdateLink('quickAccess')} className="save-button">Save</button>
+                            <button onClick={handleCancelEdit} className="cancel-button">Cancel</button>
+                          </td>
+                        </>
+                      ) : (
+                        <>
+                          <td>{link.description}</td>
+                          <td><a href={link.link} target="_blank" rel="noopener noreferrer">{link.link}</a></td>
+                          <td>
+                            <button onClick={() => handleEditLink(link)} className="edit-button">Edit</button>
+                            <button onClick={() => handleDeleteLink('quickAccess', link.id)} className="delete-button">Delete</button>
+                          </td>
+                        </>
+                      )}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
             <div className="add-link-form">
               <input
                 type="text"
@@ -183,40 +185,42 @@ const AdminPage = () => {
           </details>
           <details>
             <summary>Entertainment</summary>
-            <table className="links-table">
-              <thead>
-                <tr>
-                  <th>Description</th>
-                  <th>Link</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {entertainmentLinks.map((link) => (
-                  <tr key={link.id}>
-                    {editingLink && editingLink.id === link.id ? (
-                      <>
-                        <td data-label="Description"><input type="text" value={editingLink.description} onChange={(e) => setEditingLink({ ...editingLink, description: e.target.value })} /></td>
-                        <td data-label="Link"><input type="text" value={editingLink.link} onChange={(e) => setEditingLink({ ...editingLink, link: e.target.value })} /></td>
-                        <td data-label="Action">
-                          <button onClick={() => handleUpdateLink('entertainment')} className="save-button">Save</button>
-                          <button onClick={handleCancelEdit} className="cancel-button">Cancel</button>
-                        </td>
-                      </>
-                    ) : (
-                      <>
-                        <td data-label="Description">{link.description}</td>
-                        <td data-label="Link"><a href={link.link} target="_blank" rel="noopener noreferrer">{link.link}</a></td>
-                        <td data-label="Action">
-                          <button onClick={() => handleEditLink(link)} className="edit-button">Edit</button>
-                          <button onClick={() => handleDeleteLink('entertainment', link.id)} className="delete-button">Delete</button>
-                        </td>
-                      </>
-                    )}
+            <div className="table-container">
+              <table className="links-table">
+                <thead>
+                  <tr>
+                    <th>Description</th>
+                    <th>Link</th>
+                    <th>Action</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {entertainmentLinks.map((link) => (
+                    <tr key={link.id}>
+                      {editingLink && editingLink.id === link.id ? (
+                        <>
+                          <td><input type="text" value={editingLink.description} onChange={(e) => setEditingLink({ ...editingLink, description: e.target.value })} /></td>
+                          <td><input type="text" value={editingLink.link} onChange={(e) => setEditingLink({ ...editingLink, link: e.target.value })} /></td>
+                          <td>
+                            <button onClick={() => handleUpdateLink('entertainment')} className="save-button">Save</button>
+                            <button onClick={handleCancelEdit} className="cancel-button">Cancel</button>
+                          </td>
+                        </>
+                      ) : (
+                        <>
+                          <td>{link.description}</td>
+                          <td><a href={link.link} target="_blank" rel="noopener noreferrer">{link.link}</a></td>
+                          <td>
+                            <button onClick={() => handleEditLink(link)} className="edit-button">Edit</button>
+                            <button onClick={() => handleDeleteLink('entertainment', link.id)} className="delete-button">Delete</button>
+                          </td>
+                        </>
+                      )}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
             <div className="add-link-form">
               <input
                 type="text"
