@@ -1,0 +1,56 @@
+.navbar {
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 15px;
+    padding: 0 20px;
+  }
+
+  .admin-nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px; /* Fixed height */
+    padding: 0 1.5rem;
+    border: none;
+    border-radius: 8px; /* Consistent border-radius */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: #8B4513; /* Brown color */
+    color: white;
+  }
+  
+  .admin-nav-button:hover {
+    background-color: #654321; /* Darker brown on hover */
+  }
+
+  .theme-toggle-button {
+    width: 40px; /* Fixed width to match height */
+    padding: 0;
+  }
+  
+  .theme-toggle-button:hover {
+    background-color: #654321; /* Darker brown on hover */
+  }
+
+  .logout-button, .nav-button {
+    /* No specific background-color here, inherits from .admin-nav-button */
+    color: white;
+  }
+
+  .logout-button:hover, .nav-button:hover {
+    /* No specific background-color here, inherits from .admin-nav-button:hover */
+  }

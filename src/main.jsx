@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './App.jsx';
 import AdminPage from './pages/AdminPage/AdminPage.jsx';
+import ChangePasswordPage from './pages/ChangePasswordPage/ChangePasswordPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: '/admin',
     element: <AdminPage />,
+  },
+  {
+    path: '/change-password',
+    element: <ChangePasswordPage />,
   },
 ]);
 
