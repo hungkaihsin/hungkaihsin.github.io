@@ -11,6 +11,22 @@ const Experience = () => {
 • Engineered a file upload pipeline (StringIO + datetime) to reduce manual contact entry from hours to seconds, processing 1,000+ contacts.
 • Designed a responsive React/Vite overview page and timezone dropdown, boosting usability scores by 25%.`,
     },
+    {
+      title: 'Manufacturing Engineer Intern',
+      subtitle: 'Formosa Plastics',
+      date: 'Nov. 2021 - Sept. 2022',
+      description: `• Organized and analyzed pipeline data for maintenance planning.
+• Conducted ultrasound inspections to detect issues early.
+• Reduced pipeline leaks by 15% through improved monitoring.`,
+    },
+    {
+      title: 'Research Assistant Intern',
+      subtitle: 'ITRI',
+      date: 'Aug. 2021 - Nov. 2021',
+      description: `• Operated equipment to evaluate solar cell chip quality.
+• Calibrated testing machines to meet global standards.
+• Reduced defect rates through optimized inspection processes.`,
+    },
   ];
 
   return (

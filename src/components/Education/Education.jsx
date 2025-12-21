@@ -5,7 +5,7 @@ const Education = () => {
   const educationData = [
     {
       title: 'University of the Pacific, Stockton, California',
-      subtitle: 'Master of Science in Data Science, GPA: 3.92 / 4.0',
+      subtitle: 'Master of Science in Data Science, GPA: 3.95 / 4.0',
       date: 'Aug. 2024 – May. 2026',
       description: 'Relevant Courseworks: Relational Databases, Machine Learning, Natural Language Processing',
     },

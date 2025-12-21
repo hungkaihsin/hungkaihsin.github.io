@@ -38,8 +38,14 @@
   }
 
   .theme-toggle-button {
-    width: 40px; /* Fixed width to match height */
+    width: 40px; /* Matched to main navbar size */
+    height: 40px; /* Matched to main navbar size */
     padding: 0;
+  }
+  
+  .theme-toggle-button svg {
+    width: 24px; /* Increased icon size */
+    height: 24px;
   }
   
   .theme-toggle-button:hover {

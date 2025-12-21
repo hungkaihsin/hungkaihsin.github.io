@@ -4,6 +4,17 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
+      title: 'GoPark: AI-Powered Parking Recommendation System',
+      date: 'Aug. 2025 - Dec. 2025',
+      tech: 'Python, FastAPI, PostgreSQL (PostGIS), Docker, YOLOv8, PyTorch',
+      bullets: [
+        'Engineered a real-time monitoring system integrating FastAPI with PostGIS to manage complex spatial logic and track parking stall availability.',
+        'Deployed a fine-tuned YOLOv8-Nano model for vehicle detection, achieving 97.2% mAP@0.5 with ultra-low inference latency (5.4 ms) on edge hardware.',
+        'Optimized performance by 500x (<2ms latency) by replacing an LLM-based parser with a custom Regex NLP solution, maintaining 96% accuracy while drastically reducing compute costs.'
+      ],
+      link: 'https://github.com/hungkaihsin/Parking_lot_detection'
+    },
+    {
       title: 'NYC Traffic Collision Analysis Dashboard',
       date: 'July. 2025',
       bullets: [
@@ -14,20 +25,22 @@ const Projects = () => {
     },
     {
       title: 'AI-Powered Resume Analyzer',
-      date: 'July. 2025',
+      date: 'Jul. 2025',
+      tech: 'Python, Flask, React, Pandas, Gemini API',
       bullets: [
-        'Implemented real-time resume parsing and keyword extraction pipelines (Pandas, Flask) to deliver instant skill-gap feedback for users',
-        'Created an AI-powered resume analysis tool integrating Adzuna and SerpApi for real-time job trends and Coursera recommendations, increasing user engagement by 25%'
+        'Increased user engagement by 25% by developing a feedback system that aggregates job data from Adzuna and SerpApi.',
+        'Integrated Generative AI (Gemini API) to provide personalized resume critiques, resulting in a 30% increase in average user session duration.'
       ],
       link: 'https://github.com/hungkaihsin/Resume-Analyzer'
     },
     {
-      title: 'Time Series Forecasting of TSMC Stock Prices Using RNNs and ConvNets',
+      title: 'Time Series Forecasting of TSMC Stock Prices',
       date: 'Jun. 2025',
+      tech: 'Python, Flask, React, TensorFlow, Docker, GCP, CI/CD',
       bullets: [
-        'Built a stock forecasting app with Flask and React to predict TSMC’s next-day closing price using LSTM, GRU, Conv1D, and FFN models on Yahoo Finance data.',
-        'Tuned and compared model performance, identifying GRU and FFN as top performers with test MAE around $4.2 (2.2%), demonstrating strong generalization.',
-        'Deployed an interactive web app by integrating REST APIs with a React frontend, enabling users to trigger predictions and visualize model outputs in real time.'
+        'Architected a scalable full-stack platform, deploying a React frontend to Firebase Hosting and a Flask backend to Google Cloud Run.',
+        'Ensured deployment reliability by containerizing the application with Docker and implementing a CI/CD pipeline via GitHub Actions for automated testing and building.',
+        'Developed LSTM and GRU models for stock prediction and built a custom backtesting engine to simulate trading strategies and validate model performance.'
       ],
       link: 'https://github.com/hungkaihsin/Time-Series-Forecasting-of-TSMC-Stock-Prices-Using-RNNs-and-ConvNets'
     },
@@ -89,6 +102,11 @@ const Projects = () => {
             <div className="project-card" key={index}>
               <h3 className="project-title">{project.title}</h3>
               <p className="project-date">{project.date}</p>
+              {project.tech && (
+                <p className="project-tech">
+                  <strong>Tech Stack:</strong> {project.tech}
+                </p>
+              )}
               <ul className="project-bullets">
                 {project.bullets.map((bullet, i) => (
                   <li key={i}>{bullet}</li>

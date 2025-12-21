@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaSun, FaMoon } from 'react-icons/fa';
+import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi2';
 import { Link } from 'react-router-dom';
 import './AdminNavbar.css';
 
@@ -19,7 +19,7 @@ const AdminNavbar = ({ handleLogout }) => {
     <nav className="navbar">
       <div className="navbar-container">
         <button className="admin-nav-button theme-toggle-button" onClick={toggleTheme} aria-label="Toggle theme">
-          {theme === 'light' ? <FaMoon size={20} /> : <FaSun size={20} />}
+          {theme === 'light' ? <HiOutlineMoon size={24} /> : <HiOutlineSun size={24} />}
         </button>
         <Link to="/change-password" className="admin-nav-button nav-button">Change Password</Link>
         <button onClick={handleLogout} className="admin-nav-button logout-button">Logout</button>

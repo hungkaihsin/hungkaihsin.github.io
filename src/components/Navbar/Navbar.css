@@ -46,14 +46,19 @@
   border: none;
   cursor: pointer;
   color: var(--icon-color);
-  padding: 8px; /* Padding for circular button */
-  border-radius: 50%; /* Circular shape */
+  padding: 8px; /* Adjusted padding to match nav-link height */
+  border-radius: 8px; /* Square-ish shape matching nav-link */
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease; /* Smooth transitions */
   margin-left: 0; /* Reset margin as gap handles spacing */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.theme-toggle-button svg {
+  width: 24px; /* Increased icon size */
+  height: 24px;
 }
 
 .theme-toggle-button:hover {

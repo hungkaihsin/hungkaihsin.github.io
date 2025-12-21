@@ -3,9 +3,11 @@ import './Skills.css';
 
 const Skills = () => {
   const skillGroups = {
-    'Programming & Analytics': ['Python', 'SQL', 'JavaScript', 'Statistical Testing (t-tests, ANOVA)', 'Power BI', 'Tableau'],
-    'Frameworks & Libraries': ['Flask', 'React', 'Vite', 'Pandas', 'NumPy', 'Scikit-learn', 'TensorFlow', 'Keras', 'Matplotlib', 'Plotly'],
-    'Databases & DevOps': ['MySQL', 'SQLite', 'Git', 'REST APIs', 'Render'],
+    'Languages & Core': ['Python', 'SQL', 'Regex', 'JavaScript (React)'],
+    'Data Science & ML': ['PyTorch', 'TensorFlow', 'Keras', 'YOLOv8 (Computer Vision)', 'Scikit-learn', 'Pandas', 'NumPy', 'NLP (LLMs/GenAI)'],
+    'Backend & Web': ['FastAPI', 'Flask', 'React', 'SQLAlchemy', 'REST APIs', 'Nginx'],
+    'Cloud & DevOps': ['Docker', 'Kubernetes', 'Google Cloud Platform (GCP - Cloud Run)', 'CI/CD (GitHub Actions)', 'Firebase'],
+    'Databases': ['PostgreSQL', 'PostGIS (Spatial Data)', 'MySQL', 'SQLite'],
   };
 
   return (

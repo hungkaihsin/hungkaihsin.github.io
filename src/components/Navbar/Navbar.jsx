@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { FaSun, FaMoon } from 'react-icons/fa';
+import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi2';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -23,7 +23,7 @@ const Navbar = () => {
         <Link to="skills" smooth={true} duration={500} className="nav-link">Skills</Link>
         <Link to="projects" smooth={true} duration={500} className="nav-link">Projects</Link>
         <button className="theme-toggle-button" onClick={toggleTheme} aria-label="Toggle theme">
-          {theme === 'light' ? <FaMoon size={20} /> : <FaSun size={20} />}
+          {theme === 'light' ? <HiOutlineMoon size={24} /> : <HiOutlineSun size={24} />}
         </button>
       </div>
     </nav>
