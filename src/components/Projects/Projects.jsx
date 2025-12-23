@@ -5,14 +5,36 @@ const Projects = () => {
   const projects = [
     {
       title: 'GoPark: AI-Powered Parking Recommendation System',
-      date: 'Aug. 2025 - Dec. 2025',
-      tech: 'Python, FastAPI, PostgreSQL (PostGIS), Docker, YOLOv8, PyTorch',
+      date: 'Dec. 2025',
+      tech: 'Python, YOLOv8, FastAPI, PostgreSQL, SwiftUI, Docker',
       bullets: [
-        'Engineered a real-time monitoring system integrating FastAPI with PostGIS to manage complex spatial logic and track parking stall availability.',
-        'Deployed a fine-tuned YOLOv8-Nano model for vehicle detection, achieving 97.2% mAP@0.5 with ultra-low inference latency (5.4 ms) on edge hardware.',
-        'Optimized performance by 500x (<2ms latency) by replacing an LLM-based parser with a custom Regex NLP solution, maintaining 96% accuracy while drastically reducing compute costs.'
+        'An AI-powered full-stack system combining real-time computer vision and NLP to optimize parking availability.',
+        'Processed real-time visual and NLP queries using YOLOv8 and Spacy detection pipelines.',
+        'Deployed a containerized FastAPI and PostgreSQL backend to support a SwiftUI iOS app with async event logging.'
       ],
       link: 'https://github.com/hungkaihsin/Parking_lot_detection'
+    },
+    {
+      title: 'JobFit AI',
+      date: 'July. 2025',
+      tech: 'Python, Flask, React, Gemini API, Google Cloud Run, Firebase',
+      bullets: [
+        'A generative AI career tool delivering personalized resume analysis and real-time job matching.',
+        'Boosted user retention by 30% by building an AI resume analyzer using Gemini API and real-time job data streams.',
+        'Architected a low-latency full-stack solution on Cloud Run and Firebase with streaming responses.'
+      ],
+      link: 'https://github.com/hungkaihsin/JobFit-AI'
+    },
+    {
+      title: 'DeepTSMC: Stock Price Forecasting System',
+      date: 'Jun. 2025',
+      tech: 'Python, TensorFlow, Docker, GCP, GitHub Actions',
+      bullets: [
+        'A full-stack forecasting application predicting stock trends using deep learning models and automated pipelines.',
+        'Achieved 2.19% Test MAE using FFN models, visualized via an interactive React/Plotly dashboard.',
+        'Established CI/CD pipelines via GitHub Actions and Docker for automated Cloud Run deployment.'
+      ],
+      link: 'https://github.com/hungkaihsin/DeepTSMC'
     },
     {
       title: 'NYC Traffic Collision Analysis Dashboard',
@@ -22,27 +44,6 @@ const Projects = () => {
         'Developed a Flask API with Pandas to preprocess and serve real-time analytics, reducing frontend load time by 20%'
       ],
       link: 'https://github.com/hungkaihsin/NYC_Traffic_Collision_Analysis_Dashboard?tab=readme-ov-file'
-    },
-    {
-      title: 'AI-Powered Resume Analyzer',
-      date: 'Jul. 2025',
-      tech: 'Python, Flask, React, Pandas, Gemini API',
-      bullets: [
-        'Increased user engagement by 25% by developing a feedback system that aggregates job data from Adzuna and SerpApi.',
-        'Integrated Generative AI (Gemini API) to provide personalized resume critiques, resulting in a 30% increase in average user session duration.'
-      ],
-      link: 'https://github.com/hungkaihsin/Resume-Analyzer'
-    },
-    {
-      title: 'Time Series Forecasting of TSMC Stock Prices',
-      date: 'Jun. 2025',
-      tech: 'Python, Flask, React, TensorFlow, Docker, GCP, CI/CD',
-      bullets: [
-        'Architected a scalable full-stack platform, deploying a React frontend to Firebase Hosting and a Flask backend to Google Cloud Run.',
-        'Ensured deployment reliability by containerizing the application with Docker and implementing a CI/CD pipeline via GitHub Actions for automated testing and building.',
-        'Developed LSTM and GRU models for stock prediction and built a custom backtesting engine to simulate trading strategies and validate model performance.'
-      ],
-      link: 'https://github.com/hungkaihsin/Time-Series-Forecasting-of-TSMC-Stock-Prices-Using-RNNs-and-ConvNets'
     },
     {
       title: 'RNN and ConvNets model performance comparison',
@@ -102,11 +103,13 @@ const Projects = () => {
             <div className="project-card" key={index}>
               <h3 className="project-title">{project.title}</h3>
               <p className="project-date">{project.date}</p>
-              {project.tech && (
-                <p className="project-tech">
-                  <strong>Tech Stack:</strong> {project.tech}
-                </p>
-              )}
+              <p className="project-tech">
+                {project.tech ? (
+                  <><strong>Tech Stack:</strong> {project.tech}</>
+                ) : (
+                  "\u00A0" 
+                )}
+              </p>
               <ul className="project-bullets">
                 {project.bullets.map((bullet, i) => (
                   <li key={i}>{bullet}</li>

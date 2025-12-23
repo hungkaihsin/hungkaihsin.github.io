@@ -72,3 +72,25 @@
   color: var(--text-color-secondary);
   white-space: pre-wrap; /* Preserve newlines for bullet points */
 }
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline-item::before {
+    left: -1.5rem;
+    width: 16px;
+    height: 16px;
+    margin-left: -10px;
+  }
+  
+  .timeline-content {
+    padding: 1rem;
+  }
+  
+  .timeline-content:hover {
+    transform: none; /* Disable hover scale on touch devices */
+  }
+}

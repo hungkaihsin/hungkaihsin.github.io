@@ -4,12 +4,13 @@ import './Experience.css';
 const Experience = () => {
   const experienceData = [
     {
-      title: 'Software Developer Intern (Full-Stack)',
+      title: 'Software Intern',
       subtitle: 'Birthday Messaging, London, UK (Remote)',
-      date: 'Mar. 2025 – May. 2025',
-      description: `• Implemented a timezone-aware Flask + APScheduler system for 100% accurate cross-time-zone birthday email scheduling.
-• Engineered a file upload pipeline (StringIO + datetime) to reduce manual contact entry from hours to seconds, processing 1,000+ contacts.
-• Designed a responsive React/Vite overview page and timezone dropdown, boosting usability scores by 25%.`,
+      date: 'Mar. 2025 - May. 2025',
+      description: `• Engineered a Flask scheduler ensuring 100% idempotency and accurate timezone handling for automated delivery.
+• Built a mass data ingestion pipeline for parsing .VCF files, enabling bulk contact importing and validation.
+• Implemented backend logic for real-time delivery status logging and automated email notifications.
+• Optimized frontend architecture by developing interactive navigation components and responsive landing pages.`,
     },
     {
       title: 'Manufacturing Engineer Intern',

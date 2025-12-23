@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <Link to="about" smooth={true} duration={500} className="nav-link">About</Link>
         <Link to="background" smooth={true} duration={500} className="nav-link">Background</Link>
-        <Link to="skills" smooth={true} duration={500} className="nav-link">Skills</Link>
+        <Link to="skills" smooth={true} duration={500} className="nav-link">Technical Skills</Link>
         <Link to="projects" smooth={true} duration={500} className="nav-link">Projects</Link>
         <button className="theme-toggle-button" onClick={toggleTheme} aria-label="Toggle theme">
           {theme === 'light' ? <HiOutlineMoon size={24} /> : <HiOutlineSun size={24} />}

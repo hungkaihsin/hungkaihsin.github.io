@@ -20,6 +20,7 @@
   margin: 0 auto;
   gap: 15px; /* Space between buttons */
   padding: 0 20px; /* Horizontal padding for the container */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
 .nav-link {
@@ -33,6 +34,7 @@
   transition: all 0.3s ease; /* Smooth transitions for all properties */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for button effect */
   margin-left: 0; /* Reset margin as gap handles spacing */
+  white-space: nowrap; /* Prevent text wrapping inside buttons */
 }
 
 .nav-link:hover {
@@ -64,4 +66,26 @@
 .theme-toggle-button:hover {
   background-color: var(--icon-hover-bg-color); /* Darker background on hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 600px) {
+  .navbar-container {
+    gap: 10px;
+    padding: 0 10px;
+  }
+  
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+  
+  .theme-toggle-button {
+    padding: 6px;
+  }
+  
+  .theme-toggle-button svg {
+    width: 20px;
+    height: 20px;
+  }
 }

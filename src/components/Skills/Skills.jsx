@@ -3,17 +3,15 @@ import './Skills.css';
 
 const Skills = () => {
   const skillGroups = {
-    'Languages & Core': ['Python', 'SQL', 'Regex', 'JavaScript (React)'],
-    'Data Science & ML': ['PyTorch', 'TensorFlow', 'Keras', 'YOLOv8 (Computer Vision)', 'Scikit-learn', 'Pandas', 'NumPy', 'NLP (LLMs/GenAI)'],
-    'Backend & Web': ['FastAPI', 'Flask', 'React', 'SQLAlchemy', 'REST APIs', 'Nginx'],
-    'Cloud & DevOps': ['Docker', 'Kubernetes', 'Google Cloud Platform (GCP - Cloud Run)', 'CI/CD (GitHub Actions)', 'Firebase'],
-    'Databases': ['PostgreSQL', 'PostGIS (Spatial Data)', 'MySQL', 'SQLite'],
+    'Languages': ['Python', 'SQL', 'JavaScript', 'Swift'],
+    'Frameworks': ['PyTorch', 'TensorFlow', 'YOLOv8', 'React', 'FastAPI', 'SwiftUI', 'Flask'],
+    'DevOps & Cloud': ['Docker', 'GCP', 'GitHub Actions', 'Firebase'],
   };
 
   return (
     <section id="skills" className="section skills-section">
       <div className="container">
-        <h2 className="section-title">Skills</h2>
+        <h2 className="section-title">Technical Skills</h2>
         <div className="skill-groups-container">
           {Object.entries(skillGroups).map(([group, skills]) => (
             <div className="skill-group" key={group}>
