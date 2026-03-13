@@ -4,17 +4,16 @@ import './Experience.css';
 const Experience = () => {
   const experienceData = [
     {
-      title: 'Software Intern',
+      title: 'Software Engineer Intern',
       subtitle: 'Birthday Messaging, London, UK (Remote)',
       date: 'Mar. 2025 - May. 2025',
-      description: `• Engineered a Flask scheduler ensuring 100% idempotency and accurate timezone handling for automated delivery.
-• Built a mass data ingestion pipeline for parsing .VCF files, enabling bulk contact importing and validation.
-• Implemented backend logic for real-time delivery status logging and automated email notifications.
-• Optimized frontend architecture by developing interactive navigation components and responsive landing pages.`,
+      description: `• Synchronized 1,000+ bulk contacts by engineering a mass data ingestion pipeline and a custom .VCF file parser in Python.
+• Eliminated duplicate message deliveries by architecting an idempotent, cron-based API task scheduler.
+• Monitored background job execution statuses by implementing a transactional logging system that dynamically updates database records via API responses.`,
     },
     {
       title: 'Manufacturing Engineer Intern',
-      subtitle: 'Formosa Plastics',
+      subtitle: 'Formosa Plastics, Yunlin County, Taiwan',
       date: 'Nov. 2021 - Sept. 2022',
       description: `• Organized and analyzed pipeline data for maintenance planning.
 • Conducted ultrasound inspections to detect issues early.
@@ -22,7 +21,7 @@ const Experience = () => {
     },
     {
       title: 'Research Assistant Intern',
-      subtitle: 'ITRI',
+      subtitle: 'Industrial Technology Research Institute, Guiren District, Tainan City, Taiwan',
       date: 'Aug. 2021 - Nov. 2021',
       description: `• Operated equipment to evaluate solar cell chip quality.
 • Calibrated testing machines to meet global standards.

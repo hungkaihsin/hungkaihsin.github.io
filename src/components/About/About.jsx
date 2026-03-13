@@ -18,7 +18,7 @@ const About = () => {
           <h1 className="about-title">Hi, I’m Daniel Hung</h1>
           <div className="about-subtitle">
             <Typewriter
-              words={['Data Scientist', 'Software Engineer']}
+              words={['Data Scientist', 'Data Engineer']}
               loop={0}
               cursor
               cursorStyle="_"
@@ -30,7 +30,7 @@ const About = () => {
           <p className="about-description">
             A passionate data science graduate student with a knack for turning data into impactful real-world solutions. Experienced in machine learning, backend development, and bilingual in Mandarin and English.
           </p>
-          <a href="https://drive.google.com/file/d/1sSAoMN3ih9pQcQv-D3TC6TeI_nVfPFwF/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="download-cv-button">
+          <a href="/Kai-Hsin_Hung_Resume.pdf" target="_blank" rel="noopener noreferrer" className="download-cv-button">
             Download CV
           </a>
           <div className="contact-icons">

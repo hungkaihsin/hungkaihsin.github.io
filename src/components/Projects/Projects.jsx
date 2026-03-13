@@ -6,33 +6,31 @@ const Projects = () => {
     {
       title: 'GoPark: AI-Powered Parking Recommendation System',
       date: 'Dec. 2025',
-      tech: 'Python, YOLOv8, FastAPI, PostgreSQL, SwiftUI, Docker',
+      tech: 'Python, YOLOv8, FastAPI, PostgreSQL, Shapely, Docker',
       bullets: [
-        'An AI-powered full-stack system combining real-time computer vision and NLP to optimize parking availability.',
-        'Processed real-time visual and NLP queries using YOLOv8 and Spacy detection pipelines.',
-        'Deployed a containerized FastAPI and PostgreSQL backend to support a SwiftUI iOS app with async event logging.'
+        'Tracked continuous vehicle events in real-time by engineering a data pipeline using containerized ML models and FastAPI microservices.',
+        'Mapped 2D image detections to physical parking spaces by building a geospatial database system with PostgreSQL, SQLAlchemy, and Shapely.',
+        'Publication: Accepted paper at IntelliSys 2026 (Springer); indexed in Scopus and Web of Science.'
       ],
       link: 'https://github.com/hungkaihsin/Parking_lot_detection'
     },
     {
-      title: 'JobFit AI',
-      date: 'July. 2025',
-      tech: 'Python, Flask, React, Gemini API, Google Cloud Run, Firebase',
+      title: 'JobFit AI: Automated Resume & Skills Analysis Pipeline',
+      date: 'Jul. 2025',
+      tech: 'Python, Flask, Google Gemini API, PyMuPDF, Docker',
       bullets: [
-        'A generative AI career tool delivering personalized resume analysis and real-time job matching.',
-        'Boosted user retention by 30% by building an AI resume analyzer using Gemini API and real-time job data streams.',
-        'Architected a low-latency full-stack solution on Cloud Run and Firebase with streaming responses.'
+        'Parsed unstructured resume PDFs and scraped live job postings by building an automated data extraction pipeline with Python, PyMuPDF, and the Adzuna API.',
+        'Delivered real-time analysis feedback to users, reducing perceived loading latency by 40%, by implementing Server-Sent Events (SSE) in a Dockerized Flask microservice.'
       ],
       link: 'https://github.com/hungkaihsin/JobFit-AI'
     },
     {
-      title: 'DeepTSMC: Stock Price Forecasting System',
+      title: 'DeepTSMC: Automated Time-Series Forecasting Pipeline',
       date: 'Jun. 2025',
-      tech: 'Python, TensorFlow, Docker, GCP, GitHub Actions',
+      tech: 'Python, Pandas, Scikit-Learn, Flask, Docker, CI/CD',
       bullets: [
-        'A full-stack forecasting application predicting stock trends using deep learning models and automated pipelines.',
-        'Achieved 2.19% Test MAE using FFN models, visualized via an interactive React/Plotly dashboard.',
-        'Established CI/CD pipelines via GitHub Actions and Docker for automated Cloud Run deployment.'
+        'Supplied normalized time-series data inputs by developing an automated pipeline using Pandas and Scikit-Learn for imputation, scaling, and sequence windowing.',
+        'Streamlined application deployment, reducing deployment time by 85%, by building a model-serving infrastructure using Docker, Google Cloud Run, and GitHub Actions CI/CD.'
       ],
       link: 'https://github.com/hungkaihsin/DeepTSMC'
     },
