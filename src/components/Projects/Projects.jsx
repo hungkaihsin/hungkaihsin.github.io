@@ -112,20 +112,23 @@ const Projects = () => {
         <div className="projects-grid">
           {projects.map((project, index) => (
             <motion.div 
-              className="project-card" 
+              className={`project-card ${project.link ? 'clickable-card' : ''}`}
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index % 3 * 0.1 }}
               whileHover={{ scale: 1.02 }}
+              onClick={() => project.link && window.open(project.link, '_blank')}
             >
               <h3 className="project-title">{project.title}</h3>
               <p className="project-date">{project.date}</p>
               {project.tech && (
-                <p className="project-tech">
-                  <strong>Tech Stack:</strong> {project.tech}
-                </p>
+                <div className="project-tech-chips">
+                  {project.tech.split(',').map((techItem, i) => (
+                    <span key={i} className="tech-chip">{techItem.trim()}</span>
+                  ))}
+                </div>
               )}
               <ul className="project-bullets">
                 {project.bullets.map((bullet, i) => (
