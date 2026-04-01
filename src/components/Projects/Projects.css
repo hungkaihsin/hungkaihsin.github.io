@@ -33,7 +33,6 @@
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: var(--text-color);
-  min-height: 3.5rem;
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -47,14 +46,12 @@
   font-weight: 500;
   color: var(--text-color-secondary);
   margin-bottom: 0.75rem;
-  height: 1.2rem; /* Consistent date height */
 }
 
 .project-tech {
   font-size: 0.85rem;
   color: var(--text-color-secondary);
   margin-bottom: 1rem;
-  min-height: 3rem; /* Allow for 2 lines of tech stack */
   line-height: 1.5;
 }
 

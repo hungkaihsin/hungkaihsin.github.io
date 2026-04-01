@@ -1,11 +1,13 @@
 .main-content {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
   width: 100%;
 }
 
 @media (min-width: 1024px) {
   .main-content {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     width: 55%;
   }
 }
@@ -15,7 +17,13 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .text-section {
+    padding-bottom: 6rem;
+  }
 }
 
 .text-section p {

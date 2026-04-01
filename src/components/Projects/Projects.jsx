@@ -122,13 +122,11 @@ const Projects = () => {
             >
               <h3 className="project-title">{project.title}</h3>
               <p className="project-date">{project.date}</p>
-              <p className="project-tech">
-                {project.tech ? (
-                  <><strong>Tech Stack:</strong> {project.tech}</>
-                ) : (
-                  "\u00A0" 
-                )}
-              </p>
+              {project.tech && (
+                <p className="project-tech">
+                  <strong>Tech Stack:</strong> {project.tech}
+                </p>
+              )}
               <ul className="project-bullets">
                 {project.bullets.map((bullet, i) => (
                   <li key={i}>{bullet}</li>
