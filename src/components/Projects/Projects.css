@@ -70,13 +70,27 @@
 }
 
 .project-link {
-  color: var(--primary-color);
+  color: var(--accent-color);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
-  align-self: flex-end;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: auto;
+}
+
+.project-link .arrow {
+  transition: transform 0.3s ease;
+  display: inline-block;
 }
 
 .project-link:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: var(--accent-hover);
+}
+
+.project-link:hover .arrow {
+  transform: translate(2px, -2px);
 }

@@ -16,6 +16,10 @@ const Sidebar = () => {
           <a href="https://www.linkedin.com/in/kai-hsin-hung/" target="_blank" rel="noopener noreferrer"><FaLinkedin size={28} /></a>
           <a href="mailto:k_hung2@u.pacific.edu"><FaEnvelope size={28} /></a>
         </div>
+        
+        <a href="/Kai-Hsin_Hung_Resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-btn">
+          View Full Resume
+        </a>
 
         <nav className="nav-links">
           <Link to="about" smooth={true} duration={500} offset={-50} spy={true} activeClass="active" className="nav-link">About</Link>

@@ -133,8 +133,8 @@ const Projects = () => {
                 ))}
               </ul>
               {project.link && (
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
-                  View Project
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link group">
+                  View Project <span className="arrow">↗</span>
                 </a>
               )}
             </motion.div>
