@@ -1,0 +1,31 @@
+.main-content {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    width: 55%;
+  }
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 6rem;
+}
+
+.text-section p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.text-section strong {
+  color: var(--text-main);
+  font-weight: 500;
+}
