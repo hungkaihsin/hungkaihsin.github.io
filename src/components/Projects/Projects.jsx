@@ -1,17 +1,19 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Projects.css';
 
 const Projects = () => {
   const projects = [
     {
-      title: 'AI-Driven Toxicity Prediction & Curation (Capstone Project)',
+      title: 'Toxicity Prediction Data Pipeline (Capstone)',
       date: 'Feb. 2026 - May 2026',
-      tech: 'Python, Gemini LLM, NLP, Pandas',
+      tech: 'Python, Gemini API, NLP, Pandas, REST APIs',
       bullets: [
-        'Curated a unified, high-confidence hepatotoxicity dataset for downstream machine learning models by merging and cleaning diverse public datasets (e.g., DrugBank, Clinical Trials).',
-        'Implemented automated literature mining using the PubMed API and Gemini LLM to parse research abstracts and validate drug-toxicity associations.',
-        'Established a rigorous data validation framework, identifying missing values and standardizing identifiers (CAS, InChIKey) to ensure 100% data traceability and modeling readiness.'
-      ]
+        'Architected an automated data curation pipeline to ingest, clean, and standardize multiple healthcare datasets (LIVERTOX, SIDER) into a unified JSON/CSV schema.',
+        'Engineered API integration with PubChem and PubMed to programmatically extract compound synonyms and peer-reviewed reference metadata, resolving data inconsistencies.',
+        'Developed a scalable NLP workflow utilizing the Gemini API to parse unstructured medical abstracts, automatically verifying drug-induced hepatotoxicity labels.'
+      ],
+      link: 'https://github.com/hungkaihsin/Toxicity_Prediction'
     },
     {
       title: 'GoPark: AI-Powered Parking Recommendation System',
@@ -27,10 +29,11 @@ const Projects = () => {
     {
       title: 'JobFit AI: Intelligent Resume Analysis System',
       date: 'Jul. 2025',
-      tech: 'Python, Gemini LLM, Firebase, Cloud Run',
+      tech: 'Python, Gemini LLM, Flask, Firebase, Cloud Run, Docker',
       bullets: [
-        'Built an AI resume analyzer using the Gemini API and real-time job data streams, boosting user retention by 30%.',
-        'Architected a full-stack streaming solution on Google Cloud Run and Firebase to reduce application response latency.'
+        'Built an automated data extraction pipeline with Python, PyMuPDF, and the Adzuna API to parse unstructured resume PDFs and scrape live job postings.',
+        'Architected a full-stack real-time streaming solution using Google Cloud Run, Firebase, and Flask Server-Sent Events (SSE) to reduce application response latency by 40%.',
+        'Integrated the Gemini API for intelligent resume analysis, boosting user retention by 30%.'
       ],
       link: 'https://github.com/hungkaihsin/JobFit-AI'
     },
@@ -108,7 +111,15 @@ const Projects = () => {
         <h2 className="section-title">Projects</h2>
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div className="project-card" key={index}>
+            <motion.div 
+              className="project-card" 
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index % 3 * 0.1 }}
+              whileHover={{ scale: 1.02 }}
+            >
               <h3 className="project-title">{project.title}</h3>
               <p className="project-date">{project.date}</p>
               <p className="project-tech">
@@ -128,7 +139,7 @@ const Projects = () => {
                   View Project
                 </a>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

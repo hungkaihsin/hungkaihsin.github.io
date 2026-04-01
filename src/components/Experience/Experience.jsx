@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Experience.css';
 
 const Experience = () => {
@@ -18,11 +19,11 @@ Skills: Python, Gemini API`,
       title: 'Software Engineer Intern',
       subtitle: 'BIRTHDAYMESSAGING.IO | London Area, UK (Remote)',
       date: 'Mar. 2025 - May 2025',
-      description: `• Engineered a mass data ingestion pipeline and a custom .VCF file parser in Python to synchronize 1,000+ bulk contacts.
-• Architected an idempotent, cron-based API task scheduler, eliminating duplicate message deliveries.
-• Implemented a transactional logging system to dynamically update database records via API responses, enabling real-time monitoring of background job execution statuses.
+      description: `• Engineered a Python mass data ingestion pipeline and custom .VCF file parser to synchronize, process, and validate 1,000+ unstructured bulk contacts.
+• Architected an idempotent, cron-based backend API task scheduler to query database events, automating 100% of daily email scheduling and eliminating duplicate message deliveries.
+• Implemented state-management logic and a transactional logging system to dynamically update database records, maintaining 100% data integrity and enabling real-time background job monitoring.
 
-Skills: Python, React.js`,
+Skills: Python, React.js, APIs`,
     },
     {
       title: 'Manufacturing Engineer Intern',
@@ -53,14 +54,24 @@ Skills: Manufacturing Engineering`,
       <h2 className="section-title">Experience</h2>
       <div className="timeline">
         {experienceData.map((item, index) => (
-          <div className="timeline-item" key={index}>
-            <div className="timeline-content">
+          <motion.div 
+            className="timeline-item" 
+            key={index}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: index * 0.15 }}
+          >
+            <motion.div 
+              className="timeline-content"
+              whileHover={{ scale: 1.02 }}
+            >
               <span className="timeline-date">{item.date}</span>
               <h3 className="timeline-title">{item.title}</h3>
               <h4 className="timeline-subtitle">{item.subtitle}</h4>
               <p className="timeline-description">{item.description}</p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         ))}
       </div>
     </div>

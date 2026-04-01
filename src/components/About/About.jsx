@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 import './About.css';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
@@ -6,7 +7,12 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 const About = () => {
   return (
     <section id="about" className="section about-section">
-      <div className="about-main-content">
+      <motion.div 
+        className="about-main-content"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <div className="about-photo-container">
           <img
             src="/images/photo2.jpeg"
@@ -45,7 +51,7 @@ const About = () => {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
