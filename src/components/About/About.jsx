@@ -34,7 +34,13 @@ const About = () => {
             />
           </div>
           <p className="about-description">
-            A passionate data science graduate student with a knack for turning data into impactful real-world solutions. Experienced in machine learning, backend development, and bilingual in Mandarin and English.
+            I am an M.S. Data Science student at the University of the Pacific (graduating May 2026), specializing in data engineering and machine learning infrastructure. I love turning messy data into scalable, production-ready systems.
+            <br /><br />
+            Recently, I have been building AI-driven biomedical data pipelines in partnership with Absentia Labs, and I recently co-authored a published paper on real-time computer vision (YOLOv8) for edge devices.
+            <br /><br />
+            <strong>Core Tech:</strong> Python, SQL, Docker, GCP, PyTorch, and FastAPI.
+            <br /><br />
+            <strong>Currently Seeking:</strong> Full-time Data Engineering, ML Infrastructure, or Software Engineering roles starting in Summer 2026.
           </p>
           <a href="/Kai-Hsin_Hung_Resume.pdf" target="_blank" rel="noopener noreferrer" className="download-cv-button">
             Download CV

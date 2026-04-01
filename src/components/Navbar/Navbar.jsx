@@ -1,20 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-scroll';
-import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi2';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
-
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -22,9 +10,6 @@ const Navbar = () => {
         <Link to="background" smooth={true} duration={500} className="nav-link">Background</Link>
         <Link to="skills" smooth={true} duration={500} className="nav-link">Technical Skills</Link>
         <Link to="projects" smooth={true} duration={500} className="nav-link">Projects</Link>
-        <button className="theme-toggle-button" onClick={toggleTheme} aria-label="Toggle theme">
-          {theme === 'light' ? <HiOutlineMoon size={24} /> : <HiOutlineSun size={24} />}
-        </button>
       </div>
     </nav>
   );
