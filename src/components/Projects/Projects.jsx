@@ -4,23 +4,33 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
+      title: 'AI-Driven Toxicity Prediction & Curation (Capstone Project)',
+      date: 'Feb. 2026 - May 2026',
+      tech: 'Python, Gemini LLM, NLP, Pandas',
+      bullets: [
+        'Curated a unified, high-confidence hepatotoxicity dataset for downstream machine learning models by merging and cleaning diverse public datasets (e.g., DrugBank, Clinical Trials).',
+        'Implemented automated literature mining using the PubMed API and Gemini LLM to parse research abstracts and validate drug-toxicity associations.',
+        'Established a rigorous data validation framework, identifying missing values and standardizing identifiers (CAS, InChIKey) to ensure 100% data traceability and modeling readiness.'
+      ]
+    },
+    {
       title: 'GoPark: AI-Powered Parking Recommendation System',
       date: 'Dec. 2025',
-      tech: 'Python, YOLOv8, FastAPI, PostgreSQL, Shapely, Docker',
+      tech: 'Python, YOLOv8, PyTorch, PostGIS',
       bullets: [
-        'Tracked continuous vehicle events in real-time by engineering a data pipeline using containerized ML models and FastAPI microservices.',
-        'Mapped 2D image detections to physical parking spaces by building a geospatial database system with PostgreSQL, SQLAlchemy, and Shapely.',
-        'Publication: Accepted paper at IntelliSys 2026 (Springer); indexed in Scopus and Web of Science.'
+        'Co-authored an accepted paper at IntelliSys 2026 (Springer), detailing a system that unifies computer vision and NLP for parking optimization.',
+        'Engineered a YOLOv8-Nano object detection pipeline, achieving 97.2% mAP@0.5 and 5.4ms inference latency on edge hardware.',
+        'Developed a Night-Time Optimization strategy using HSV augmentation, increasing vehicle recall by 5.3x under low-light conditions.'
       ],
       link: 'https://github.com/hungkaihsin/Parking_lot_detection'
     },
     {
-      title: 'JobFit AI: Automated Resume & Skills Analysis Pipeline',
+      title: 'JobFit AI: Intelligent Resume Analysis System',
       date: 'Jul. 2025',
-      tech: 'Python, Flask, Google Gemini API, PyMuPDF, Docker',
+      tech: 'Python, Gemini LLM, Firebase, Cloud Run',
       bullets: [
-        'Parsed unstructured resume PDFs and scraped live job postings by building an automated data extraction pipeline with Python, PyMuPDF, and the Adzuna API.',
-        'Delivered real-time analysis feedback to users, reducing perceived loading latency by 40%, by implementing Server-Sent Events (SSE) in a Dockerized Flask microservice.'
+        'Built an AI resume analyzer using the Gemini API and real-time job data streams, boosting user retention by 30%.',
+        'Architected a full-stack streaming solution on Google Cloud Run and Firebase to reduce application response latency.'
       ],
       link: 'https://github.com/hungkaihsin/JobFit-AI'
     },
@@ -113,9 +123,11 @@ const Projects = () => {
                   <li key={i}>{bullet}</li>
                 ))}
               </ul>
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
-                View Project
-              </a>
+              {project.link && (
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                  View Project
+                </a>
+              )}
             </div>
           ))}
         </div>

@@ -4,8 +4,9 @@ import './Skills.css';
 const Skills = () => {
   const skillGroups = {
     'Languages': ['Python', 'SQL', 'JavaScript', 'Swift'],
-    'Frameworks': ['PyTorch', 'TensorFlow', 'YOLOv8', 'React', 'FastAPI', 'SwiftUI', 'Flask'],
-    'DevOps & Cloud': ['Docker', 'GCP', 'GitHub Actions', 'Firebase'],
+    'AI & Machine Learning': ['PyTorch', 'TensorFlow', 'YOLOv8', 'NLP', 'Scikit-Learn', 'Gemini LLM'],
+    'Web & Frameworks': ['React', 'FastAPI', 'Flask', 'Pandas'],
+    'Cloud, DB & DevOps': ['Google Cloud (GCP)', 'Firebase', 'Docker', 'PostgreSQL', 'PostGIS', 'GitHub Actions'],
   };
 
   return (
