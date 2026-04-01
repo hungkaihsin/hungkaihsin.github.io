@@ -13,7 +13,7 @@ const Projects = () => {
         'Engineered API integration with PubChem and PubMed to programmatically extract compound synonyms and peer-reviewed reference metadata, resolving data inconsistencies.',
         'Developed a scalable NLP workflow utilizing the Gemini API to parse unstructured medical abstracts, automatically verifying drug-induced hepatotoxicity labels.'
       ],
-      link: 'https://github.com/hungkaihsin/Toxicity_Prediction'
+      link: 'https://github.com/Huyhoclaptrinh/toxicity-prediction'
     },
     {
       title: 'GoPark: AI-Powered Parking Recommendation System',

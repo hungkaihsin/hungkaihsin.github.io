@@ -42,9 +42,10 @@
 }
 
 .skill-chip {
-  background-color: var(--chip-bg-color);
-  color: var(--text-color);
+  background-color: rgba(94, 234, 212, 0.1);
+  color: var(--accent-color);
   padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  font-size: 0.9rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
 }
