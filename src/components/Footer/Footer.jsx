@@ -7,7 +7,12 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>&copy; {currentYear} Daniel Hung. All rights reserved.</p>
+        <p className="footer-text">
+          Designed & Built by Daniel Hung
+        </p>
+        <p className="footer-copyright">
+          &copy; {currentYear} All rights reserved.
+        </p>
       </div>
     </footer>
   );

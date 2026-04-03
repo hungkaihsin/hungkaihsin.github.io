@@ -2,6 +2,8 @@
   padding-top: 2rem;
   padding-bottom: 4rem;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 1024px) {
@@ -22,18 +24,18 @@
 
 @media (min-width: 1024px) {
   .text-section {
-    padding-bottom: 6rem;
+    padding-bottom: 4rem;
   }
 }
 
 .text-section p {
   color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
 }
 
 .text-section strong {
   color: var(--text-main);
-  font-weight: 500;
+  font-weight: 600;
 }

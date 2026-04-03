@@ -2,6 +2,7 @@
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .App-container {
@@ -11,12 +12,6 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-}
-
-@media scroll {
-  html {
-    scroll-behavior: smooth;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -31,6 +26,7 @@
   padding-bottom: 6rem;
 }
 
+/* Cursor spotlight */
 .mouse-light {
   position: fixed;
   top: 0;
@@ -41,7 +37,36 @@
   z-index: 9999;
   background: radial-gradient(
     600px circle at var(--mouse-x, 100vw) var(--mouse-y, 100vh),
-    rgba(94, 234, 212, 0.05),
+    rgba(94, 234, 212, 0.06),
     transparent 80%
   );
+}
+
+/* Subtle grid background pattern */
+.App::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(94, 234, 212, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(94, 234, 212, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ambient gradient orbs */
+.App::after {
+  content: '';
+  position: fixed;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(94, 234, 212, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }

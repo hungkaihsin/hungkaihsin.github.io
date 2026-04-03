@@ -1,0 +1,107 @@
+.publication-container {
+  margin-bottom: 2rem;
+}
+
+.publication-card {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  background: linear-gradient(135deg, rgba(94, 234, 212, 0.06), rgba(167, 139, 250, 0.06));
+  border: 1px solid rgba(94, 234, 212, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.publication-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(94, 234, 212, 0.2), rgba(167, 139, 250, 0.2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.publication-card:hover::after {
+  opacity: 1;
+}
+
+.publication-card:hover {
+  box-shadow: 0 8px 30px rgba(94, 234, 212, 0.08);
+}
+
+.publication-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 12px;
+  background: rgba(94, 234, 212, 0.1);
+  color: var(--accent-color);
+}
+
+.publication-content {
+  flex: 1;
+}
+
+.publication-badge {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--accent-warm);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.publication-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+}
+
+.publication-authors {
+  font-size: 0.85rem;
+  color: var(--accent-color);
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.publication-venue {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .publication-card {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+  
+  .publication-icon-wrap {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+}

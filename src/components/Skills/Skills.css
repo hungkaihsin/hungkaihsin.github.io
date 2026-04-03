@@ -1,51 +1,75 @@
 .skills-section {
-  background-color: var(--background-color);
+  position: relative;
 }
 
 .skills-section .section-title {
-  text-align: center;
-  margin-bottom: 3rem;
+  text-align: left;
+  margin-bottom: 2rem;
 }
 
 .skill-groups-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
 .skill-group {
-  background-color: var(--card-background);
-  padding: 2rem;
+  background: var(--card-background);
+  padding: 1.75rem;
   border-radius: 16px;
-  box-shadow: var(--glass-shadow);
   border: 1px solid var(--card-border);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.skill-group:hover {
+  border-color: var(--card-border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .skill-group-title {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--primary-color);
-  text-align: center;
+  letter-spacing: -0.01em;
 }
 
 .skill-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
+  gap: 0.4rem;
 }
 
 .skill-chip {
-  background-color: rgba(94, 234, 212, 0.1);
-  color: var(--accent-color);
-  padding: 0.5rem 1rem;
+  background: rgba(94, 234, 212, 0.06);
+  color: var(--text-secondary);
+  padding: 0.4rem 0.85rem;
   border-radius: 999px;
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(94, 234, 212, 0.06);
+  cursor: default;
+  transition: all 0.25s ease;
+}
+
+.skill-chip:hover {
+  color: var(--text-main);
+  border-color: rgba(94, 234, 212, 0.15);
+}
+
+@media (max-width: 600px) {
+  .skill-groups-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .skill-group {
+    padding: 1.25rem;
+  }
+  
+  .skill-group:hover {
+    transform: none;
+  }
 }
