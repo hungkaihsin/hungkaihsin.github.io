@@ -6,27 +6,27 @@ const Projects = () => {
   const projects = [
     {
       title: 'Toxicity Prediction Data Pipeline (Capstone)',
-      date: 'Feb. 2026 – Apr. 2026',
-      tech: 'Python, Gemini API, REST APIs, Pandas, JSON/CSV',
+      date: 'May 2026',
+      tech: 'Python, Scikit-Learn, Gemini API, Pandas, REST APIs, JSON/CSV',
       category: 'Data Engineering',
       featured: true,
       bullets: [
-        'Architected an automated ETL pipeline to ingest, clean, and standardize multiple healthcare datasets (LIVERTOX, SIDER) into a unified JSON/CSV schema, producing model-ready outputs for downstream ML consumers.',
-        'Engineered API integration with PubChem and PubMed to programmatically extract compound synonyms and peer-reviewed reference metadata, resolving cross-source data inconsistencies.',
-        'Developed a scalable text-processing workflow utilizing the Gemini API to parse unstructured medical abstracts, outputting structured JSON validation records with automated quality checks.',
+        'Harmonized TG-GATEs and DrugMatrix toxicogenomics data (~22 GB) and trained multitask machine-learning models to predict animal-study outcomes (body weight, organ weight, clinical chemistry) from molecular inputs — SMILES, dose, and duration.',
+        'Built an automated ETL pipeline ingesting, cleaning, and standardizing 10 heterogeneous healthcare datasets (DrugBank, LIVERTOX, SIDER, ClinicalTrials.gov) into a unified analytics-ready schema, with PubChem/PubMed API integration to resolve cross-source identifier inconsistencies.',
+        'Engineered feature pipelines and data-quality guardrails (schema-drift, missing-value, and label-consistency checks) producing versioned JSON validation reports for reproducible model training.',
       ],
-      link: 'https://github.com/Huyhoclaptrinh/toxicity-prediction',
+      link: 'https://github.com/hungkaihsin/toxicity-prediction',
     },
     {
       title: 'GoPark: AI-Powered Parking Recommendation System',
       date: 'Dec. 2025',
-      tech: 'Python, FastAPI, PostgreSQL, PostGIS, SQLAlchemy, Alembic, Docker, SwiftUI',
+      tech: 'Python, YOLOv8, PyTorch, FastAPI, PostgreSQL/PostGIS, spaCy, Docker',
       category: 'ML / AI',
       featured: true,
       bullets: [
-        'Designed and implemented a PostgreSQL/PostGIS database schema with SQLAlchemy ORM and Alembic migrations, modeling spatial stall geometries, occupancy states, and vehicle event logs with referential integrity constraints.',
-        'Built a containerized FastAPI backend with Docker Compose, orchestrating API, database, and ML model services into a reproducible multi-container deployment.',
-        'Engineered an end-to-end pipeline from raw image ingestion through object detection to recommendation ranking, achieving sub-50 ms average latency on edge hardware.',
+        'Trained and deployed a YOLOv8 computer-vision detector reaching 97.2% mAP@0.5 at 5.4 ms inference, paired with a spaCy NLP query parser (96% intent accuracy) — peer-reviewed and accepted at IntelliSys 2026 (Springer LNNS).',
+        'Designed a PostgreSQL/PostGIS schema with SQLAlchemy ORM and Alembic migrations, modeling spatial stall geometries, occupancy states, and event logs with referential-integrity constraints.',
+        'Built a containerized FastAPI backend with Docker Compose, orchestrating API, database, and model services into a reproducible multi-container deployment with sub-50 ms end-to-end latency.',
       ],
       link: 'https://github.com/hungkaihsin/Parking_lot_detection',
     },
@@ -58,7 +58,7 @@ const Projects = () => {
     },
     {
       title: 'NYC Traffic Collision Analysis Dashboard',
-      date: 'Jul. 2025',
+      date: 'Mar. 2025',
       tech: 'React, Plotly, Flask, Pandas, Firebase',
       category: 'Data Viz',
       featured: false,
@@ -67,54 +67,6 @@ const Projects = () => {
         'Developed a Flask API with Pandas to preprocess and serve real-time analytics, reducing frontend load time by 20%.',
       ],
       link: 'https://github.com/hungkaihsin/NYC_Traffic_Collision_Analysis_Dashboard',
-    },
-    {
-      title: 'RNN and ConvNets Model Performance Comparison',
-      date: 'Apr. 2025',
-      tech: 'Python, TensorFlow, LSTM, GRU, 1D ConvNet',
-      category: 'ML / AI',
-      featured: false,
-      bullets: [
-        'Explored four models (Feedforward NN, LSTM, GRU, and 1D ConvNet) to predict time series values by using historical data.',
-        'Evaluated models based on unnormalized MAE, concluding that LSTM performed best with the lowest prediction error among all.',
-      ],
-      link: 'https://github.com/hungkaihsin/RNN-ConvNets',
-    },
-    {
-      title: 'Perceptron and Shallow Neural Network',
-      date: 'Apr. 2025',
-      tech: 'Python, NumPy, OpenCV, SGD',
-      category: 'ML / AI',
-      featured: false,
-      bullets: [
-        'Built a wine quality prediction model using Lasso regression to select impactful features and achieved an out-of-sample MAE of 0.7654.',
-        'Developed a custom 3-layer neural network using stochastic gradient descent and back propagation, reaching a minimum in-sample error with hand-tuned weights.',
-      ],
-      link: 'https://github.com/hungkaihsin/Perceptron-and-Shallow-Neural-Network',
-    },
-    {
-      title: 'TDSP Data Science Project',
-      date: 'Jan. 2025',
-      tech: 'Python, Pandas, Matplotlib, Seaborn',
-      category: 'Data Viz',
-      featured: false,
-      bullets: [
-        'Interpreted the dataset from NYC OpenData on vehicle collisions and analyzed several factors leading to crashes using Pandas, Matplotlib, and Seaborn.',
-        'Utilized data visualization skills to create charts, compare relationships between different categories, and recommend solutions to reduce crashes.',
-      ],
-      link: 'https://github.com/hungkaihsin/TDSP_Projcet_analysis',
-    },
-    {
-      title: 'Machine Learning with PCA',
-      date: 'Nov. 2024',
-      tech: 'Python, NumPy, PCA',
-      category: 'ML / AI',
-      featured: false,
-      bullets: [
-        'Used PCA in Python to compress several large-sized images.',
-        'Combined images to generate a new one with reduced noise.',
-      ],
-      link: 'https://github.com/hungkaihsin/Machine-learning-image-compression-with-PCA',
     },
     {
       title: 'Graphene Oxide Actuator',
@@ -136,11 +88,11 @@ const Projects = () => {
   const otherProjects = projects.filter(p => !p.featured);
 
   const categoryColors = {
-    'Data Engineering': { bg: 'rgba(94, 234, 212, 0.1)', color: '#5eead4' },
-    'ML / AI': { bg: 'rgba(167, 139, 250, 0.1)', color: '#a78bfa' },
-    'Full-Stack': { bg: 'rgba(251, 113, 133, 0.1)', color: '#fb7185' },
-    'Data Viz': { bg: 'rgba(245, 158, 11, 0.1)', color: '#f59e0b' },
-    'Research': { bg: 'rgba(96, 165, 250, 0.1)', color: '#60a5fa' },
+    'Data Engineering': { bg: 'rgba(15, 118, 110, 0.10)', color: '#0f766e' },
+    'ML / AI': { bg: 'rgba(109, 40, 217, 0.10)', color: '#6d28d9' },
+    'Full-Stack': { bg: 'rgba(190, 18, 60, 0.10)', color: '#be123c' },
+    'Data Viz': { bg: 'rgba(180, 83, 9, 0.10)', color: '#b45309' },
+    'Research': { bg: 'rgba(29, 78, 216, 0.10)', color: '#1d4ed8' },
   };
 
   const renderProjectCard = (project, index, isFeatured = false) => (

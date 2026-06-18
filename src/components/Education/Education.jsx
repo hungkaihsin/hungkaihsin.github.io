@@ -6,7 +6,7 @@ const Education = () => {
   const educationData = [
     {
       title: 'University of the Pacific, Stockton, California',
-      subtitle: 'Master of Science in Data Science, GPA: 3.95 / 4.00',
+      subtitle: 'Master of Science in Data Science, GPA: 3.96 / 4.00',
       date: 'Aug. 2024 – May 2026',
       description: 'Relevant Coursework: Relational Databases, Machine Learning, Natural Language Processing',
     },
@@ -14,7 +14,7 @@ const Education = () => {
       title: 'Ming Chi University of Technology, New Taipei City, Taiwan',
       subtitle: 'Bachelor of Science in Materials Science and Engineering',
       date: 'Jun. 2023',
-      description: 'Relevant Coursework: Thermal Dynamics of Materials, Engineering of Mathematics, Semiconductor Processing',
+      description: 'Relevant Coursework: Thermodynamics of Materials, Engineering Mathematics, Semiconductor Processing',
     },
   ];
 

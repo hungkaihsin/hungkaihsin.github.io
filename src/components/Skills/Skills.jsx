@@ -5,20 +5,28 @@ import './Skills.css';
 const Skills = () => {
   const skillGroups = {
     'Languages': {
-      skills: ['Python', 'SQL', 'JavaScript'],
-      color: '#5eead4',
+      skills: ['Python', 'SQL', 'JavaScript', 'Swift'],
+      color: '#0f766e',
     },
-    'Databases & Data': {
-      skills: ['PostgreSQL', 'PostGIS', 'SQLAlchemy', 'Alembic', 'Pandas', 'NumPy', 'JSON/CSV Schema Design'],
-      color: '#a78bfa',
+    'ML & AI': {
+      skills: ['PyTorch', 'TensorFlow / Keras', 'Scikit-Learn', 'YOLOv8', 'spaCy', 'Google Gemini API'],
+      color: '#6d28d9',
+    },
+    'Data & Visualization': {
+      skills: ['Pandas', 'NumPy', 'Power BI', 'Plotly', 'Matplotlib', 'Streamlit', 'Jupyter'],
+      color: '#b45309',
+    },
+    'Databases': {
+      skills: ['PostgreSQL', 'PostGIS', 'SQLAlchemy', 'Alembic', 'JSON/CSV Schema Design'],
+      color: '#1d4ed8',
     },
     'Cloud & DevOps': {
       skills: ['Docker', 'Docker Compose', 'Google Cloud (Cloud Run, Firebase)', 'GitHub Actions (CI/CD)', 'REST APIs'],
-      color: '#60a5fa',
+      color: '#be123c',
     },
     'Frameworks & Tools': {
-      skills: ['FastAPI', 'Flask', 'Scikit-Learn', 'PyMuPDF', 'BeautifulSoup', 'Git'],
-      color: '#fb7185',
+      skills: ['FastAPI', 'Flask', 'React', 'PyMuPDF', 'BeautifulSoup', 'Git'],
+      color: '#15803d',
     },
   };
 

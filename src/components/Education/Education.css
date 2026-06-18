@@ -35,7 +35,7 @@
 .education-card:hover {
   border-color: var(--card-border-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(31, 41, 51, 0.07);
 }
 
 .education-card:hover::before {
@@ -45,14 +45,14 @@
 .education-date {
   display: inline-block;
   margin-bottom: 0.35rem;
-  font-size: 0.8rem;
+  font-size: 0.84rem;
   font-weight: 600;
   color: var(--accent-color);
   letter-spacing: 0.02em;
 }
 
 .education-title {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 0.2rem;
   color: var(--text-main);
@@ -60,14 +60,14 @@
 }
 
 .education-subtitle {
-  font-size: 0.9rem;
+  font-size: 0.93rem;
   font-weight: 600;
   color: var(--accent-warm);
   margin-bottom: 0.5rem;
 }
 
 .education-description {
-  font-size: 0.825rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   color: var(--text-secondary);
   margin: 0;

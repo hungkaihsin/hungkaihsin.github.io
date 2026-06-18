@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 import './Sidebar.css';
 
@@ -23,31 +22,8 @@ const Sidebar = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
-          <Typewriter
-            words={[
-              'Data Scientist',
-              'ML Engineer',
-              'Full-Stack Developer',
-              'Cloud Architect',
-            ]}
-            loop
-            cursor
-            cursorStyle="|"
-            typeSpeed={70}
-            deleteSpeed={50}
-            delaySpeed={2000}
-          />
+          Data Scientist &amp; Data Engineer
         </motion.h2>
-
-        <motion.div
-          className="status-badge"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4, delay: 0.3 }}
-        >
-          <span className="status-dot" />
-          Open to Work — Summer 2026
-        </motion.div>
 
         <motion.p
           className="sidebar-bio"

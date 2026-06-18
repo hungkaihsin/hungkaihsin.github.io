@@ -10,26 +10,26 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --bg-color: #0f172a;
-  --bg-elevated: #1e293b;
-  --text-main: #e2e8f0;
-  --text-secondary: #94a3b8;
-  --accent-color: #5eead4;
-  --accent-hover: #2dd4bf;
-  --accent-warm: #f59e0b;
-  --accent-purple: #a78bfa;
-  --accent-rose: #fb7185;
+  --bg-color: #faf8f4;
+  --bg-elevated: #ffffff;
+  --text-main: #1f2933;
+  --text-secondary: #5b6470;
+  --accent-color: #0f766e;
+  --accent-hover: #0d9488;
+  --accent-warm: #b45309;
+  --accent-purple: #6d28d9;
+  --accent-rose: #be123c;
 
   /* Card system */
-  --card-background: rgba(30, 41, 59, 0.5);
-  --card-border: rgba(94, 234, 212, 0.08);
-  --card-border-hover: rgba(94, 234, 212, 0.25);
-  --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  --card-background: #ffffff;
+  --card-border: #ece9e3;
+  --card-border-hover: rgba(15, 118, 110, 0.35);
+  --glass-shadow: 0 4px 20px rgba(31, 41, 51, 0.06);
 
   /* Gradients */
-  --gradient-accent: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  --gradient-warm: linear-gradient(135deg, #5eead4, #f59e0b);
-  --gradient-hero: linear-gradient(135deg, #e2e8f0, #5eead4);
+  --gradient-accent: linear-gradient(135deg, #0f766e, #14b8a6);
+  --gradient-warm: linear-gradient(135deg, #0f766e, #b45309);
+  --gradient-hero: linear-gradient(135deg, #1f2933, #0f766e);
 }
 
 body {
@@ -54,7 +54,7 @@ a:hover {
 h1, h2, h3, h4, h5 {
   font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
   font-weight: 700;
-  color: #f8fafc;
+  color: var(--text-main);
   margin-top: 0;
 }
 
@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5 {
 .section-title {
   position: relative;
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   margin-bottom: 2rem;

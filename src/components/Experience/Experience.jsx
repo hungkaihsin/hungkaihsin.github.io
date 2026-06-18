@@ -20,11 +20,11 @@ const Experience = () => {
       subtitle: 'Formosa Plastics Group · Yunlin County, Taiwan (On-site)',
       date: 'Nov. 2021 – Sep. 2022',
       bullets: [
-        'Organized Low-Density Polyethylene (LDPE) factory pipeline data by material type, streamlining maintenance workflows and speeding up repairs.',
-        'Conducted ultrasound pipeline analyses to verify repair completion and reduce defects, cutting leak incidents by 15%.',
-        'Assisted with daily clerical operations, including record archiving, factory audit support, and maintenance data preparation.',
+        'Organized and cleaned daily plant operational reports submitted by multiple teams, restructuring inconsistent hand-off data into reliable records that supported maintenance, scheduling, and capacity-planning decisions.',
+        'Performed hands-on ultrasonic pipeline leak inspections alongside engineering staff in a high-volume production environment, supporting equipment reliability and preventive-maintenance workflows.',
+        'Supported daily plant operations including record archiving, factory audit support, and maintenance data preparation.',
       ],
-      skills: ['Manufacturing Engineering', 'Data Analysis'],
+      skills: ['Data Wrangling', 'Manufacturing Operations'],
     },
     {
       title: 'Research Assistant Intern',

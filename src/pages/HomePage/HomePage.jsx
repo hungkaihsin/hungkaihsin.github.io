@@ -4,7 +4,6 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import Background from '../../components/Background/Background';
 import Skills from '../../components/Skills/Skills';
 import Projects from '../../components/Projects/Projects';
-import StatsBar from '../../components/StatsBar/StatsBar';
 import Footer from '../../components/Footer/Footer';
 import './HomePage.css';
 
@@ -19,7 +18,7 @@ const HomePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            I am an M.S. Data Science student at the University of the Pacific (graduating May 2026), specializing in data engineering and machine learning infrastructure. I love turning messy data into scalable, production-ready systems.
+            I am an M.S. Data Science graduate from the University of the Pacific (May 2026), specializing in data engineering and machine learning infrastructure. I love turning messy data into scalable, production-ready systems.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -44,7 +43,6 @@ const HomePage = () => {
           </motion.p>
         </section>
 
-        <StatsBar />
         <Background />
         <Skills />
         <Projects />

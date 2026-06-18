@@ -4,10 +4,10 @@ import './StatsBar.css';
 
 const StatsBar = () => {
   const stats = [
-    { value: 3.95, label: 'GPA', suffix: '', decimals: 2, color: '#3b82f6' },
+    { value: 3.96, label: 'GPA', suffix: '', decimals: 2, color: '#3b82f6' },
     { value: 1, label: 'Published Paper', suffix: '', decimals: 0, color: '#f59e0b' },
     { value: 10, label: 'Projects Built', suffix: '+', decimals: 0, color: '#a78bfa' },
-    { value: 1000, label: 'Records Processed', suffix: '+', decimals: 0, color: '#fb7185' },
+    { value: 2.1, label: 'Records Processed', suffix: 'M+', decimals: 1, color: '#fb7185' },
   ];
 
   return (

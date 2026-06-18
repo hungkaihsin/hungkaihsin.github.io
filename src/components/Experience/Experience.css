@@ -35,7 +35,7 @@
 .experience-card:hover {
   border-color: var(--card-border-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(31, 41, 51, 0.07);
 }
 
 .experience-card:hover::before {
@@ -49,14 +49,14 @@
 .experience-date {
   display: inline-block;
   margin-bottom: 0.35rem;
-  font-size: 0.8rem;
+  font-size: 0.84rem;
   font-weight: 600;
   color: var(--accent-color);
   letter-spacing: 0.02em;
 }
 
 .experience-title {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 0.2rem;
   color: var(--text-main);
@@ -64,7 +64,7 @@
 }
 
 .experience-subtitle {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--text-secondary);
   margin-bottom: 0;
@@ -75,7 +75,7 @@
 }
 
 .experience-bullets li {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   line-height: 1.65;
   color: var(--text-secondary);
   margin-bottom: 0.5rem;
@@ -88,11 +88,11 @@
 }
 
 .exp-chip {
-  background: rgba(94, 234, 212, 0.08);
+  background: rgba(15, 118, 110, 0.08);
   color: var(--accent-color);
   padding: 0.2rem 0.65rem;
   border-radius: 999px;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 600;
 }
 

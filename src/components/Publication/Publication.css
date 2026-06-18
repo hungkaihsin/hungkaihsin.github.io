@@ -6,8 +6,8 @@
   display: flex;
   gap: 1.25rem;
   padding: 1.75rem;
-  background: linear-gradient(135deg, rgba(94, 234, 212, 0.06), rgba(167, 139, 250, 0.06));
-  border: 1px solid rgba(94, 234, 212, 0.15);
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.06), rgba(15, 118, 110, 0.06));
+  border: 1px solid rgba(15, 118, 110, 0.15);
   border-radius: 16px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -22,7 +22,7 @@
   inset: 0;
   border-radius: 16px;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(94, 234, 212, 0.2), rgba(167, 139, 250, 0.2));
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.2), rgba(15, 118, 110, 0.2));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -36,7 +36,7 @@
 }
 
 .publication-card:hover {
-  box-shadow: 0 8px 30px rgba(94, 234, 212, 0.08);
+  box-shadow: 0 8px 30px rgba(15, 118, 110, 0.08);
 }
 
 .publication-icon-wrap {
@@ -47,7 +47,7 @@
   height: 44px;
   min-width: 44px;
   border-radius: 12px;
-  background: rgba(94, 234, 212, 0.1);
+  background: rgba(15, 118, 110, 0.1);
   color: var(--accent-color);
 }
 
@@ -62,7 +62,7 @@
   color: var(--accent-warm);
   border: 1px solid rgba(245, 158, 11, 0.2);
   border-radius: 999px;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -70,7 +70,7 @@
 }
 
 .publication-title {
-  font-size: 1.05rem;
+  font-size: 1.12rem;
   font-weight: 700;
   color: var(--text-main);
   margin-bottom: 0.35rem;
@@ -78,14 +78,14 @@
 }
 
 .publication-authors {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--accent-color);
   margin-bottom: 0.25rem;
   font-weight: 500;
 }
 
 .publication-venue {
-  font-size: 0.8rem;
+  font-size: 0.84rem;
   color: var(--text-secondary);
   line-height: 1.5;
   font-style: italic;
