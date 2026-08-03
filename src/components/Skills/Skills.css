@@ -1,75 +1,45 @@
+/* Skills — a specification table: field label, then values.
+   One accent for the whole page; no per-group colour coding. */
+
 .skills-section {
   position: relative;
 }
 
-.skills-section .section-title {
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
-.skill-groups-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  width: 100%;
-}
-
-.skill-group {
-  background: var(--card-background);
-  padding: 1.75rem;
-  border-radius: 16px;
-  border: 1px solid var(--card-border);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition: all 0.3s ease;
-}
-
-.skill-group:hover {
-  border-color: var(--card-border-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(31, 41, 51, 0.07);
-}
-
-.skill-group-title {
-  font-size: 1.08rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  letter-spacing: -0.01em;
-}
-
-.skill-chips {
+.skill-table {
+  margin: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
+  flex-direction: column;
 }
 
-.skill-chip {
-  background: rgba(15, 118, 110, 0.06);
-  color: var(--text-secondary);
-  padding: 0.4rem 0.85rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  border: 1px solid rgba(15, 118, 110, 0.06);
-  cursor: default;
-  transition: all 0.25s ease;
+.skill-row {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 1.5rem;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-top: 1px dotted var(--rule);
 }
 
-.skill-chip:hover {
-  color: var(--text-main);
-  border-color: rgba(15, 118, 110, 0.15);
+.skill-row:first-child {
+  border-top: none;
+  padding-top: 0;
 }
 
-@media (max-width: 600px) {
-  .skill-groups-container {
+.skill-group-label {
+  padding-top: 0.15em;
+}
+
+.skill-values {
+  margin: 0;
+  font-family: var(--font-data);
+  font-size: 0.8125rem;
+  line-height: 1.9;
+  color: var(--ink-muted);
+}
+
+@media (max-width: 640px) {
+  .skill-row {
     grid-template-columns: 1fr;
-  }
-  
-  .skill-group {
-    padding: 1.25rem;
-  }
-  
-  .skill-group:hover {
-    transform: none;
+    gap: 0.35rem;
   }
 }

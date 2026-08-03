@@ -18,7 +18,7 @@ const HomePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            I am an M.S. Data Science graduate from the University of the Pacific (May 2026), specializing in data engineering and machine learning infrastructure. I love turning messy data into scalable, production-ready systems.
+            I am a data scientist who can ship. I clean messy data, build and evaluate models, deploy them, and use LLMs where they genuinely help. M.S. Data Science, University of the Pacific, May 2026.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -39,7 +39,7 @@ const HomePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.65 }}
           >
-            <strong>Currently Seeking:</strong> Full-time Data Engineering, ML Infrastructure, or Software Engineering roles starting Summer 2026.
+            <strong>Currently seeking:</strong> full-time Data Scientist, Data Analyst, or Data Engineer roles. Available immediately, in the US or Taiwan.
           </motion.p>
         </section>
 

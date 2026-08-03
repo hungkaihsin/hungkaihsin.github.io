@@ -31,13 +31,13 @@ const Experience = () => {
       subtitle: 'Industrial Technology Research Institute (ITRI) · Tainan City, Taiwan (On-site)',
       date: 'Sep. 2021 – Nov. 2021',
       bullets: [
-        'Operated a Four-Point Probe to evaluate solar cell chips, improving quality control and reducing defect rates.',
-        'Welded reference solar cells to the World PV Scale Standard battery to ensure precise solar test machine calibration.',
-        'Manufactured the World PV Scale Standard battery for machining adjustments and performance corrections.',
-        'Recreated solar silicon chips from used components to support material recycling and cost reduction.',
-        'Prepared detailed summary reports documenting the manufacturing process of the World PV Scale Standard battery.',
+        'Operated a Four-Point Probe to characterize and evaluate solar cell chips as part of photovoltaic performance testing.',
+        'Welded reference solar cells to the World PV Scale Standard to support precise calibration of solar test equipment.',
+        'Assisted in manufacturing and adjusting the reference cell used for machine calibration and performance correction.',
+        'Reconstructed solar silicon chips from used components to support material recycling.',
+        'Prepared summary reports documenting the reference-cell manufacturing process.',
       ],
-      skills: ['Manufacturing Engineering', 'Quality Control'],
+      skills: ['PV Characterization', 'Lab Instrumentation'],
     },
   ];
 

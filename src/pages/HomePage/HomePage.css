@@ -10,32 +10,33 @@
   .main-content {
     padding-top: 6rem;
     padding-bottom: 6rem;
-    width: 55%;
+    width: 58%;
   }
 }
 
+/* Opening statement: set slightly larger than body copy so it reads as the
+   thesis of the page, then everything after it is reference material. */
 .text-section {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
-  padding-bottom: 3rem;
-}
-
-@media (min-width: 1024px) {
-  .text-section {
-    padding-bottom: 4rem;
-  }
+  gap: 1.1rem;
+  padding-bottom: 4rem;
 }
 
 .text-section p {
-  color: var(--text-secondary);
+  color: var(--ink-muted);
   line-height: 1.75;
-  margin-bottom: 1.25rem;
-  font-size: 1rem;
+  max-width: var(--measure);
+}
+
+.text-section p:first-child {
+  font-size: var(--step-1);
+  color: var(--ink);
+  line-height: 1.6;
 }
 
 .text-section strong {
-  color: var(--text-main);
+  color: var(--ink);
   font-weight: 600;
 }

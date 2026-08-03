@@ -1,143 +1,219 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+/* ==========================================================================
+   Kai-Hsin (Daniel) Hung — portfolio
+   Visual system: technical datasheet. Type and alignment do the work;
+   no cards, no shadows, no gradients.
+   ========================================================================== */
 
 :root {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  font-weight: 400;
+  /* --- Type roles --------------------------------------------------------
+     Prose: native system UI stack (fast, no network request).
+     Data:  monospace for every measured value, so figures align in columns. */
+  --font-prose: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-data: ui-monospace, "SF Mono", SFMono-Regular, "JetBrains Mono", Menlo,
+    Consolas, "Liberation Mono", monospace;
+
+  /* --- Palette -----------------------------------------------------------
+     Neutrals carry a slight green bias toward the accent, so they read as
+     chosen rather than inherited mid-grey. */
+  --paper: #f5f6f5;
+  --paper-raised: #fafbfa;
+  --ink: #16211f;
+  --ink-muted: #626e6b;
+  --ink-faint: #8b9794;
+  --rule: #d8dedb;
+  --rule-strong: #b9c3bf;
+  --accent: #0f766e;
+  --accent-soft: rgba(15, 118, 110, 0.08);
+
+  /* --- Scale ------------------------------------------------------------- */
+  --measure: 68ch;
+  --step-0: 0.9375rem;
+  --step-1: 1.0625rem;
+  --step-2: 1.375rem;
+  --step-3: 1.875rem;
+  --step-4: 2.5rem;
+  --label: 0.6875rem;
+
+  font-family: var(--font-prose);
+  font-size: var(--step-0);
+  line-height: 1.65;
+  color: var(--ink);
+  background-color: var(--paper);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
-  --bg-color: #faf8f4;
-  --bg-elevated: #ffffff;
-  --text-main: #1f2933;
-  --text-secondary: #5b6470;
-  --accent-color: #0f766e;
-  --accent-hover: #0d9488;
-  --accent-warm: #b45309;
-  --accent-purple: #6d28d9;
-  --accent-rose: #be123c;
+/* Dark theme: token-level only, so components never branch on theme. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #101614;
+    --paper-raised: #151d1b;
+    --ink: #e6ebe9;
+    --ink-muted: #9aa8a4;
+    --ink-faint: #6c7a76;
+    --rule: #263230;
+    --rule-strong: #35443f;
+    --accent: #5eead4;
+    --accent-soft: rgba(94, 234, 212, 0.1);
+  }
+}
 
-  /* Card system */
-  --card-background: #ffffff;
-  --card-border: #ece9e3;
-  --card-border-hover: rgba(15, 118, 110, 0.35);
-  --glass-shadow: 0 4px 20px rgba(31, 41, 51, 0.06);
+:root[data-theme="dark"] {
+  --paper: #101614;
+  --paper-raised: #151d1b;
+  --ink: #e6ebe9;
+  --ink-muted: #9aa8a4;
+  --ink-faint: #6c7a76;
+  --rule: #263230;
+  --rule-strong: #35443f;
+  --accent: #5eead4;
+  --accent-soft: rgba(94, 234, 212, 0.1);
+}
 
-  /* Gradients */
-  --gradient-accent: linear-gradient(135deg, #0f766e, #14b8a6);
-  --gradient-warm: linear-gradient(135deg, #0f766e, #b45309);
-  --gradient-hero: linear-gradient(135deg, #1f2933, #0f766e);
+:root[data-theme="light"] {
+  --paper: #f5f6f5;
+  --paper-raised: #fafbfa;
+  --ink: #16211f;
+  --ink-muted: #626e6b;
+  --ink-faint: #8b9794;
+  --rule: #d8dedb;
+  --rule-strong: #b9c3bf;
+  --accent: #0f766e;
+  --accent-soft: rgba(15, 118, 110, 0.08);
+}
+
+/* --- Legacy aliases -------------------------------------------------------
+   The admin pages and the unused StatsBar still reference the pre-2026-08
+   token names. Mapping them here keeps those screens rendering correctly
+   without dragging the old card/gradient system back into the public page.
+   Safe to delete once those files are retired. */
+:root {
+  --bg-color: var(--paper);
+  --bg-elevated: var(--paper-raised);
+  --background-color: var(--paper);
+  --text-main: var(--ink);
+  --text-secondary: var(--ink-muted);
+  --accent-color: var(--accent);
+  --accent-hover: var(--accent);
+  --card-background: var(--paper-raised);
+  --card-border: var(--rule);
+  --card-border-hover: var(--rule-strong);
+  --glass-shadow: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--bg-color);
-  color: var(--text-main);
+  background-color: var(--paper);
+  color: var(--ink);
 }
 
 a {
-  font-weight: 500;
-  color: var(--text-main);
+  color: var(--ink);
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--accent-color);
+  color: var(--accent);
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
-  font-weight: 700;
-  color: var(--text-main);
-  margin-top: 0;
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 1px;
 }
 
-/* Section titles with gradient underline */
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.014em;
+  text-wrap: balance;
+  color: var(--ink);
+}
+
+p {
+  margin: 0;
+  max-width: var(--measure);
+}
+
+/* --- Section heading -----------------------------------------------------
+   A field label, not a display heading: small, spaced, sitting on a rule.
+   The rule is structural (it separates records), not decorative. */
 .section-title {
-  position: relative;
-  display: inline-block;
-  font-size: 1.6rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: 2rem;
+  font-family: var(--font-data);
+  font-size: var(--label);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-faint);
+  padding-bottom: 0.6rem;
+  margin: 0 0 1.75rem;
+  border-bottom: 1px solid var(--rule-strong);
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 40px;
-  height: 3px;
-  background: var(--gradient-accent);
-  border-radius: 2px;
-  transition: width 0.4s ease;
+/* --- Data primitives ---------------------------------------------------- */
+.mono {
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
 }
 
-.section-title:hover::after {
-  width: 100%;
+.field-label {
+  font-family: var(--font-data);
+  font-size: var(--label);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-faint);
 }
 
-
-/* Global dash bullet style */
+/* Bulleted prose: a thin rule marker instead of a glyph bullet. */
 ul.dash-bullets {
   list-style: none;
   padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
 ul.dash-bullets li {
   position: relative;
-  padding-left: 1.25rem;
+  padding-left: 1.15rem;
+  max-width: var(--measure);
+  color: var(--ink-muted);
 }
 
 ul.dash-bullets li::before {
-  content: '–';
+  content: "";
   position: absolute;
   left: 0;
-  color: var(--accent-color);
-  font-weight: 600;
+  top: 0.72em;
+  width: 0.55rem;
+  height: 1px;
+  background: var(--rule-strong);
 }
 
-/* Utility: gradient text */
-.gradient-text {
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Keyframes */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 4px rgba(94, 234, 212, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 12px rgba(94, 234, 212, 0.6);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

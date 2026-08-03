@@ -31,7 +31,8 @@ const Sidebar = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          Turning messy data into scalable, production-ready ML and engineering infrastructure.
+          I clean messy data, build and evaluate models, and ship them into
+          systems people actually use.
         </motion.p>
 
         <motion.div 
@@ -42,7 +43,7 @@ const Sidebar = () => {
         >
           <a href="https://github.com/hungkaihsin" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub size={24} /></a>
           <a href="https://www.linkedin.com/in/kai-hsin-hung/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin size={24} /></a>
-          <a href="mailto:k_hung2@u.pacific.edu" aria-label="Email"><FaEnvelope size={24} /></a>
+          <a href="mailto:danielhung0802@gmail.com" aria-label="Email"><FaEnvelope size={24} /></a>
         </motion.div>
         
         <motion.a 

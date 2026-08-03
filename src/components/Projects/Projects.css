@@ -1,184 +1,175 @@
+/* Projects — spec records.
+   Each project is a datasheet entry: rule, title/date row, measured values
+   in an aligned table, prose, then stack and source. No cards. */
+
 .projects-section {
   position: relative;
 }
 
-.projects-section .section-title {
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
-.other-projects-title {
-  margin-top: 3rem;
-}
-
-/* Featured grid — single column for emphasis */
-.featured-grid {
+.record-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
 }
 
-/* Other projects grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  width: 100%;
+.additional-title {
+  margin-top: 4.5rem;
 }
 
-/* Base card */
-.project-card {
-  background: var(--card-background);
-  padding: 1.75rem;
-  border-radius: 16px;
-  border: 1px solid var(--card-border);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+.record {
+  padding: 2rem 0 2.25rem;
+  border-top: 1px solid var(--rule);
+}
+
+.record:first-child {
+  border-top: none;
+  padding-top: 0.25rem;
+}
+
+/* --- Head: title left, date right, sharing a baseline ------------------- */
+.record-head {
   display: flex;
-  flex-direction: column;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-card:hover {
-  border-color: var(--card-border-hover);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(31, 41, 51, 0.08);
-}
-
-/* Featured card — gradient border glow */
-.featured-card {
-  background: linear-gradient(135deg, #ffffff, #f6f4ef);
-  border-color: rgba(15, 118, 110, 0.18);
-}
-
-.featured-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  background: var(--gradient-accent);
-  border-radius: 3px 0 0 3px;
-}
-
-.featured-card:hover {
-  border-color: rgba(15, 118, 110, 0.35);
-  box-shadow: 0 12px 30px rgba(31, 41, 51, 0.10);
-}
-
-.clickable-card {
-  cursor: pointer;
-}
-
-/* Card Header */
-.project-card-header {
-  display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 0.75rem;
+  gap: 1.5rem;
+  margin-bottom: 0.35rem;
 }
 
-.category-badge {
-  padding: 0.2rem 0.65rem;
-  border-radius: 999px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+.record-title {
+  font-size: var(--step-2);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.record-date {
+  flex-shrink: 0;
+  font-size: var(--label);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  color: var(--ink-faint);
 }
 
-.project-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: var(--text-main);
-  line-height: 1.35;
+.record-context {
+  font-size: var(--step-0);
+  color: var(--ink-muted);
+  margin-bottom: 1.1rem;
 }
 
-.project-date {
-  font-size: 0.84rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  margin: 0;
-}
-
-/* Tech chips */
-.project-tech-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 1rem;
-}
-
-.tech-chip {
-  background: rgba(15, 118, 110, 0.08);
-  color: var(--accent-color);
-  padding: 0.2rem 0.6rem;
-  border-radius: 999px;
-  font-size: 0.74rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
-}
-
-.tech-chip:hover {
-  background: rgba(15, 118, 110, 0.15);
-}
-
-/* Bullets */
-.project-bullets {
-  margin-bottom: 1.25rem;
-  flex-grow: 1;
-}
-
-.project-bullets li {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: var(--text-secondary);
-  margin-bottom: 0.4rem;
-}
-
-/* Link */
-.project-link {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.88rem;
-  transition: all 0.3s ease;
-  align-self: flex-start;
+/* --- Publication status: the one place the accent is spent -------------- */
+.record-status {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  margin-top: auto;
-  padding: 0.3rem 0;
+  gap: 0.5rem;
+  font-family: var(--font-data);
+  font-size: var(--label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 0.3rem 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.status-mark {
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* --- Metrics table ------------------------------------------------------
+   Two columns, dotted leader between label and value, values right-aligned
+   on tabular figures so digits stack cleanly down the column. */
+.metrics {
+  margin: 0 0 1.35rem;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.metric-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.metric-row dt {
+  font-size: var(--step-0);
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+
+/* The leader is drawn, not typed, so it stretches to fill the gap. */
+.metric-row::after {
+  content: "";
+  order: 1;
+  flex: 1;
+  height: 1px;
+  align-self: center;
+  background-image: linear-gradient(
+    to right,
+    var(--rule-strong) 0 2px,
+    transparent 2px 6px
+  );
+  background-size: 6px 1px;
+  background-repeat: repeat-x;
+  opacity: 0.9;
+}
+
+.metric-row dd {
+  order: 2;
+  margin: 0;
+  font-size: var(--step-0);
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.record-bullets {
+  margin-bottom: 1.4rem;
+}
+
+/* --- Foot: stack string and source link --------------------------------- */
+.record-foot {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: 0.5rem 2rem;
+  padding-top: 0.9rem;
+  border-top: 1px dotted var(--rule);
+}
+
+.record-stack {
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  color: var(--ink-faint);
+  min-width: 0;
+}
+
+.record-link {
+  flex-shrink: 0;
+  font-size: 0.8125rem;
+  color: var(--accent);
   border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
 }
 
-.project-link .arrow {
-  transition: transform 0.3s ease;
-  display: inline-block;
+.record-link:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
-.project-link:hover {
-  text-decoration: none;
-  color: var(--accent-hover);
-  border-bottom-color: var(--accent-hover);
-}
-
-.project-link:hover .arrow {
-  transform: translate(2px, -2px);
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .project-card {
-    padding: 1.25rem;
+@media (max-width: 640px) {
+  .record-head {
+    flex-direction: column;
+    gap: 0.25rem;
   }
-  
-  .project-card:hover {
-    transform: none;
+
+  .metrics {
+    max-width: none;
+  }
+
+  .record-foot {
+    grid-template-columns: 1fr;
   }
 }
