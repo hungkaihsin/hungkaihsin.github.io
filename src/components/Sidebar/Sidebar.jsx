@@ -9,8 +9,8 @@ const Sidebar = () => {
     <header className="sidebar">
       <div>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
           <h1 className="sidebar-name">Daniel Hung</h1>
@@ -18,9 +18,9 @@ const Sidebar = () => {
 
         <motion.h2
           className="sidebar-role"
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.45 }}
         >
           Data Scientist &amp; Data Engineer
         </motion.h2>
@@ -29,7 +29,7 @@ const Sidebar = () => {
           className="sidebar-bio"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.45 }}
         >
           I clean messy data, build and evaluate models, and ship them into
           systems people actually use.
@@ -39,7 +39,7 @@ const Sidebar = () => {
           className="social-links"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.45 }}
         >
           <a href="https://github.com/hungkaihsin" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub size={24} /></a>
           <a href="https://www.linkedin.com/in/kai-hsin-hung/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin size={24} /></a>
@@ -53,10 +53,8 @@ const Sidebar = () => {
           className="resume-btn"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
-        >
+          transition={{ duration: 0.45 }}
+                  >
           View Full Resume
         </motion.a>
 

@@ -9,11 +9,10 @@ const Publication = () => {
       <h2 className="section-title">Publication</h2>
       <motion.div
         className="publication-card"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.5 }}
-        whileHover={{ scale: 1.01 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, margin: '-40px' }}
+        transition={{ duration: 0.4 }}
       >
         <div className="publication-icon-wrap">
           <FaBookOpen size={20} />
