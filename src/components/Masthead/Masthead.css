@@ -74,9 +74,9 @@
 }
 
 /* --- Title block --------------------------------------------------------
-   Name set large against an availability mark on the opposite edge, then the
-   role on a rule, the summary, and the contact line. Asymmetric on purpose:
-   the eye lands left, the status is the only thing pulling right. */
+   Name set large, then the role on a rule, the summary, and the contact line.
+   Left-aligned throughout; the measure keeps the summary readable rather than
+   letting it run the full width. */
 .masthead {
   padding: 3.25rem 0 3rem;
   border-bottom: 1px solid var(--rule-strong);
