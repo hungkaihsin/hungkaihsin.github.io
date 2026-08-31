@@ -5,7 +5,15 @@ import Publication from '../Publication/Publication';
 
 const Background = () => {
   return (
-    <div id="background" style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+    <div
+      id="background"
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '4rem',
+        paddingBottom: '6rem',
+      }}
+    >
       <Experience />
       <Publication />
       <Education />

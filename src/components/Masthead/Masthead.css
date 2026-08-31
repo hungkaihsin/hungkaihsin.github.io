@@ -1,0 +1,168 @@
+/* Running head: a document header, not a marketing navbar.
+   One line, 56px, hairline underneath. No blur, no shadow, no pill. */
+
+.runhead {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+
+.runhead-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .runhead-inner {
+    padding: 0 2rem;
+  }
+}
+
+.runhead-name {
+  font-size: var(--label);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.runhead-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.runhead-link {
+  font-family: var(--font-data);
+  font-size: var(--label);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-faint);
+  cursor: pointer;
+  white-space: nowrap;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.runhead-link:hover,
+.runhead-link.active {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+.runhead-link.is-resume {
+  color: var(--accent);
+}
+
+@media (max-width: 620px) {
+  .runhead-nav {
+    gap: 1.1rem;
+  }
+
+  .runhead-name {
+    display: none;
+  }
+}
+
+/* --- Title block --------------------------------------------------------
+   Name set large against an availability mark on the opposite edge, then the
+   role on a rule, the summary, and the contact line. Asymmetric on purpose:
+   the eye lands left, the status is the only thing pulling right. */
+.masthead {
+  padding: 3.25rem 0 3rem;
+  border-bottom: 1px solid var(--rule-strong);
+  margin-bottom: 3.25rem;
+}
+
+@media (min-width: 1024px) {
+  .masthead {
+    padding: 4.5rem 0 3.25rem;
+  }
+}
+
+.masthead-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.masthead-name {
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  color: var(--ink);
+}
+
+.masthead-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--label);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.masthead-role {
+  font-family: var(--font-data);
+  font-size: var(--label);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-muted);
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--rule);
+  margin: 1.1rem 0 1.5rem;
+}
+
+.masthead-summary {
+  font-size: var(--step-1);
+  line-height: 1.65;
+  color: var(--ink-muted);
+  max-width: 58ch;
+}
+
+.masthead-meta {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.masthead-meta > .mono {
+  font-size: var(--label);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-faint);
+}
+
+.masthead-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.masthead-links a {
+  color: var(--ink-faint);
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.masthead-links a:hover {
+  color: var(--accent);
+}

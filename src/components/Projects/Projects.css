@@ -1,60 +1,108 @@
-/* Projects — spec records.
-   Each project is a datasheet entry: rule, title/date row, measured values
-   in an aligned table, prose, then stack and source. No cards. */
+/* Projects — claim on the left, plotted evidence on the right.
+   Still the datasheet system: no cards, no shadows, no radius. The bars are
+   the only new primitive, and they carry real measured values. */
 
 .projects-section {
   position: relative;
 }
 
-.record-list {
+.spread-list {
   display: flex;
   flex-direction: column;
 }
 
-.additional-title {
-  margin-top: 4.5rem;
-}
-
-.record {
-  padding: 2rem 0 2.25rem;
+.spread {
+  display: grid;
+  gap: 2rem;
+  padding: 2.75rem 0 3rem;
   border-top: 1px solid var(--rule);
 }
 
-.record:first-child {
+.spread:first-child {
   border-top: none;
   padding-top: 0.25rem;
 }
 
-/* --- Head: title left, date right, sharing a baseline ------------------- */
-.record-head {
+/* With the rail gone the content column is ~1076px, so a genuine two-column
+   spread finally fits: the claim reads left, the evidence plots right. */
+@media (min-width: 900px) {
+  .spread {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 3.5rem;
+    align-items: start;
+  }
+}
+
+.spread-claim {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1.5rem;
-  margin-bottom: 0.35rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+  min-width: 0;
 }
 
-.record-title {
-  font-size: var(--step-2);
-  font-weight: 600;
-  line-height: 1.25;
-}
-
-.record-date {
-  flex-shrink: 0;
+.spread-date {
   font-size: var(--label);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-faint);
 }
 
-.record-context {
-  font-size: var(--step-0);
-  color: var(--ink-muted);
-  margin-bottom: 1.1rem;
+.spread-title {
+  font-size: var(--step-2);
+  font-weight: 600;
+  line-height: 1.22;
 }
 
-/* --- Publication status: the one place the accent is spent -------------- */
+.spread-line {
+  margin-top: 0.35rem;
+  color: var(--ink-muted);
+  line-height: 1.7;
+  max-width: 46ch;
+}
+
+.spread-stack {
+  margin-top: 0.6rem;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  color: var(--ink-faint);
+}
+
+.spread-evidence {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+/* The one number that defines the project, set large in mono beside the
+   plot. Deliberately a figure the chart does NOT already show, so the two
+   complement instead of repeating. */
+.headline-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-top: 0.1rem;
+}
+
+.figure-value {
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.figure-caption {
+  font-family: var(--font-data);
+  font-size: var(--label);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+  line-height: 1.4;
+}
+
+/* --- Publication status: the one place the accent is spent --------------- */
 .record-status {
   display: inline-flex;
   align-items: center;
@@ -66,7 +114,7 @@
   color: var(--accent);
   background: var(--accent-soft);
   padding: 0.3rem 0.6rem;
-  margin-bottom: 1.25rem;
+  margin: 0.15rem 0;
 }
 
 .status-mark {
@@ -76,78 +124,8 @@
   border-radius: 50%;
 }
 
-/* --- Metrics table ------------------------------------------------------
-   Two columns, dotted leader between label and value, values right-aligned
-   on tabular figures so digits stack cleanly down the column. */
-.metrics {
-  margin: 0 0 1.35rem;
-  max-width: 30rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.metric-row {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-}
-
-.metric-row dt {
-  font-size: var(--step-0);
-  color: var(--ink-muted);
-  white-space: nowrap;
-}
-
-/* The leader is drawn, not typed, so it stretches to fill the gap. */
-.metric-row::after {
-  content: "";
-  order: 1;
-  flex: 1;
-  height: 1px;
-  align-self: center;
-  background-image: linear-gradient(
-    to right,
-    var(--rule-strong) 0 2px,
-    transparent 2px 6px
-  );
-  background-size: 6px 1px;
-  background-repeat: repeat-x;
-  opacity: 0.9;
-}
-
-.metric-row dd {
-  order: 2;
-  margin: 0;
-  font-size: var(--step-0);
-  font-weight: 600;
-  color: var(--ink);
-  white-space: nowrap;
-}
-
-.record-bullets {
-  margin-bottom: 1.4rem;
-}
-
-/* --- Foot: stack string and source link --------------------------------- */
-.record-foot {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: baseline;
-  gap: 0.5rem 2rem;
-  padding-top: 0.9rem;
-  border-top: 1px dotted var(--rule);
-}
-
-.record-stack {
-  font-size: 0.8125rem;
-  line-height: 1.7;
-  color: var(--ink-faint);
-  min-width: 0;
-}
-
 .record-link {
-  flex-shrink: 0;
+  margin-top: 0.35rem;
   font-size: 0.8125rem;
   color: var(--accent);
   border-bottom: 1px solid transparent;
@@ -159,17 +137,137 @@
   border-bottom-color: var(--accent);
 }
 
-@media (max-width: 640px) {
-  .record-head {
-    flex-direction: column;
-    gap: 0.25rem;
+/* --- Chart --------------------------------------------------------------
+   Square bars on a hairline track. The accent marks the figure that is his
+   own contribution; everything else stays neutral so the accent means one
+   thing on this page. */
+.chart {
+  margin: 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--rule-strong);
+}
+
+.chart-plot {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.chart-row {
+  display: grid;
+  grid-template-columns: minmax(0, 8.5rem) 1fr auto;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.chart-label {
+  font-size: 0.8125rem;
+  color: var(--ink-muted);
+  line-height: 1.35;
+}
+
+.chart-track {
+  position: relative;
+  display: block;
+  height: 9px;
+  min-width: 0;
+  background: var(--rule);
+}
+
+.chart-fill {
+  display: block;
+  height: 100%;
+  background: var(--rule-strong);
+}
+
+.chart-fill.is-emphasis {
+  background: var(--accent);
+}
+
+.chart-value {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.chart-caption {
+  margin-top: 1rem;
+  font-family: var(--font-data);
+  font-size: var(--label);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-faint);
+}
+
+@media (max-width: 560px) {
+  .chart-row {
+    grid-template-columns: 1fr auto;
+    gap: 0.35rem 0.75rem;
   }
 
-  .metrics {
-    max-width: none;
+  .chart-label {
+    grid-column: 1 / -1;
   }
+}
 
-  .record-foot {
-    grid-template-columns: 1fr;
+/* --- Index: the second register ----------------------------------------- */
+.additional-title {
+  margin-top: 4.5rem;
+}
+
+.index-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--rule);
+}
+
+@media (min-width: 720px) {
+  .index-list {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
   }
+}
+
+.index-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  padding: 1.35rem 0 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.index-date {
+  font-size: var(--label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.index-title {
+  font-size: var(--step-1);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.index-title a {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.index-title a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.index-context {
+  color: var(--ink-muted);
+  max-width: 42ch;
+}
+
+.index-stack {
+  margin-top: 0.15rem;
+  font-size: 0.8125rem;
+  color: var(--ink-faint);
 }

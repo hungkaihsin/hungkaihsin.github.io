@@ -8,10 +8,10 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <p className="footer-text">
-          Designed & Built by Daniel Hung
+          Built with React and Vite.
         </p>
         <p className="footer-copyright">
-          &copy; {currentYear} All rights reserved.
+          &copy; {currentYear} Kai-Hsin Hung
         </p>
       </div>
     </footer>

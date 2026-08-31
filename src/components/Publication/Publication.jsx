@@ -1,37 +1,32 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { FaBookOpen } from 'react-icons/fa';
 import './Publication.css';
 
-const Publication = () => {
-  return (
-    <div className="publication-container">
-      <h2 className="section-title">Publication</h2>
-      <motion.div
-        className="publication-card"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, margin: '-40px' }}
-        transition={{ duration: 0.4 }}
-      >
-        <div className="publication-icon-wrap">
-          <FaBookOpen size={20} />
-        </div>
-        <div className="publication-content">
-          <span className="publication-badge">Accepted — IntelliSys 2026</span>
-          <h3 className="publication-title">
-            GoPark: An AI-Powered Parking Recommendation System
-          </h3>
-          <p className="publication-authors">
-            K. Hung, G. Phung, F. Lorenzino
-          </p>
-          <p className="publication-venue">
-            Intelligent Systems Conference (IntelliSys) 2026, Springer Lecture Notes in Networks and Systems
-          </p>
-        </div>
-      </motion.div>
-    </div>
-  );
-};
+/* Same two-column grid as Experience: status left, citation right. */
+
+const Publication = () => (
+  <div className="publication-container">
+    <h2 className="section-title">Publication</h2>
+
+    <article className="pub-row">
+      <div className="pub-meta">
+        <span className="record-status">
+          <span className="status-mark" aria-hidden="true" />
+          Accepted · IntelliSys 2026
+        </span>
+      </div>
+
+      <div className="pub-detail">
+        <h3 className="pub-title">
+          GoPark: An AI-Powered Parking Recommendation System
+        </h3>
+        <p className="pub-authors">G. Phung, K. Hung, F. Lorenzino</p>
+        <p className="pub-venue">
+          Intelligent Systems Conference (IntelliSys) 2026, Springer Lecture
+          Notes in Networks and Systems
+        </p>
+      </div>
+    </article>
+  </div>
+);
 
 export default Publication;

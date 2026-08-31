@@ -1,24 +1,21 @@
 .App {
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
   position: relative;
 }
 
+/* Single content column. The 42% rail is gone, so the document gets the full
+   measure and the work grid has room to be a real two-column spread. */
 .App-container {
-  max-width: 1200px;
+  max-width: 1140px;
   width: 100%;
+  margin: 0 auto;
   padding: 0 1.5rem;
-  display: flex;
-  flex-direction: column;
   box-sizing: border-box;
 }
 
 @media (min-width: 1024px) {
   .App-container {
     padding: 0 2rem;
-    flex-direction: row;
-    gap: 4rem;
   }
 }
 
